@@ -1,0 +1,1969 @@
+﻿<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python19 UNIX MAC Windows</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++  -->
+<ul id="menu">
+
+
+<!--  START - Windows section  ---------------------------->
+<li><a href="" id="Windows">Windows</a>
+<div class="menu-container-1">
+
+<!--  START - Windows column  ----------------------------->
+<div class="column-1"><h3>Windows</h3>
+<ul>
+<li><a href="#doc35.winapi">Windows API</a></li>
+<li><a href="#doc35.wsl">Win Subsystem Linux</a></li>
+<li><a href="#doc35.pywin32">'pywin32' module</a></li>
+<li><a href="#doc35.wmi">'wmi' module</a></li>
+<li><a href="#doc35">35.0 Windows Services</a></li>
+<li><a href="#doc35.msilib">35.1 'msilib' Installer</a></li>
+<li><a href="#doc35.msvcrt">35.2 'msvcrt' VC++</a></li>
+<li><a href="#doc35.winreg">35.3 'winreg' Registry</a></li>
+<li><a href="#doc35.winsound">35.4 'winsound'</a></li>
+<li><a href="">DEAD: 38.1 'ntpath'</a></li>
+</ul></div>
+<!--  END - Windows column  ----------------------------->
+</div></li>
+<!--  END - Windows section  ------------------------------->
+
+
+<!--  START - UNIX section  ------------------------->
+<li><a href="UNIX">UNIX</a>
+<div class="menu-container-1">
+
+<!--  START - UNIX section  ------------------------->
+<div class="column-1"><h3>UNIX</h3>
+<ul>
+<li><a href="#doc36.gnome">GNOME</a></li>
+<li><a href="#doc36">36.0 Unix Services</a></li>
+<li><a href="#doc36.posix">36.1 'posix' Module</a></li>
+<li><a href="#doc38.posixpath">38.2 'posixpath' Module</a></li>
+<li><a href="#doc36.pwd">36.2 'pwd' password</a></li>
+<li><a href="#doc36.spwd">36.3 'spwd' spassword</a></li>
+<li><a href="#doc36.grp">36.4 'grp' database</a></li>
+<li><a href="#doc36.crypt">36.5 'crypt'</a></li>
+<li><a href="#doc36.termios">36.6 'termios'</a></li>
+<li><a href="#doc36.tty">36.7 'tty'</a></li>
+<li><a href="#doc36.pty">36.8 'pty' Module</a></li>
+<li><a href="#doc36.fcntl">36.9 'fcntl'</a></li>
+<li><a href="#doc36.pipes">36.10 'pipes'</a></li>
+<li><a href="#doc36.resource">36.11 'resource'</a></li>
+<li><a href="#doc36.nis">36.12 'nis'</a></li>
+<li><a href="#doc36.syslog">36.13 'syslog'</a></li>
+<li><a href="#doc12.dbm">12.5 'dbm' UnixDB</a></li>
+<li><a href="#gunicorn">'gunicorn' Server</a></li>
+</ul></div>
+<!--  START - UNIX section  ------------------------->
+</div></li>
+<!--  END - UNIX section  --------------------------->
+
+
+<!--  START - MAC section  ------------------------>
+<li><a href="#">MAC</a>
+<div class="menu-container-1">
+
+<!--  START - MAC column  ------------------------->
+<div class="column-1"><h3>MAC</h3>
+<ul>
+<li><a href="#doc14.plistlib">14.5 'plistlib' Module</a></li>
+<li><a href="">DEAD: 'macpath'</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#doc34">34.0 Miscellaneous Svcs</a></li>
+<li><a href="#doc37">37.0 Superseded Mods</a></li>
+<li><a href="#doc38">38.0 Undocumnted Mods</a></li>
+
+</ul></div>
+<!--  END - MAC column  --------------------------->
+</div></li>
+<!--  END - MAC section  ---------------------------------------------->
+
+</ul>
+<!-- +++++ end table of contents -------------------------------------->
+<br><p></p>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.wsl">Windows Subsystem for Linux (WSL)</a><br>
+<a class="semanticweb">Version: x  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.techopedia.com/definition/33033/windows-subsystem-for-linux-wsl" target="_blank">techopedia: WSL</a>
+| <a href="https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/" target="_blank">microsoft: WSL docs</a>
+| <a href="http://wsl-guide.org/en/latest/" target="_blank">Windows Subsystem for Linux Guide!</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/ebooks/windowsapi/" target="_blank">Introduction to Windows API</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">Enable Windows Subsystem for Linux</div>
+<div class="propertydescription">
+| <a class="listitem" href="https://docs.microsoft.com/en-us/windows/wsl/about" target="_blank">Microsoft TOC</a>
+| <a class="listitem" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">Enable WSL</a>
+| <a class="listitem" href="https://winaero.com/blog/enable-wsl-windows-10-fall-creators-update/" target="_blank">winaero</a>
+|<br>
+[powershell@administator] <kbd>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</kbd> enables 'WSL' on Windows10
+<br>
+</div>
+<p></p>
+
+<div class="propertyheader">Install Ubuntu Linux on WSL</div>
+<div class="propertydescription">#1 [www] Download Ubuntu from Microsoft Store <br>
+#1 [powershell@administator]<kbd>Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing</kbd> downloads 'Ubuntu' Linux</div>
+<p></p>
+<div class="propertyheader">Update Ubuntu Linux on WSL</div>
+<div class="propertydescription">
+#2 [jhsunix@Dell9020] <kbd>sudo apt update && sudo apt upgrade</kbd> updates/upgrades 'Ubuntu'</div>
+<p></p>
+<div class="propertyheader">Add 'gnome3' PPA Repository</div>
+<div class="propertydescription">
+#3 [jhsunix@Dell9020] <kbd>sudo add-apt-repository PPA:gnome3-team/gnome3</kbd></div>
+<p></p>
+<div class="propertyheader">Install 'gnome3' on Ubuntu</div>
+<div class="propertydescription">
+#4 [jhsunix@Dell9020] <kbd>sudo apt-get update && sudo apt-get install gnome-shell ubuntu-gnome-desktop</kbd></div>
+<p></p>
+<div class="propertyheader">Updates 'gnome3' on Ubuntu</div>
+<div class="propertydescription">
+#5 [jhsunix@Dell9020] <kbd>sudo apt update && sudo apt upgrade</kbd> updates/upgrades 'Ubuntu'</div>
+<p></p>
+<div class="propertyheader">Start 'gnome3 service' on Ubuntu</div>
+<div class="propertydescription">
+#6 [jhsunix@Dell9020] <kbd>sudo service gdm3 start</kbd></div>
+<p></p>
+<div class="propertyheader">Install 'binutils' on Ubuntu</div>
+<div class="propertydescription">
+#7 [jhsunix@Dell9020] <kbd>sudo apt install binutils</kbd> installs 'binutils'</div>
+<p></p>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.winapi">Windows API</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/ebooks/windowsapi/" target="_blank">Introduction to Windows API</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.pywin32">Module: 'pywin32'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Python extensions for Microsoft Windows Provides access to much of the Win32 API, the ability to create and use COM objects, and the Pythonwin environment. A python library which provides some useful methods and classes for interacting with windows.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/pywin32/" target="_blank">PyPI: pywin32 224</a>
+| <a href="http://timgolden.me.uk/python/win32_how_do_i.html" target="_blank">Win32 How Do I...?</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.blog.pythonlibrary.org/tag/pywin32/" target="_blank">Mouse v. Python</a>
+ - <span class="update">(visited 09 Nov 18)  -Tag Archives: PyWin32</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.wmi">Module: 'wmi'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Windows Management Instrumentation (WMI) is Microsoft’s implementation of Web-Based Enterprise Management (WBEM), an industry initiative to provide a Common Information Model (CIM) for pretty much any information about a computer system.<br>
+The Python WMI module is a lightweight wrapper on top of the pywin32 extensions, and hides some of the messy plumbing needed to get Python to talk to the WMI API. It’s pure Python and should work with any version of Python from 2.1 onwards (list comprehensions) and any recent version of pywin32.</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/WMI/" target="_blank">PyPI: wmi 1.4.9</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.msilib">35.1 'msilib' — Read and write Microsoft Installer files</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The msilib supports the creation of Microsoft Installer (.msi) files.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/msilib.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.msvcrt">35.2 'msvcrt' — Routines from the MS Visual C++ runtime</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The module implements both the normal and wide char variants of the console I/O api.</div>
+
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/msvcrt.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.winreg">Module: 'winreg' — Windows registry access</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">These functions expose the Windows registry API to Python.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/winreg.html" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35.winsound">Module: 'winsound' — Sound-playing interface for Windows</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The winsound module provides access to the basic sound-playing machinery provided by Windows platforms.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/winsound.html" target="_blank">3.7doc</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.gnome">Platform: GNOME</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p> See <a href="#">'os' module</a>.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How to install GNOME components</div>
+<div class="propertydescription">
+| #1 [jhsunix@Dell9020] <kbd>sudo apt-get install gnome gnome-shell</kbd> installs 'gnome'
+<br>
+| #2 [jhsunix@Dell9020] <kbd>sudo apt-get install ubuntu-gnome-desktop</kbd> installs 'gnome-desktop'
+<br>
+| #3 [jhsunix@Dell9020] <kbd>sudo apt-get install gnome-panel</kbd> installs 'gnome-panel'
+<br>
+| #4 [jhsunix@Dell9020] <kbd>sudo apt-get install gnome-settings-daemon</kbd> installs 'gnome-settings-daemon'
+<br>
+| #5 [jhsunix@Dell9020] <kbd>sudo apt-get install metacity</kbd> installs 'metacity'
+</div>
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36">36.0 Unix Specific Services</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p> See <a href="#">'os' module</a>.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/unix.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.posix">Module: 'posix' — Common POSIX system calls</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<li></a></li>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/posix.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://marshmallow.readthedocs.io/en/3.0/" target="_blank">Marshmallow 3.0</a>
+ - <span class="update">(visited 22 Aug 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc38.posixpath">Module: 'posixpath' — 'os.path' on POSIX</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pickletools.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.pwd">Module: 'pwd' — The password database</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/how-to-pickle-unpickle-tutorial/" target="_blank">pythoncentral</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.spwd">Module: 'spwd' — The shadow password database</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.grp">Module: 'grp' — The group database</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/grp.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.crypt">Module: 'crypt' — Function to check Unix passwords</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/crypt.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.termios">Module: 'termios' — POSIX style tty control</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/termios.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.tty">Module: 'tty' — Terminal control functions</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/tty.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://marshmallow.readthedocs.io/en/3.0/" target="_blank">Marshmallow 3.0</a>
+ - <span class="update">(visited 22 Aug 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.pty">Module: 'pty' — Pseudo-terminal utilities</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pty.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.fcntl">Module: 'fcntl' + 'ioctl' system calls</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p><li><a href="#"></a></li>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/fcntl.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.pipes">Module: 'pipes' — Interface to shell pipelines</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pipes.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.resource">Module: 'resource' — Resource usage information</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/resource.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++-------------------------------------------------------------->
+<!-- ++++-------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.nis">Module: 'nis' — Interface to Sun’s NIS (Yellow Pages)</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/nis.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc36.syslog">Module: 'syslog' — Unix syslog library routines</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/syslog.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.dbm">Module: 'dbm' — Interfaces to Unix databases</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p><li><a href="#"></a></li>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/dbm.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++---------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gunicorn">Module: 'gunicorn' - WSGI HTTP Server for UNIX</a></p><br>
+<a class="semanticweb">Version: 19.9.0  Released: Jul 03, 2018</a><br>
+<a class="newhtml5">Gunicorn is for a UNIX environment and is incompatible with Windows</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Gunicorn ‘Green Unicorn’ is a Python WSGI HTTP Server for UNIX. It’s a pre-fork worker model ported from Ruby’s Unicorn project. The Gunicorn server is broadly compatible with various web frameworks, simply implemented, light on server resource usage, and fairly speedy.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/gunicorn/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://gunicorn.org/" target="_blank">gunicorn.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc14.plistlib">Module: 'plistlib' — Generate and parse Mac OS X .plist</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/plistlib.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc34">34.0  Miscellaneous Services</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Thhis is just a placeholder!  This section is empty in v3.7.1</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/misc.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc37">37.0 Superseded Modules</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p>The modules, 'optparse' and 'imp' are deprecated [DEAD] and only kept for backwards compatibility.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/superseded.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc38">38.0  Undocumented Modules</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Here’s a quick listing of modules that are currently undocumented, but that should be documented.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/undoc.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc35">35.0  Microsoft Windows Specific Services</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/windows.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc">1</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p> See <a href="#">'os' module</a>.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+</body>
+</html>

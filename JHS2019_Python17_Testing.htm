@@ -1,0 +1,1737 @@
+﻿<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python17 Testing</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++ ------->
+<ul id="menu">
+
+<!--  START - Regression Test section  -------------------------------->
+<li><a href="#">Regression Test</a>
+<div class="menu-container-2">
+
+<!--  START - Unit Test column  --------------------------------------->
+<div class="column-1"><h3>Regression Test</h3>
+<ul>
+<li><a href="#doc27.Cookiecutter">'Cookiecutter'</a></li>
+<li><a href="#doc27.doctest">27.3 'doctest'</a></li>
+<li><a href="#doc27.test">27.8 'test'</a></li>
+<li><a href="#doc27.test.regrtest">'test.regrtest'</a></li>
+<li><a href="#doc27.test.support">27.9 'test.support'</a></li>
+<li><a href="#doc27.test.support.script_helper">'support.script_helper'</a></li>
+<li><a href="#doc28.timeit">28.5 'timeit' module</a></li>
+</ul></div>
+<!--  END - Unit Test column  ----------------------------------------->
+
+<!--  START - Testing Frameworks column  ------------------------------>
+<div class="column-1"><h3>Test Frameworks</h3>
+<ul>
+<li><a href="#type.functional">Functional Testing</a></li>
+<li><a href="#type.nonfunctional">Non-Functional Testing</a></li>
+<li><a href="#hypothesis">'hypothesis' module</a></li>
+<li><a href="#mamba">'mamba' Framework</a></li>
+<li><a href="#robot.framework">Robot Framework</a></li>
+<li><a href="#selenium">Selenium</a></li>
+</ul></div>
+<!--  END -Testing Frameworks column  --------------------------------->
+
+</div></li>
+<!--  END - Regression Test section  ---------------------------------->
+
+
+<!--  START - Test Runners section  ----------------------------------->
+<li><a href="#">Test Runners</a>
+<div class="menu-container-2">
+
+<!--  START - Test Runners column  ------------------------------------>
+<div class="column-1"><h3>Test Runners</h3>
+<ul>
+<li><a href="#green">'green' testrunner</a></li>
+<li><a href="#tox">'tox' testrunner</a></li>
+<li><a href="#doc27.pytest">'PyTest'</a></li>
+<li><a href="#nose2">'nose2' Module</a></li>
+<li><a href="">DEAD: 'nose' Module</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#doc27.unittest">27.4 'unittest' PyUnit</a></li>
+<li><a href="#doc27.unittest.mock">27.5 'unittest.mock'</a></li>
+<li><a href="#doc27.unittest.mockstart">27.6 'unittest.mock' Start</a></li>
+</ul></div>
+<!--  END - Test Runners column  -------------------------------------->
+
+<!--  START - GUI-Web Test column  ------------------------------------>
+<div class="column-1"><h3>GUI-Web Test</h3>
+<ul>
+<li><a href="#locust">'locust' load testing</a></li>
+<li><a href="#pyautogui">'PyAutoGUI' automation</a></li>
+<li><a href="#sixpack">'sixpack' A/B Testing</a></li>
+<li><a href="#splinter">'splinter' Module</a></li>
+</ul></div>
+<!--  END - GUI-Web Test column  -------------------------------------->
+
+</div></li>
+<!--  END - Test Runners section  ------------------------------------->
+
+
+<!--  START - Mock section  ------------------------------------------->
+<li><a href="#">Mock Test</a>
+<div class="menu-container-2">
+
+<!--  START - Mock Test column  --------------------------------------->
+<div class="column-1"><h3>Mock Test</h3>
+<ul>
+<li><a href="#doublex">'doublex' module</a></li>
+<li><a href="#freezegun">'freezegun' datetime</a></li>
+<li><a href="#httmock">'httmock' module</a></li>
+<li><a href="#httpretty">'httpretty' mock request</a></li>
+<li><a href="#mock">'mock' Library</a></li>
+<li><a href="#mocket">'mocket' Socket</a></li>
+<li><a href="#responses">'responses' module</a></li>
+<li><a href="#vcr.py">'vcr.py' HTTP</a></li>
+</ul></div>
+<!--  END - Mock Test column  ----------------------------------------->
+
+<!--  START - Object Factory column  ---------------------------------->
+<div class="column-1"><h3>Object Factory</h3>
+<ul>
+<li><a href="#factory.boy">'factory_boy' Python</a></li>
+<li><a href="#mixer">'mixer' fixtures rep</a></li>
+<li><a href="#model.mommy">'model_mommy' fixtures</a></li>
+</ul></div>
+<!--  END - Object Factory column  ------------------------------------>
+
+</div></li>
+<!--  END - Mock Test section  ---------------------------------------->
+
+
+<!--  START - Code Coverage section  ---------------------------------->
+<li><a href="#">Code Coverage</a>
+<div class="menu-container-2">
+
+<!--  START - Code Coverage column  ----------------------------------->
+<div class="column-1"><h3>Code Coverage</h3>
+<ul>
+<li><a href="#coverage">'coverage' Module</a></li>
+</ul></div>
+<!--  END - Code Coverage column  ------------------------------------->
+
+<!--  START - Fake Data column  --------------------------------------->
+<div class="column-1"><h3>Fake Data Generator</h3>
+<ul>
+<li><a href="#nimesis">'nimesis' Generator</a></li>
+<li><a href="#fake2db">'fake2db' Generator</a></li>
+<li><a href="#faker">'faker' Data Generator</a></li>
+<li><a href="#radar">'radar' random datetime</a></li>
+</ul></div>
+<!--  END - Fake Data column  ----------------------------------------->
+
+</div></li>
+<!--  END - Code Coverage section  ------------------------------------>
+
+</ul>
+<!-- +++++ end table of contents ++++++++++++++++++++++++++++++----- -->
+<br><p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="type.functional">Functional Testing</a><br>
+<a class="semanticweb">Version:</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="propertyheader">What is Functional Testing?</div>
+<div class="propertydescription">The prime objective of Functional testing is checking the functionalities of the software system.<br>
+<li>Mainline functions:  Testing the main functions of an application</li>
+<li>Basic Usability: It involves basic usability testing of the system. It checks whether a user can freely navigate through the screens without any difficulties.</li>
+<li>Accessibility:  Checks the accessibility of the system for the user</li>
+<li>Error Conditions: Usage of testing techniques to check for error conditions.  It checks whether suitable error messages are displayed.</li>
+</div>
+<p></p>
+<div class="propertyheader">What is Black-Box Testing?</div>
+<div class="propertydescription">“Black-Box” software testing treats software as a black box & without checking internal structure of software we test the software. All testing is done as customer’s point of view and tester is only aware of what is software is supposed to do but how these requests are processing by software is not aware. While testing tester is knows about the input and expected output’s of the software and they do not aware of how the software or application actually processing the input requests & giving the outputs. Tester only passes valid as well as invalid inputs & determines the correct expected outputs. All the test cases to test using such method are calculated based on requirements & specifications document.</div>
+<p></p>
+    <div class="propertyheader">What is {Black-Box} Boundary Value Analysis (BVA) Testing?</div>
+<div class="propertydescription">Boundary Value Analysis is the most commonly used test case design method for black box testing. As all we know the most of errors occurs at boundary of the input values. This is one of the techniques used to find the error in the boundaries of input values rather than the center of the input value range.</div>
+<p></p>
+<div class="propertyheader">What is {Black-Box} Equivalence Class Partitioning Testing?</div>
+<div class="propertydescription">The equivalence class partition is the black box test case design technique used for writing test cases. This approach is use to reduce huge set of possible inputs to small but equally effective inputs. This is done by dividing inputs into the classes and gets one value from each class. Such method is used when exhaustive testing is most wanted & to avoid the redundancy of inputs.
+In the equivalence partitioning input are divided based on the input values:<br>
+
+    If input value is Range, then we one valid equivalence class & two invalid equivalence classes.
+    If input value is specific set, then we one valid equivalence class & one invalid equivalence classes.
+    If input value is number, then we one valid equivalence class & two invalid equivalence classes.
+    If input value is Boolean, then we one valid equivalence class & one invalid equivalence classes.
+</div>
+<p></p>
+<div class="propertyheader">What is {Black-Box} Decision Table based Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is {Black-Box} Cause-Effect Graphing Technique Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is {Black-Box} Control Flow Testing?</div>
+<div class="propertydescription">Behavioral control-flow testing was introduced as the fundamental model of black-box testing. The control-flow graph is the basic model for the test design.  Control-flow behavioral testing is a fundamental testing technique that is applicable to majority of software programs and is quite effective for them. It is generally applicable for comparatively smaller programs or even for smaller segments of bigger programs.</div>
+<p></p>
+<div class="propertyheader">What is {Black-Box} Error Guessing Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Automated Testing?</div>
+<div class="propertydescription">The purpose of Automated Testing is not to find bugs, but rather to catch regressions. utomated testing is repeatable. Automating the execution of your test plan (the parts of your application you want to test, the order in which you want to test them, and the expected responses) by a script instead of a human.</div>
+<p></p>
+<div class="propertyheader">What is Component Testing?</div>
+<div class="propertydescription">Component testing is testing your program as individual components. This is generally accomplished by creating mocks of the other components. It's also generally done through the use of a unit testing library, just with larger tests. Where you might have 10's or hundreds of unit tests for each class (largely dependent on the size of the class), you'll have a handful of component tests for each component of your system.<br>
+As an example, you mention a database. You could component test by writing a mocked database that returns canned data, and testing the parts that interface with the database using the mock. This is more difficult that unit testing because testability starts to become a concern in the design. Things come up like how are you going to mock a database if the database is hardcoded into your program. It's still relatively easy to do though, it just requires some forethought and planning.</div>
+<p></p>
+<div class="propertyheader">What is Gray-Box Testing?</div>
+<div class="propertydescription">Gray box testing is a software testing methodology that involves the combination of white box and black box testing. It makes use of the straightforward technique of black box testing, as well as the approach for code-targeted systems, as in the case of white box testing. Testers that use gray box testing need high-level application documentation to complete the tests. Gray box testing is geared toward finding defects based on improper structure or application use.<br>
+Gray box testing is also known as translucent testing.
+</div>
+<p></p>
+<div class="propertyheader">What is White-Box Testing?</div>
+<div class="propertydescription">White-box testing is a methodology used to ensure and validate the internal framework, mechanisms, objects and components of a software application. White-box testing verifies code according to design specifications and uncovers application vulnerabilities.<br>
+White-box testing is also known as transparent box testing, clear box testing, structural testing and glass box testing. Glass box and clear box indicate that internal mechanisms are visible to a software engineering team.
+</div>
+<p></p>
+<div class="propertyheader">What is Integration Testing?</div>
+<div class="propertydescription">Think of how you might test the lights on a car. You would turn on the lights (known as the test step) and go outside the car or ask a friend to check that the lights are on (known as the test assertion). Testing multiple components is known as integration testing.  An integration test checks that components in your application operate with each other.</br>
+A major challenge with integration testing is when an integration test doesn’t give the right result. It’s very hard to diagnose the issue without being able to isolate which part of the system is failing. If the lights didn’t turn on, then maybe the bulbs are broken. Is the battery dead? What about the alternator? Is the car’s computer failing?</div>
+<p></p>
+<div class="propertyheader">What is Progression Testing?</div>
+<div class="propertydescription">Progression Testing is nothing but, test the application with Old Test Data. The purpose of this task is to run the system with existing test cases that were retained from the system tests. The reasoning is that if the test data are held constant and something does not work, it must be due to the change(s) made to the system. This proves that all of the previous system functions still work. <br>
+Progression tests used in the current release would roll into regression tests for future releases.
+</div>
+<p></p>
+<div class="propertyheader">What is Regression Testing?</div>
+<div class="propertydescription">Regression testing is testing existing software applications to make sure that a change or addition hasn’t broken any existing functionality. Its purpose is to catch bugs that may have been accidentally introduced into a new build or release candidate, and to ensure that previously eradicated bugs continue to stay dead.  By re-running testing scenarios that were originally scripted when known problems were first fixed, you can make sure that any new changes to an application haven’t resulted in a regression, or caused components that formerly worked to fail.  Such tests can be performed manually on small projects, but in most cases repeating a suite of tests each time an update is made is too time-consuming and complicated to consider, so an automated testing tool is typically required.</div>
+<p></p>
+<div class="propertyheader">What is Unit Testing?</div>
+<div class="propertydescription">Unit testing is the process of writing code to test the behavior and functionality of your system.  A unit test helps you to isolate what is broken in your application and fix it faster.
+<li>A unit test is a smaller test, one that checks that a single component operates in the right way.</li>
+<li>Unit test code should be short, sweet and quick to execute.</li>
+Unit tests shorten the development feedback loop dramatically: with a separate testing department it may take weeks for you to know that there is a bug in your code, by which time you have already forgotten much of the context, thus it may take you hours to find and fix the bug; OTOH with unit tests, the feedback cycle is measured in seconds, and the bug fix process is typically along the lines of an "oh sh*t, I forgot to check for that condition here"</div>
+<p></p>
+<div class="propertyheader">What is Smoke Testing?</div>
+<div class="propertydescription">Gray box testing is a software testing methodology that involves the combination of white box and black box testing. It makes use of the straightforward technique of black box testing, as well as the approach for code targeted systems, as in the case of white box testing. Testers that use gray box testing need high-level application documentation to complete the tests. Gray box testing is geared toward finding defects based on improper structure or application use.<br>
+Gray box testing is also known as translucent testing.<br>
+Smoke testing is a preliminary test which is used to catch the high-level functional errors of an application. If the tests fail, then further testing of the application stops, and the build is refused for additional testing until the build passes the smoke test.<br>
+The term itself is derived from the electronic industry. While repairing a hardware component, if the equipment works with no smoke, the component is said to have passed the test.
+</div>
+<p></p>
+<div class="propertyheader">What is Sanity Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is System Testing?</div>
+<div class="propertydescription">System testing is the hardest to write tests for, because you have to have integration points to drive your system. On a personal project you can probably skip system testing, especially if you've done a thorough job with unit and component testing.<br>
+System testing involves going through scenarios on the whole system. The difficulty is vastly increased, especially for a UI application, because you have to have a way to simulate user input. With a text based system, like compilers, you just have to generate text, but with a UI you have to either drive input or have test hooks into the input callbacks. There is no one size fits all solution like there is for unit testing.</div>
+<p></p>
+<div class="propertyheader">What is Unit Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is User-Acceptance Testing (UAT)?</div>
+<div class="propertydescription">User acceptance testing (UAT) is the last phase of the software testing process. During UAT, actual software users test the software to make sure it can handle required tasks in real-world scenarios, according to specifications.  UAT is one of the final and most critical software project procedures that must occur before newly developed software is rolled out to the market.  UAT is also known as beta testing, application testing or end user testing.<br>
+This type of testing verifies that the system meets the customer specified requirements or not. User or a customer does this testing to decide whether to accept application.
+</div>
+<p></p>
+
+
+
+<div class="propertyheader">Testing Advice</div>
+<div class="propertydescription">Real world testing is completely different than what I thought testing was before I got into the industry. When I was in school I wasted a lot of time doing unproductive things that I thought were productive when I was "testing."
+<ol>
+<li>Bucketize things, and spread your effort across buckets. Look at various aspect, such as stress, performance, border cases, regular input, localization, UI, and anything else you can come up with a bucket for. Then decide what's worth pursuing and what isn't. Localization likely won't be a priority for a hobby project.</li>
+<li>Don't test things just to test things. Before you decide to write a test, decide if it's worth writing. For example, if you find out that your website crashes if you give a 500,000 character string as input, would you fix that? I know I wouldn't unless it was a trivial fix. So that testcase isn't worth writing.</li>
+<li>Do think about the program under test as a piece of code. A lot of people subscribe to the black box view, where you aren't supposed to assume anything about the implementation details, but I think that's unproductive. Write tests that are mean to the implementation, and also that are mean to any future implementations. This goes back to the purpose of automated tests, not to find bugs but to catch regressions later.</li>
+<li>Think about the border cases. If you are writing a container class like I mentioned previously, you should be thinking about empty containers, containers of max size (or if there is a max size), containers with one element, etc. There should be a few tests for the normal cases and a few more for the border cases. Be pragmatic here though, keep point 2 in mind.</li>
+<li>First, 'dont test things just to test things", write FAILING tests. Your goal in testing is to write code that your code does not account for and then ensure that it DOES account for it. Second, unit testing should be done by removing all dependencies from the aspect being tested. If you are not testing the database directly, then simulate the database so that a failure is guaranteed to be related to what you are testing rather than a DB error.</li>
+</ol>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/test.html#module-test.support.script_helper" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://pyunit.sourceforge.net/pyunit.html" target="_blank">Python Unit Testing Framework</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/vinta/awesome-python#logging" target="_blank">github: Awesome-Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="type.nonfunctional">Non-Functional Testing</a><br>
+<a class="semanticweb">Version:</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="propertyheader">What is Compatibility Testing?</div>
+<div class="propertydescription">Compatibility Testing is a type of Non-functional testing. It checks your software's compatibility with external components:
+<ol>
+<li>Hardware: It checks software to be compatible with different hardware configurations.</li>
+<li>Operating Systems: It checks your software to be compatible with different Operating Systems like Windows, Unix, Mac OS etc.</li>
+<li>Software: It checks your developed software to be compatible with other software. For example, MS Word application should be compatible with other software like MS Outlook, MS Excel, VBA etc.</li>
+<li>Network: Evaluation of performance of a system in a network with varying parameters such as Bandwidth, Operating speed, Capacity. It also checks application in different networks with all parameters mentioned earlier.</li>
+<li>Browser: It checks the compatibility of your website with different browsers like Firefox, Google Chrome, Internet Explorer etc.</li>
+<li>Devices: It checks compatibility of your software with different devices like USB port Devices, Printers and Scanners, Other media devices and Blue tooth.</li>
+<li>Mobile: Checking your software is compatible with mobile platforms like Android, iOS etc.</li>
+<li>Versions of the software: It is verifying your software application to be compatible with different versions of the software. For instance checking your Microsoft Word to be compatible with Windows 7, Windows 7 SP1, Windows 7 SP2, Windows 7 SP3.</li>
+</ol>
+</div>
+<p></p>
+<div class="propertyheader">What is Installation Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Load Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Manual Testing?</div>
+<div class="propertydescription">Make a list of all the features your application has, the different types of input it can accept, and the expected results. Now, every time you make a change to your code, you need to go through every single item on that list and check it.<br>
+If you test your code manually, it may convince you that the code is working perfectly - in its current state. But what about a week later, when you made a slight modification in it? Are you willing to retest it again by hand whenever anything changes in your code?</div>
+<p></p>
+<div class="propertyheader">What is Exploratory (Manual) Testing?</div>
+<div class="propertydescription">Exploratory testing is a form of testing that is done without a plan. Remember when you ran your application and used it for the first time? Did you check the features and experiment using them? In an exploratory test, you’re just exploring the application.</div>
+<p></p>
+<div class="propertyheader">What is Migration Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Penetration Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Performance Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Static Testing?</div>
+<div class="propertydescription">Static Testing is type of testing in which the code is not executed. It can be done manually or by a set of tools. This type of testing checks the code, requirement documents and design documents and puts review comments on the work document. When the software is non –operational and inactive, we perform security testing to analyse the software in non-runtime environment. With static testing, we try to find out the errors, code flaws and potentially malicious code in the software application. It starts earlier in development life cycle and hence it is also called verification testing. Static testing can be done on work documents like requirement specifications, design documents, source code, test plans, test scripts and test cases, web page content.</div>
+<p></p>
+<div class="propertyheader">What is Stress Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Performance Testing?</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is Volume Testing?</div>
+<div class="propertydescription">Volume testing should show the impact on response time and system behavior when the software app (both hardware and software) is exposed to an increasing volume of data.<br>
+Volume testing verifies the physical and logical limits to a system’s capacity are acceptable based on the projected capacity of the business processing.<br>
+Such systems can be transactions processing systems capturing real time sales or could be database updates and or data retrieval.  For example, testing the music site behavior when there are millions of user to download the song.<br>
+Volume Testing, also referred to as flood testing, is a type of non-functional testing.</div>
+<p></p>
+
+
+<div class="propertyheader">Testing Advice</div>
+<div class="propertydescription">Real world testing is completely different than what I thought testing was before I got into the industry. When I was in school I wasted a lot of time doing unproductive things that I thought were productive when I was "testing."
+<ol>
+<li>Bucketize things, and spread your effort across buckets. Look at various aspect, such as stress, performance, border cases, regular input, localization, UI, and anything else you can come up with a bucket for. Then decide what's worth pursuing and what isn't. Localization likely won't be a priority for a hobby project.</li>
+<li>Don't test things just to test things. Before you decide to write a test, decide if it's worth writing. For example, if you find out that your website crashes if you give a 500,000 character string as input, would you fix that? I know I wouldn't unless it was a trivial fix. So that testcase isn't worth writing.</li>
+<li>Do think about the program under test as a piece of code. A lot of people subscribe to the black box view, where you aren't supposed to assume anything about the implementation details, but I think that's unproductive. Write tests that are mean to the implementation, and also that are mean to any future implementations. This goes back to the purpose of automated tests, not to find bugs but to catch regressions later.</li>
+<li>Think about the border cases. If you are writing a container class like I mentioned previously, you should be thinking about empty containers, containers of max size (or if there is a max size), containers with one element, etc. There should be a few tests for the normal cases and a few more for the border cases. Be pragmatic here though, keep point 2 in mind.</li>
+<li>First, 'dont test things just to test things", write FAILING tests. Your goal in testing is to write code that your code does not account for and then ensure that it DOES account for it. Second, unit testing should be done by removing all dependencies from the aspect being tested. If you are not testing the database directly, then simulate the database so that a failure is guaranteed to be related to what you are testing rather than a DB error.</li>
+</ol>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/test.html#module-test.support.script_helper" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/vinta/awesome-python#logging" target="_blank">github: Awesome-Python</a>
+ - <span class="update">(visited 20 Jun 18)  THE BIG LIST</span>
+</li>
+<li>
+<a class="listitem" href="https://www.guru99.com/compatibility-testing.html" target="_blank">guru99: What is Compatibility Testing? Forward & Backward Testing</a>
+ - <span class="update">(visited 20 Jun 18)  Good list</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="cookiecutter">Cookiecutter - Better Project Templates</a><br>
+<a class="semanticweb">Version: 1.6.0  Released: Oct 15, 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Cookiecutter is a command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://cookiecutter.readthedocs.io/en/latest/" target="_blank">readthedocs: cookiecutter</a>
+| <a href="https://github.com/audreyr/cookiecutter" target="_blank">gibhub: cookiecutter</a>
+| <a href="https://pypi.org/project/cookiecutter/" target="_blank">PyPI: cookiecutter</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://pythonspot.com/tag/cookiecutter/" target="_blank">pythonspot: cookiecutter</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.doctest">27.3 'doctest' — Test interactive Python examples</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/doctest.html" target="_blank">docs3.7.2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://pymotw.com/3/doctest/" target="_blank">PyMOTW: doctest — Testing Through Documentation</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://code-maven.com/doctest-in-python" target="_blank">code-maven: Doctest in Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.geeksforgeeks.org/testing-in-python-using-doctest-module/" target="_blank">geeksforgeeks: Testing in Python using doctest module</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.test">27.8 'test' — Regression tests package for Python</a><br>
+<a class="semanticweb">Version:  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/test.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/python-testing/" target="_blank">realpython: Getting Started With Testing in Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.regrtest">'test.regrtest' — Regression tests package for Python</a><br>
+<a class="semanticweb">Version:  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/test.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/python-testing/" target="_blank">realpython: Getting Started With Testing in Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.test.support">27.9 'testtest.support' — Utilities for the Python test suite</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/test.html#module-test.support" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.test.support.script_helper">27.10 'test.support.script_helper — Utilities for the Python execution tests</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/test.html#module-test.support.script_helper" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.timeit">28.5 'timeit' — Measure execution time of small code snippets</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/timeit.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="selemium">'selenium'</a><br>
+<a class="semanticweb">Version: 3.141.0  Released: Nov 01, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">You can automate webpages and bind pages and programs made in many other languages, including Python with the Selenium package. From the initial web launch request to form filling, buttons and auto-fill text fields, you can automate all the web elements.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/selenium/" target="_blank">PyPi</a>
+| <a href="https://www.seleniumhq.org/docs/02_selenium_ide.jsp" target="_blank">Selenium IDE 3.4.3</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=T4JUD1_cuJ8" target="_blank">Abhishek Jain</a>
+| <a href="https://www.youtube.com/watch?v=FFDDN1C1MEQ" target="_blank">Raghav Pal</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p><div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.guru99.com/selenium-python.html" target="_blank">Guru99</a>
+| <a href="https://www.techbeamers.com/selenium-webdriver-python-tutorial/" target="_blank">techbeamers</a>
+| <a href="https://pythonspot.com/category/selenium/" target="_blank">pythonspot</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+    <li>
+<a class="listitem" href="https://www.seleniumhq.org/" target="_blank">SeleniumHQ</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://pymotw.com/2/webbrowser/" target="_blank">pymotw</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.marinamele.com/selenium-tutorial-web-scraping-with-selenium-and-python" target="_blank">Mari</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.swtestacademy.com/python-selenium-tutorial/" target="_blank">swtestacademy</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/modern-web-automation-with-python-and-selenium/" target="_blank">RealPython</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://likegeeks.com/python-web-scraping/" target="_blank">Likegeeks</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://seleniumhq.wordpress.com/2018/08/06/selenium-ide-tng/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Selenium+%28The+Official+Selenium+Blog%29" target="_blank">seleniumhq blog</a>
+ - <span class="update">(visited 14 Oct 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">S</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.unittest">27.4 'unittest' — Unit testing framework</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/unittest.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=1Lfv5tUGsn8&index=30&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-" target="_blank">Socratica</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://blakesmith.me/2009/09/14/getting-started-with-python-unit-testing.html" target="_blank">getting started with python unit testing</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="unittest2">'unittest2' — Unit testing framework</a><br>
+<a class="semanticweb">Version: 1.1.0  Released: Jun 30, 2015</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">unittest2 is a backport of the new features added to the unittest testing framework in Python 2.7 and onwards. It is tested to run on Python 2.6, 2.7, 3.2, 3.3, 3.4 and pypy.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/unittest2/" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=1Lfv5tUGsn8&index=30&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-" target="_blank">Socratica</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.unittest.mock">27.5 'unittest.mock' — mock object library</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/unittest.mock.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.unittest.mockstart">27.6 'unittest.mock' — getting started</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/unittest.mock-examples.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="hypothesis">'hypothesis' Module</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Hypothesis is a Python library for creating unit tests.  Often called property based testing; popularised by the Haskell library Quickcheck.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://hypothesis.readthedocs.io/en/latest/" target="_blank">ReadTheDocs</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">S</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="nose2">'nose2'</a><br>
+<a class="semanticweb">Version: 1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'nose' is compatible with any tests written using the unittest framework and can be used as a drop-in replacement for the unittest test runner. It is recommended that you use nose2 instead of nose.<br>
+To get started with nose2, install nose2 from PyPI and execute it on the command line. nose2 will try to discover all test scripts named test*.py and test cases inheriting from unittest.TestCase in your current directory</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="nose">'nose'</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Nose is a testing library. As their homepage states: "nose is nicer testing for python". And their tagline is: "nose extends unit test to make testing easier." A testing framework for python. It is used by millions of python developers. It is a must have if you do test driven development.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="http://ivory.idyll.org/articles/nose-intro.html" target="_blank">An Extended Introduction to the nose Unit Testing Framework</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.pytest">'pytest' </a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.<br>
+pytest supports execution of unittest test cases. The real advantage of pytest comes by writing pytest test cases. pytest test cases are a series of functions in a Python file starting with the name test_.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/pytest/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://docs.pytest.org/en/latest/" target="_blank">PyTest.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://alysivji.github.io/testing-101-introduction-to-testing.html" target="_blank">Testing 101: Introduction to Testing</a>
+ - <span class="update">Aly Sivji: 21 October 18</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tox">'tox' Install Test</a><br>
+<a class="semanticweb">Version:  Released: 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'tox' is a command-line driven automated testing tool. Based on virtualenv, tox can be used for both manually-invoked testing from the desktop, or continuous testing within continuous integration frameworks such as Jenkins or Travis CI.<br>
+'tox' acts a wrapper for both virtual environments and test automation tools, to simplify the consistent testing of Python code across a range of environments. It integrates the use of a virtualisation tool, such as virtualenv, with a test script such as Imprimatur. This gives a consistent container-based testing environment on both desktops and integration servers.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://tox.readthedocs.io/" target="_blank">Tox Automation Project</a>
+ - <span class="update">(visited 10 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">S</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="splinter">'splinter'</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A Python library for testing Web applications by automating interactions with them.  Splinter automates everything end to end, invoking the browser, passing URLs, filling out forms, clicking buttons, and so on.  It requires drivers to work with a specific browser, but Chrome and Firefox are already covered, and it can use Selenium Remote to control a browser running elsewhere. You can even manually execute JavaScript in the target browser. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="https://splinter.readthedocs.io/en/latest/" target="_blank">Splinter</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="mock">'mock'</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A library for testing and mocking Python code which was recently incorporated into the standard library in Python 3.3, so if you’re using python 3.3 or newer, you can use it right off the bat. It seems all the Cakti value rigorous testing.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="coverage">'coverage' </a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">Measures code coverage for Python programs. Tests are important, but too often overlooked. Coverage gives you a way to create a benchmark for how much of a project’s code you’re testing and for improving from there.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="c">'py</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+</body>
+</html>

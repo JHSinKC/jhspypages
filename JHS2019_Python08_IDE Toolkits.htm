@@ -1,0 +1,3707 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python08 IDE Toolkits</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++------------->
+<ul id="menu">
+
+<!--  START - Web GUI section  ---------------------------------------->
+<li><a href="">Web GUI</a>
+<div class="menu-container-3">
+
+<!--  START - Desktop GUI column  ------------------------------------->
+<div class="column-1"><h3>Desktop GUI</h3>
+<ul>
+<li><a href="#asyncio">'asyncio'</a></li>
+<li><a href="#aiohttp">'aiohttp'</a></li>
+<li><a href="#kivy">'kivy'</a></li>
+<li><a href="#pillow">'pillow'</a></li>
+<li><a href="#pygtk">'PyGTK'</a></li>
+<li><a href="#requests">'requests'</a></li>
+<li><a href="#scrapy">'scrapy'</a></li>
+<li><a href="#six">'six'</a></li>
+<li><a href="#twisted">'twisted'</a></li>
+<li><a href="#wxpython">'wxPython'</a></li>
+</ul></div>
+<!--  END - Desktop GUI column  --------------------------------------->
+
+<!--  START - Full Stack Web GUI column  ------------------------------>
+<div class="column-1"><h3>FULLSTACK GUI</h3>
+<ul>
+<li><a href="#django">*django*</a></li>
+<li><a href="#heroku">heroku</a></li>
+<li><a href="#dash">'dash'</a></li>
+<li><a href="#hug">'hug'</a></li>
+<li><a href="#pyjamas">'pyjamas'</a></li>
+<li><a href="#turbogears">'turbogears'</a></li>
+<li><a href="fullstack">Full Stack</a></li>
+<li><a href="#nodejs">'nodejs'</a></li>
+<li><a href="#npm">'npm'</a></li>
+<li><a href="#angular">'angular'</a></li>
+<li><a href="#vue">'vue' module</a></li>
+<li><a href="#react">'react'</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#web2py">PY2: web2py</a></li>
+<li><a href="#">PY2: zope2</a></li>
+<li><a href="#">PY2: cubicweb</a></li>
+</ul></div>
+<!--  END - Full Stack Web GUI column  -------------------------------->
+
+<!--  START - Lightweight GUI column  --------------------------------->
+<div class="column-1"><h3>LIGHTWEIGHT GUI</h3>
+<ul>
+<li><a href="#flask">*flask*</a></li>
+<li><a href="#flask.wtf">'flask-WTF' Forms</a></li>
+<li><a href="#wtforms">WTForms</a></li>
+<li><a href="#bottle">'bottle'</a></li>
+<li><a href="#cherrypy">*cherrypy*</a></li>
+<li><a href="#falcon">'falcon'</a></li>
+<li><a href="#pyramid">'pyramid'</a></li>
+<li><a href="#tornado">*tornado*</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="">GUI WIDGETS</a></li>
+<li><a href="#toscawidgets">widgets: Tosca</a></li>
+<li><a href="#pmw">widgets: 'pmw'</a></li>
+</ul></div>
+<!--  END -  Lightweight GUI column  ---------------------------------->
+
+</div></li>
+<!--  END - Web GUI section  ------------------------------------------>
+
+
+<!--  START - IDE Tools section  -------------------------------------->
+<li><a href="#">IDE Tools</a>
+<div class="menu-container-2">
+
+<!--  START - IDE Tools column  --------------------------------------->
+<div class="column-1"><h3>IDE Tools</h3>
+<ul>
+<li><a href="#ide.pycharm">PyCharm IDE</a></li>
+<li><a href="#ide.Python">Python IDLE</a></li>
+<li><a href="#ide.eclipse">Eclipse IDE</a></li>
+<li><a href="#ide.eclipse.pydev">PyDev IDE /Eclipse</a></li>
+<li><a href="#ide.spyder">Spyder IDE</a></li>
+<li><a href="#ide.wingpersonal">Wing Personal IDE</a></li>
+<li><a href="#ide.wing101">Wing 101 IDE</a></li>
+<li><a href="#ide.vim">Vim IDE</a></li>
+<li><a href="#solid">SOLID Platform</a></li>
+<li><a href="#ide.vscode">Visual Studio Code</a></li>
+</ul></div>
+<!--  END - IDE Tools column  ----------------------------------------->
+
+<!--  START - PYTHON CONSOLE column  ---------------------------------->
+<div class="column-1"><h3>PYTHON CONSOLE</h3>
+<ul>
+<li><a href="#shell.bash">'bash'</a></li>
+<li><a href="#shell.cmder">'cmder'</a></li>
+<li><a href="#shell.powershell">Powershell</a></li>
+<li><a href="#shell.cmd">'cmd' DOS shell</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="">EDITORS</a></li>
+<li><a href="#editor.atom">Atom </a></li>
+<li><a href="#editor.notepad">Notepad++</a></li>
+<li><a href="#editor.sublimetext">Sublime-Text3</a></li>
+</ul></div>
+<!--  END - PYTHON CONSOLE column  ------------------------------------>
+
+</div></li>
+<!--  END - IDE Tools section  ---------------------------------------->
+
+
+<!--  START - Mobile GUI section  ------------------------------------->
+<li><a href="#">Mobile GUI</a>
+<div class="menu-container-1">
+
+<!--  START - Mobile GUI column  -------------------------------------->
+<div class="column-1"><h3>Mobile GUI</h3>
+<ul>
+<li><a href="#beeware">'beeware' Framework</a></li>
+<li><a href="#pyqtdeploy">'pyqtdeploy' tool</a></li>
+<li><a href="#pythonista">'pythonista' (Iphone)</a></li>
+<li><a href="#">M</a></li>
+<li><a href="#">P</a></li>
+</ul></div>
+<!--  END - Mobile GUI column  ---------------------------------------->
+
+</div></li>
+<!--  END - Mobile GUI section  --------------------------------------->
+
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++--------------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++  ----------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="django">'django' Web Frameworks</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Django is the most powerful Python framework you can get. It has the ability to create customized CMS, interface, design and strong functionality based on user demands. You can also import many new and innovative solutions and plugins to increase the versatility of your Python solution.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://www.pythonlake.com/python/django" target="_blank">Python Lake</a>
+| <a href="https://en.wikipedia.org/wiki/Django_(web_framework)" target="_blank">wikipedia</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">N</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=M9rtf7icuG0" target="_blank">Edureka: Django Tutorial for Beginners</a>
+| <a href="https://www.udemy.com/try-django-v1-11-python-web-development/?ranMID=39197&ranEAID=JVFxdTr9V80&ranSiteID=JVFxdTr9V80-P9k9LwhNT543KYaw5u6ZXw&LSNPUBID=JVFxdTr9V80" target="_blank">udemy: Try Django 1.11 // Python Web Development</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|<br>
+
+<!----- thenewboston: Django for Beginners ---------------------------->
+<li>
+[thenewboston: Django for Beginners]
+<a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=qgGIqRFvFFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK&t=0s&index=2" target="_blank">01 install</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=QW_5xCCPWFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK&t=0s&index=41" target="_blank">40  REST API</a>
+|</li>
+<!----- thenewboston: Django for Beginners ---------------------------->
+
+<!----- CleverProgrammer: Django for Beginners ------------------------>
+<li>
+[CleverProgrammer: Django for Beginners]
+ <a href="https://www.youtube.com/playlist?list=PL-J2q3Ga50oOpni_xS2PPUe4mf9lM96dD" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=I7WtoFivrS0&list=PL-J2q3Ga50oOpni_xS2PPUe4mf9lM96dD&t=0s&index=2" target="_blank">01</a>
+| 02 | 03 | 04 | 05
+| <a href="https://www.youtube.com/watch?v=c0evTd_QXYY&list=PL-J2q3Ga50oOpni_xS2PPUe4mf9lM96dD&index=6" target="_blank">06 static files</a>
+|</li>
+<!----- CleverProgrammer: Django for Beginners ------------------------>
+
+<!----- CoreyMS: Django Tutorial -------------------------------------->
+<li>
+[CoreyMS: Django Tutorial]
+ <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=UmljXZIypDc&index=2&t=0s&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p" target="_blank">01 install</a>
+| <a href="https://www.youtube.com/watch?v=a48xeeo5Vnk&index=3&t=0s&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p" target="_blank">02 apps/routes</a>
+| <a href="https://www.youtube.com/watch?v=qDwdMDQ8oX4&index=4&t=0s&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p" target="_blank">03 templates</a>
+| 04 | 05
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=Sa_kQheCnds&index=14&t=0s&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p" target="_blank">13 deploy</a>
+|</li>
+<!----- CoreyMS: Django Tutorial -------------------------------------->
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/series/python-django-tutorial/" target="_blank">pythoncentral</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">N</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.djangoproject.com/" target="_blank">Django Project</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://djangoforbeginners.com/" target="_blank">Django For Beginners</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html" target="_blank">A Complete Beginner's Guide to Django</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.django-rest-framework.org/" target="_blank">Django REST framework</a>
+ - <span class="update">(visited 11 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/django-migrations-a-primer/" target="_blank">realpython: Django Migrations: A Primer</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Other Django Modules</div>
+<div class="propertydescription">
+<li>django-filter (1.0.1+) - Filtering support.</li>
+<li>django-crispy-forms - Improved HTML display for filtering.</li>
+<li>django-guardian (1.1.1+) - Object level permissions support.</li>
+<li>djangorestframework</li>
+</div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="heroku">Heroku cloud platform</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Heroku makes it easy to deploy and scale Python apps. Whether you prefer frameworks like Django or Flask, or getting your hands dirty with Twisted or raw sockets.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<li>
+<a class="listitem" href="https://devcenter.heroku.com/" target="_blank">Heroku DevCenter</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://devcenter.heroku.com/categories/python-support" target="_blank">Heroku for Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="hug">'hug'</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">hug is not a Web API Framework. hug is the cleanest way to create HTTP REST APIs on Python3. At its core, hug is a framework for exposing idiomatically correct and standard internal Python APIs externally.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://github.com/timothycrosley/hug" target="_blank">GitHub</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.hug.rest/">Hug.rest</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.bedjango.com/blog/what-is-hug/" target="_blank">BeDjango</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyjamas">'pyjamas' Web Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pyjamas' or Pyjs is a port of Google Web Toolkit to Python, and thus enables the development of Rich Media AJAX applications in Python; no need for special browser plugins. Pyjs contains a stand-alone python-to-javascript compiler, and also a Widget Set API that looks very similar to Desktop Widget Set APIs (such as PyQT4 or PyGTK2).<br>
+Pyjs also contains a Desktop Widget Set version, running as pure python, with three useable Desktop ports available. With web-engine technology at it's core, HTML, CSS, plugins and other related features work out-of-the-box.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Pyjamas/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://wiki.python.org/moin/Pyjamas?action=show&redirect=PyJamas" target="_blank">Python Wiki</a>
+ - <span class="update">(visited 27 Aug 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://pyjs.org/" target="_blank">pyjs</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://wiki.python.org/moin/PyjamasDesktop" target="_blank">Pyjamas Desktop</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="turbogears">'turbogears'</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">TurboGears 2 is built on top of the experience of several next generation web frameworks including TurboGears 1, Django, and Rails.  TurboGears is designed around the model–view–controller (MVC) architecture.<br>
+<li>front end: MochiKit JavaScript for the browser, Genshi / Kid / Mako / Cheetah for templates in Python</li>
+<li>Genshi (View) defines templates for the HTML or XHTML the user will generate. This is where the user defines the front-end the client will interact with.</li>
+<li>controllers: CherryPy</li>
+<li>back end: SQLObject or SQLAlchemy defines the table structures of the user's database and how to link them to Python objects the user's controller can interact with.<br>
+Ming (Model) provides the data access layer for MongoDB, much like SQLAlchemy defines how to link MongoDB collections to Python objects the user's controller can interact with.</li>
+<li>security: Repoze - Repoze.who is used to handle security (identification and authentication). Users can define authorization rules based on predicates attached to controllers, the framework already provides some built-in predicates, but custom ones can be written.</li>
+<li>ToscaWidgets is the primary widget library for creating forms and complex GUIs. Tosca by default will generate simple HTML forms, but can also be used as a middleware to connect to more advanced JavaScript widgets and toolkits. Unlike TurboGears 1.x, there is no longer a preferred/integrated JavaScript library.</li>
+<li>Gearbox is the toolkit used by TurboGears to manage projects, create new ones and serve TurboGears applications but the user can also connect to Apache, Nginx, or any other WSGI-compatible webserver.</li>
+</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wiki.python.org/moin/TurboGears" target="_blank">Python Wiki</a>
+| <a href="https://pypi.org/project/TurboGears/" target="_blank">PyPi</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.turbogears.org/" target="_blank">TurboGears</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="web2py">Py2: 'web2py'</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="">g</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask">'flask' Web Micro-Framework</a><br>
+<a class="semanticweb">Version: 1.0.2  Released: May 02, 2018</a>
+<a class="newhtml5">Packaged with (5) dependencies</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.<br>
+Flask doesn’t enforce any dependencies or project layout, but it does come packaged with five other apps (see below).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://flask.pocoo.org/docs/1.0/" target="_blank">docs1.0.2</a>
+| <a href="https://pypi.org/project/Flask-SQLAlchemy/" target="_blank">PyPI: Flask + <a href="#sqlalchemy">SQL-Alchemy 2.3.2</a></a>
+|<br>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|
+<!----- CoreyMSchafer ------------------------------------------------->
+<li>
+[CoreyMSchafer: Python Flask Tutorial: Full-Featured Web App]
+ <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=MwZwr5Tvyxo&index=2&t=0s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">01 Get Started</a>*
+| <a href="https://www.youtube.com/watch?v=QnDWIZuWYW0&index=2&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">02 templates</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=UIJKdCIEXUQ" target="_blank">03 forms</a>
+| <a href="https://www.youtube.com/watch?v=cYWiDiIUxQc" target="_blank">04 database</a>
+| <a href="https://www.youtube.com/watch?v=44PvX0Yv368" target="_blank">05 Package Structure</a>
+| <a href="https://www.youtube.com/watch?v=CSHx6eCkmv0" target="_blank">06 User Authentication</a>
+| <a href="https://www.youtube.com/watch?v=803Ei2Sq-Zs" target="_blank">07 User Account and Profile</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=u0oDDZrDz9U" target="_blank">08 Posts</a>
+| <a href="https://www.youtube.com/watch?v=PSWf2TjTGNY" target="_blank">09 Pagination</a>
+| <a href="https://www.youtube.com/watch?v=vutyTx7IaAI" target="_blank">10 Email and Password Reset</a>
+| <a href="https://www.youtube.com/watch?v=Wfx4YBzg16s" target="_blank">11 Blueprints and Configuration</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=uVNfQDohYNI" target="_blank">12 Custom Error Pages</a>
+| <a href="https://www.youtube.com/watch?v=goToXTC96Co&t=0s&index=14&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">13 Deploy</a>
+|</li>
+<!----- CoreySchafer -------------------------------------------------->
+
+<!----- RealPython: Discover Flask ------------------------------------>
+<li>
+[RealPython: Discover Flask]
+ <a href="https://github.com/realpython/discover-flask" target="_blank">Github: playlist</a>
+| <a href="https://www.youtube.com/watch?v=WfpFUmV1d0w&feature=youtu.be" target="_blank">01 Setting up a static site</a>
+| <a href="https://www.youtube.com/watch?v=bLA6eBGN-_0" target="_blank">02 Creating a login page</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=qAe6v_6SMA8&feature=youtu.be" target="_blank">30 Continuous Integration</a>
+|</li>
+<!----- RealPython: Discover Flask ------------------------------------>
+
+<!----- Traversy Media: Flask From Scratch ---------------------------->
+<li>
+[Traversy Media: Flask From Scratch]
+ <a href="https://www.youtube.com/playlist?list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_">Github: playlist</a>
+| <a href="https://www.youtube.com/watch?v=zRwy8gtgJ1A&index=2&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&t=0s" target="_blank">01 GetStarted</a>
+| <a href="https://www.youtube.com/watch?v=addnlzdSQs4&index=3&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&t=0s">02 UserReg</a>
+| <a href="https://www.youtube.com/watch?v=QEMtSUxtUDY&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&index=3" target="_blank">03 Login</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=EgnyWxKFwjs&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&index=4">04 Dashboard</a>
+| <a href="https://www.youtube.com/watch?v=Us9DuF4KWUE&index=5&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_" target="_blank">05 EditArticles</a>
+|</li>
+<!----- RealPython: Flask From Scratch -------------------------------->
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.fullstackpython.com/flask.html" target="_blank">Full Stack Python</a>
+| <a href="http://coreyms.com/development/python/python-flask-tutorials-full-series" target="_blank">coreyms: Flask</a>
+| <a href="http://flask-tutorial.com/" target="_blank">RMOTR: (20)flask</a>
+| <a href="http://flask.pocoo.org/docs/1.0/tutorial/" target="_blank">Pocoo: (11)flask</a>
+| <a href="http://pythonspot.com/flask-web-app-with-python/" target="_blank">PythonSpot: Flask For Beginners</a>
+|<br>
+| <a href="http://www.tutorialspoint.com/flask" target="_blank">TutorialsPoint</a>
+| <a href="https://hackr.io/tutorials/learn-flask" target="_blank">HackrIO: (+10)</a>
+| <a href="https://scotch.io/tutorials/getting-started-with-flask-a-python-microframework" target="_blank">Scotch: Getting Started With Flask</a>
+| <a href="https://pythonprogramming.net/practical-flask-introduction/" target="_blank">PythonProgramming</a>
+| <a href="https://pythonhow.com/building-a-website-with-python-flask/" target="_blank">PythonHow</a>
+|<br>
+| <a href="https://www.journaldev.com/15524/python-flask-tutorial" target="_blank">JournalDev</a>
+| <a href="http://realpython.com/tutorials/flask/" target="_blank">Real Python: list!</a>
+| <a href="https://realpython.com/scaffold-a-flask-project/" target="_blank">realpython: Scaffold a Flask Project</a>
+|<br>
+| <a href="http://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-python-flask-and-mysql--cms-22972" target="_blank">FEE TutsPlus: Create Web App w/Flask + MySQL</a>
+| <a href="https://code.tutsplus.com/courses/build-a-web-app-with-the-flask-microframework-for-python" target="_blank">FEE TutsPlus: Build a Web App w/Flask</a>
+|<br>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|<br>
+
+<!----- Miguel: Flask Mega-Tutorial ----------------------------------->
+<li>
+[Miguel Grinberg: Flask Mega-Tutorial (veMicroblog)]
+ <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">01 HelloWorld</a>*
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates" target="_blank">02 Templates</a>*
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms" target="_blank">03 Web Forms</a>
+|<br /><span>--&gt;</span>
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database" target="_blank">04 database</a>
+|<br /><span>--&gt;</span>
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis" target="_blank">23 APIs</a>
+|</li>
+<!----- Miguel: Flask Mega-Tutorial ----------------------------------->
+
+<!----- RealPython: Flask by Example ---------------------------------->
+<li>
+[RealPython: Flask by Example]
+ <a href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">01 Project Setup on Heroku</a>
+| <a href="https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/" target="_blank">02 Setup Postgres + SQLAlchemy + Alembic</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-part-3-text-processing-with-requests-beautifulsoup-nltk/" target="_blank">03 Text Processing w/Requests + BeautifulSoup + NLTK</a>
+| <a href="https://realpython.com/flask-by-example-implementing-a-redis-task-queue/" target="_blank">04 Implementing a Redis Task Queue</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-integrating-flask-and-angularjs/" target="_blank">05 Integrating Flask + Angular</a>
+| <a href="https://realpython.com/updating-the-staging-environment/" target="_blank">06 Updating the Staging Environment</a>
+| <a href="https://realpython.com/flask-by-example-updating-the-ui/" target="_blank">07 Updating the UI</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-custom-angular-directive-with-d3/" target="_blank">08 Custom Angular Directive with D3</a>
+|</li>
+<!----- RealPython: Flask by Example ---------------------------------->
+
+<!----- RealPython: Python Web Applications with Flask ---------------->
+<li>
+[RealPython: Python Web Applications with Flask]
+ <a href="https://realpython.com/python-web-applications-with-flask-part-i/" target="_blank">01 Application setup</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/python-web-applications-with-flask-part-ii/" target="_blank">02  Setup user accounts + Templates + Static files</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/python-web-applications-with-flask-part-iii/" target="_blank">03 Testing (unit and integration) + Debugging + Error Handling</a>
+|</li>
+<!----- RealPython: Python Web Applications with Flask ---------------->
+
+<!----- Pretty Printed: Intro to Flask Tutorials ---------------------->
+<li>
+[Pretty Printed: Intro to Flask]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=mD4KFDmusCc&index=2&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&t=0s" target="_blank">01 intro</a>
+| <a href=https://www.youtube.com/watch?v=tvRnBbwQwvs&index=2&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">02 Hello</a>
+| <a href="https://www.youtube.com/watch?v=zKI66AuEGkA&index=4&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&t=0s" target="_blank">03 endpoints</a>
+| <a href="https://www.youtube.com/watch?v=HILynX3Dsoc&index=4&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">04 templates</a>
+| <a href="https://www.youtube.com/watch?v=2LADyUdtTrs&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&index=5" target="_blank">05 guestbook</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=SYeKYJwwYvg&index=6&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">06 form</a>
+| <a href="https://www.youtube.com/watch?v=0FsvqwRhYdM&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&index=7" target="_blank">07 database</a>
+| <a href="https://www.youtube.com/watch?v=_hGE8yvnOfY&index=8&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">08 wrapup</a>
+|</li>
+<!----- Pretty Printed: Intro to Flask Tutorials ---------------------->
+
+<!----- Pretty Printed: Flask Tutorials ------------------------------->
+<li>
+[Pretty Printed: Flask Tutorials]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">Playlist</a>
+|<br /><span>--&gt;</span>
+[ RESTFul API With Flask] <a href="" target="_blank">01 Get</a>
+| <a href="" target="_blank">02 Post</a>
+| <a href="" target="_blank">03 Put</a>
+| <a href="" target="_blank">04 Delete</a>
+|<br /><span>--&gt;</span>
+[Flask] <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&t=0s&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=6" target="_blank">05 fl-templates</a>
+| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=6&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">06 loops</a>
+| <a href="https://www.youtube.com/watch?v=gQ6lh3ir2Jw&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8&t=0s" target="_blank">07 HW</a>
+| <a href="https://www.youtube.com/watch?v=Kg9OqG_ZqhM&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8" target="_blank">08 Folders</a>
+| <a href="https://www.youtube.com/watch?v=xHyvIkkZ7uc&index=9&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">09 debug</a>
+| <a href="https://www.youtube.com/watch?v=nWO_VpI5wn8&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=10" target="_blank">10 mysql</a>
+| ....<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=8qDdbcWmzCg&index=126&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">126 context procs</a>
+|</li>
+<!----- Pretty Printed: Flask Tutorials ------------------------------->
+
+<!----- Pretty Printed: Flask Templates  ------------------------------>
+<li>
+[Pretty Printed: Flask Templates]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&t=0s&index=2" target="_blank">01</a>
+| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=2&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">02</a>
+| <a href="https://www.youtube.com/watch?v=sDrGyxDd4qc&t=0s&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=4" target="_blank">03 macros</a>
+| <a href="https://www.youtube.com/watch?v=FeCdwD32zeQ&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=4" target="_blank">04 </a>
+| <a href="https://www.youtube.com/watch?v=mWuhuaQMZsM&index=5&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">05 jinja</a>
+| <a href="https://www.youtube.com/watch?v=HYO6GNOJMmQ&index=6&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">06 fl-assets</a>
+| <a href="https://www.youtube.com/watch?v=C09qJXa6eKo&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=7" target="_blank">07 fl-assets</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=PE9ZGniSDW8&index=8&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">08 fl-bootstrap</a>
+| <a href="https://www.youtube.com/watch?v=S7ZLiUabaEo&index=9&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">09 fl-bootstrap</a>
+|</li>
+<!----- Pretty Printed: Flask Templates ------------------------------->
+
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://scotch.io/tag/python" target="_blank">Scotch: Flask</a>
+ - <span class="update">(visited 06 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://exploreflask.com/en/latest/" target="_blank">ExploreFlask: </a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">realpython: Flask by Example</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How to install Flask</div>
+<div class="propertydescription">[Powershell] <kbd>python -m pip install -U Flask</kbd>
+<ol>
+<li>Flask  1.0.2</li>
+<li>Jinja2  2.10</li>
+<li>MarkupSafe  1.1.0</li>
+<li>Werkzeug  0.14.1</li>
+<li>click  7.0</li>
+<li>itsdangerous  1.1.0</li>
+</ol></div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.wtf">'flask-WTF' Web Forms</a><br>
+<a class="semanticweb">Version: 0.14.2  Released: Jan 10, 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-WTF is simple integration of Flask and WTForms + CSRF + file upload + reCAPTCHA.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wtforms.readthedocs.io/en/stable/" target="_blank">WTForms 2.2.1</a>
+| <a href="https://pypi.org/project/Flask-WTF/" target="_blank">PyPI</a>
+| <a href="https://flask-wtf.readthedocs.io/en/stable/" target="_blank">readthedocs: Flask-WTF User Guide</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=-HTAKf4BJPY" target="_blank">Levin: Using Flask-WTF and wtforms Web Forms in Python</a>
+| <a href="https://www.youtube.com/watch?v=eu0tg4vgFr4" target="_blank">prettyprinted: Form Handling in Flask Using WTForms</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|
+
+<!----- Pretty Printed: Flask-WTForms Tutorials ----------------------->
+<li>
+| [Pretty Printed: Flask-WTForms Tutorials] | <a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=eu0tg4vgFr4&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=1" target="_blank">01 intro</a>
+| <a href="https://www.youtube.com/watch?v=F9vTlDzn7ac&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=2" target="_blank">02 validators</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=I2dJuNwlIH0&t=0s&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=12" target="_blank">11 dropdowns</a>
+|</li>
+<!----- Pretty Printed: Flask-WTForms Tutorials ----------------------->
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tutorialspoint.com/flask/flask_wtf.htm" target="_blank">tutorialspoint: </a>
+| <a href="https://pythonhosted.org/Flask-WTF/form.html" target="_blank">pythonhosted: Creating Forms</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="wtforms">WTForms</a><br>
+<a class="semanticweb">Version: 2.2.1  Released: </a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Forms provide the highest level API in WTForms. They contain your field definitions, delegate validation, take input, aggregate errors, and in general function as the glue holding everything together.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wtforms.readthedocs.io/en/stable/" target="_blank">readthedocs: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tutorialspoint.com/flask/flask_wtf.htm" target="_blank">tutorialspoint: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="bottle">'bottle' Web Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Bottle is a fast, simple and lightweight WSGI micro web-framework for Python. It is distributed as a single file module and has no dependencies other than the Python Standard Library.<br>
+A tiny, lightweight Web framework that's also quite fast.  Routing, templates, access to request and response data, support for multiple server types from plain old CGI on up, and support for more advanced features like WebSockets -- it's all here. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://github.com/bottlepy/bottle" target="_blank">GitHub</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=9Req-E5lXtY" target="_blank">10 Reasons to Use Python Bottle For Your Next API</a>
+| <a href="https://www.youtube.com/watch?v=g_9nsFJS_pk" target="_blank">Intro to Bottle Web Framework</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://bottlepy.org/docs/dev/tutorial.html" target="_blank">BottlePy</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://bottlepy.org/docs/dev/">Bottle: Python Web Framework</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++-------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="cherrypy">'cherrypy' Web Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://cherrypy.org/" target="_blank">cherrypy.org</a>
+| <a href="https://pypi.org/project/CherryPy/" target="_blank">PyPI: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://github.com/cherrypy/cherrypy/tree/master/cherrypy/tutorial" target="_blank">Github: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+
+<!----- Dive Into Python ----------------------------------------------------->
+<li>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html" target="_blank">CherryPy.org</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-1-a-basic-web-application" target="_blank">01 basic-web-app</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-2-different-urls-lead-to-different-functions" target="_blank">02 Different URLs=different functions</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-3-my-urls-have-parameters" target="_blank">03 My URLs have parameters</a>
+|<br /><span>--&gt;</span>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-4-submit-this-form" target="_blank">04 Submit this form</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-5-track-my-end-user-s-activity" target="_blank">05 Track end-user’s activity</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-6-what-about-my-javascripts-css-and-images" target="_blank">06 What about my javascripts, CSS and images?</a>
+|<br /><span>--&gt;</span>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-7-give-us-a-rest" target="_blank">07 Give us a REST</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-8-make-it-smoother-with-ajax" target="_blank">08 iterMake it smoother with Ajax</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-9-data-is-all-my-life" target="_blank">09 Data is all my life</a>
+|<br /><span>--&gt;</span>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-10-make-it-a-modern-single-page-application-with-react-js" target="_blank">10 Modern single-page application with React.js</a>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-11-organize-my-code" target="_blank">11 Organize my code</a>
+|<br /><span>--&gt;</span>
+| <a href="https://docs.cherrypy.org/en/latest/tutorials.html#tutorial-12-using-pytest-and-code-coverage" target="_blank">12 Using pytest and code coverage</a> |
+</li>
+<!----- Dive Into Python ---------------------------------------------->
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://cherrypy.org/">CherryPy.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="falcon">'falcon' Web API framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Falcon is a bare-metal Python web API framework for building very fast app backends and microservices.<br>
+Falcon is a WSGI-compliant web framework designed to build RESTful APIs without requiring external code library dependencies.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://github.com/falconry/falcon" target="_blank">GitHub</a>
+| <a href="https://github.com/falconry/falcon/wiki" target="_blank">Falcon Wiki</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://falcon.readthedocs.io/en/stable/user/tutorial.html" target="_blank">ReadTheDocs</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://falconframework.org/" target="_blank">Falcon Framework</a>
+ - <span class="update">(visited 11 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/falcon.html">Fullstack Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyramid">'pyramid'</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Pyramid makes it easy to write web applications.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://docs.pylonsproject.org/projects/pyramid/en/latest/quick_tutorial/index.html" target="_blank">Pyramid</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://trypyramid.com/">TryPyramid</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.pylonsproject.org/projects/pyramid/en/latest/" target="_blank">PylonsProject</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/pyramid.html" target="_blank">Fullstack</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tornado">'tornado' Web Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/tornado/" target="_blank">PyPi</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.tornadoweb.org/en/stable/">Tornado Web</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://opensource.com/article/18/6/tornado-framework" target="_blank">An introduction to Tornado</a>
+ - <span class="update">(visited 20 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="toscawidgets">'tosca' Widgets</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.toscawidgets.org/" target="_blank">Tosca Widgets</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">W</div>
+<div class="propertydescription"></div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pmwwidgets">'pmw' Python MegaWidgets</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Python Mega Widgets (v2.0.1 - Mar 22, 2015) provide UI elements missing from Tkinter.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Pmw/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="asyncio">'asyncio' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="aiohttp">'aiohttp' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="kivy">'kivy' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pillow">'pillow' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/python/pillow/" target="_blank">zetcode: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pygtk">GTK+3 Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://python-gtk-3-tutorial.readthedocs.io/en/latest/" target="_blank">ReadTheDocs</a>
+| <a href="http://zetcode.com/gui/pygtk/" target="_blank">zetcode: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++---------------------->
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="requests">'requests' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/web/pythonrequests/" target="_blank">zetcode: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="scrapy">'scrapy' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="six">'six' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="twisted">'twisted' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="wxpython">'wxPython' Web GUI</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/wxPython/4.0.3/" target="_blank">PyPI</a>
+| <a href="https://docs.wxpython.org/" target="_blank">API Documentation</a>
+| <a href="https://wiki.python.org/moin/WxPython" target="_blank">Python.org</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/wxpython/" target="_blank">Zetcode</a>
+| <a href="https://www.tutorialspoint.com/wxpython/" target="_blank">TutorialsPoint</a>
+| <a href="https://pythonspot.com/wx/" target="_blank">PythonSpot: </a>
+| <a href="http://zetcode.com/wxpython/" target="_blank">zetcode: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/results?search_query=wxpython+tutorial+%2Bsentdex" target="_blank">Sentdex</a>
+| <a href="https://www.youtube.com/watch?v=NMjV_HGLAQE" target="_blank">01</a>
+| <a href="https://www.youtube.com/watch?v=VxgdtFqWEvY" target="_blank">07</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://www.youtube.com/watch?v=qmGR1C1wJ-o" target="_blank">OpenEducation</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.wxpython.org/" target="_blank">wxPython.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc26.0">26.0 Windows Graphical User Interfaces with Tk</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.6/" target="_blank">Tcl Developer Xchange</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/tutorial/tcltutorial.html" target="_blank">Flynt</a>
+| <a href="http://zetcode.com/lang/tcl/" target="_blank">Zetcode Tcl</a>
+| <a href="http://zetcode.com/gui/tcltktutorial/" target="_blank">Zetcode Tcl/Tk</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.tcl.tk/" target="_blank">Tcl Developer Xchange</a>
+ - <span class="update">(visited 06 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Python's built-in HTTP server</div>
+<div class="propertydescription"># Python 3.7
+<kbd>$ python3 -m http.server</kbd></div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter">'tkinter' Windows GUI with Tcl/Tk</a><br>
+<a class="semanticweb">Version: 3.7.2rc1  Released: Dec 11, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/tkinter.html" target="_blank">docs3.7.1</a>
+| <a href="https://tkdocs.com/" target="_blank">TkDocs</a>
+| <a href="http://effbot.org/tkinterbook/" target="_blank">Effbot</a>
+| <a href="http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/ttk-style-layer.html" target="_blank">NMT: Tkinter 8.5 reference</a>
+|<br>
+| <a href="" target="_blank">1</a>
+| <a href="" target="_blank">1</a>
+| <a href="" target="_blank">1</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="https://www.tutorialspoint.com/python/python_gui_programming.htm" target="_blank">TutorialsPoint: </a>
+| <a href="https://www.geeksforgeeks.org/python-gui-tkinter/" target="_blank">geeksforgeeks</a>
+| <a href="https://www.python-course.eu/python_tkinter.php" target="_blank">python-course.eu: </a>
+|<br>
+| <a href="https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html" target="_blank">python-textbok:  Intro to GUI programming w/tkinter</a>
+|<br>
+
+<!----- CodeInPython: Tkinter ----------------------------------------->
+<li>
+[CodeInPython]
+| <a href="https://codeinpython.com/tutorials/getting-started-tkinter-python/" target="_blank">01 Start</a>
+| <a href="https://codeinpython.com/tutorials/organize-tkinter-layout/" target="_blank">02 Layout management</a>
+| <a href="https://codeinpython.com/tutorials/fit-widgets-tkinter-layout/" target="_blank">03 widgets</a>
+| <a href="https://codeinpython.com/tutorials/working-grid-layout-tkinter/" target="_blank">04 grid</a>
+| <a href="https://codeinpython.com/tutorials/how-to-bind-functions-to-tkinter-layout/" target="_blank">05 bind functions</a>
+| <a href=https://codeinpython.com/tutorials/implement-mouse-click-event-tkinter/" target="_blank">06 mouse</a>
+|<br /><span>--&gt;</span>
+| <a href="https://codeinpython.com/tutorials/learn-use-classes-tkinter/" target="_blank">07 Classes</a>
+| <a href="https://codeinpython.com/tutorials/how-to-create-drop-down-menus-in-tkinter/" target="_blank">08 Menus</a>
+| <a href="https://codeinpython.com/tutorials/learn-add-status-bar-tkinter/" target="_blank">09 statusbar</a>
+
+| <a href="https://codeinpython.com/tutorials/create-message-box-tkinter/" target="_blank">10 msgbox</a>
+
+|</li>
+<!----- CodeInPython: Tkinter ----------------------------------------->
+
+<!----- zetcode: Tkinter ---------------------------------------------->
+<li>
+[zetcode: Tkinter]
+| <a href="http://zetcode.com/gui/tkinter/" target="_blank">playlist</a>
+| <a href="http://zetcode.com/gui/tkinter/introduction/" target="_blank">01 Intro</a>
+| <a href="http://zetcode.com/gui/tkinter/layout/" target="_blank">Layout management</a>
+| <a href="http://zetcode.com/gui/tkinter/attributes/" target="_blank">widget attributes</a>
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">widgets</a>
+|<br /><span>--&gt;</span>
+| <a href="http://zetcode.com/gui/tkinter/menustoolbars/" target="_blank">Menus & toolbars</a>
+| <a href="http://zetcode.com/gui/tkinter/dialogs/https://codeinpython.com/tutorials/implement-mouse-click-event-tkinter/" target="_blank">Dialogs</a>
+| <a href="http://zetcode.com/gui/tkinter/drawing/" target="_blank">Drawing</a>
+| <a href="http://zetcode.com/gui/tkinter/snake/" target="_blank">Snake</a>
+|</li>
+<!----- zetcode: Tkinter ---------------------------------------------->
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+
+<!----- Sentdex: GUIs w/Tkinter --------------------------------------->
+<li>
+[Sentdex: GUIs w/Tkinter]
+| <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=HjNHATw6XgY&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&index=2&t=0s" target="_blank">01 intro</a>*
+| <a href="https://www.youtube.com/watch?v=A0gaXfM1UN0&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&index=2" target="_blank">02</a>*
+| <a href="" target="_blank">03</a>
+| <a href="" target="_blank">04</a>
+| <a href="" target="_blank">05</a>
+| <a href="" target="_blank">06</a>
+| <a href="" target="_blank">07</a>
+| <a href="" target="_blank">08</a>
+| <a href="" target="_blank">09</a>
+| <a href="" target="_blank">10</a>
+|<br /><span>--&gt;</span>
+| <a href="" target="_blank">11</a>
+| <a href="" target="_blank">12</a>
+| <a href="" target="_blank">13</a>
+| <a href="" target="_blank">14</a>
+| <a href="" target="_blank">15</a>
+| <a href="" target="_blank">16</a>
+| <a href="" target="_blank">17</a>
+| <a href="" target="_blank">18</a>
+| <a href="" target="_blank">19</a>
+| <a href="" target="_blank">20</a>
+| <a href="" target="_blank">21</a>
+| <a href="" target="_blank">22</a>
+| <a href="" target="_blank">23</a>
+| <a href="" target="_blank">24</a>
+| <a href="" target="_blank">25</a>
+| <a href="" target="_blank">26</a>
+| <a href="" target="_blank">27</a>
+| <a href="" target="_blank">28</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=HosXxXE24hA&index=30&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&t=0s" target="_blank">29 Converting to exe</a>
+|</li>
+<!----- Sentdex: GUIs w/Tkinter --------------------------------------->
+
+<!----- TheNewBoston: Python GUI w/Tkinter ---------------------------->
+<li>
+[TheNewBoston: Python GUI w/Tkinter]
+| <a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=RJB1Ek2Ko_Y&index=2&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&t=0s" target="_blank">01 intro</a>
+| <a href="" target="_blank">02 layout</a>
+| <a href="" target="_blank">03 widgets</a>
+| <a href="" target="_blank">04 grid</a>
+| <a href="" target="_blank">05 grid</a>
+|<br /><span>--&gt;</span>
+| <a href="" target="_blank">06 binding functions</a>
+| <a href="" target="_blank">07 mouse</a>
+| <a href="" target="_blank">08 classes</a>
+| <a href="" target="_blank">09 menus</a>
+| <a href="" target="_blank">10 toolbar</a>
+| <a href="" target="_blank">11 statusbar</a>
+| <a href="" target="_blank">12 msgbox</a>
+|<br /><span>--&gt;</span>
+| <a href="" target="_blank">13 shapes</a>
+| <a href="https://www.youtube.com/watch?v=lt78_05hHSk&index=15&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&t=0s" target="_blank">14 images</a>
+<!----- TheNewBoston: Python GUI w/Tkinter ---------------------------->
+
+<!----- John Philip Jones: Python tkinter ----------------------------->
+<li>
+[John Philip Jones: Python tkinter]
+| <a href="https://www.youtube.com/playlist?list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=yuoSKkSEhQg&index=2&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&t=5s" target="_blank">01</a>*
+| <a href="https://www.youtube.com/watch?v=wZ6yiUTK3Zs&index=2&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">02</a>*
+| <a href="https://www.youtube.com/watch?v=8_SXLM-a120&index=3&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">03</a>*
+| <a href="https://www.youtube.com/watch?v=rQ9XMB-0hu0&index=4&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">04</a>*
+| <a href="https://www.youtube.com/watch?v=reSF2lfrRVE&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=5" target="_blank">05</a>*
+| <a href="https://www.youtube.com/watch?v=OelKSd2nL5w&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=6" target="_blank">06</a>*
+| <a href="https://www.youtube.com/watch?v=9b1x6dZakuk&index=7&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">07</a>*
+| <a href="https://www.youtube.com/watch?v=SVW0ofsBKCU&index=8&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">08</a>*
+| <a href="https://www.youtube.com/watch?v=gjU3Lx8XMS8&index=9&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">09</a>*
+| <a href="https://www.youtube.com/watch?v=pD6a9MoQCVc&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=10" target="_blank">10 label</a>*
+| <a href="https://www.youtube.com/watch?v=mYmqsJ_eSbU&index=11&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">11</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=Xfq7l1PlJvo&index=12&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">12</a>*
+| <a href="https://www.youtube.com/watch?v=RmrJqviSi2Y&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=13" target="_blank">13</a>*
+| <a href="https://www.youtube.com/watch?v=iIa1QH-QGgM&index=14&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">14</a>*
+| <a href="https://www.youtube.com/watch?v=OcjJOz-UM98&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=15" target="_blank">15</a>*
+| <a href="https://www.youtube.com/watch?v=Typ6Q8zKq1w&index=16&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">16 anchor</a>*
+| <a href="https://www.youtube.com/watch?v=7C47_rPzH0U&index=17&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">17 padx</a>*
+| <a href="https://www.youtube.com/watch?v=LV1GBHsz5YY&index=18&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">18 justify</a>*
+| <a href="https://www.youtube.com/watch?v=EJHUhSwLde0&index=19&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">19</a>*
+| <a href="https://www.youtube.com/watch?v=kIzKaS-_4sY&index=20&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">20 options</a>*
+| <a href="https://www.youtube.com/watch?v=ZHix5eYa0m8&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=21" target="_blank">21</a>*
+| <a href="https://www.youtube.com/watch?v=yTJ8CERZGdU&index=22&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">22 keys</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=ixoXj1WDPbw&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=23" target="_blank">23 stringVar</a>*
+| <a href="https://www.youtube.com/watch?v=WYzC7lPswaE&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=24" target="_blank">24 set()</a>*
+| <a href="https://www.youtube.com/watch?v=ZPg_oZT-8rQ&index=25&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">25 button</a>*
+| <a href="https://www.youtube.com/watch?v=qJtf0J0Vrkg&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=26" target="_blank">26 grid</a>*
+| <a href="https://www.youtube.com/watch?v=XZ2G29ZUaII&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=27" target="_blank">27 summary</a>*
+| <a href="https://www.youtube.com/watch?v=qCnBkZLb-E4&index=28&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">28 entry</a>*
+| <a href="https://www.youtube.com/watch?v=xDFMpNxupzo&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=29" target="_blank">29 StringVar</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=H1-6DfphTKQ&index=30&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">30 metric con</a>*
+| <a href="https://www.youtube.com/watch?v=gkBgMmVVzJg&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=31" target="_blank">31</a>*
+| <a href="https://www.youtube.com/watch?v=l1Joyw6UkTo&index=32&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">32 focus</a>*
+| <a href="https://www.youtube.com/watch?v=L4YmYBTaTDs&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=33" target="_blank">33 taborder</a>*
+| <a href="https://www.youtube.com/watch?v=HyKaZggBAU4&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=34" target="_blank">34</a>*
+| <a href="https://www.youtube.com/watch?v=2j9sYld4uaM&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=35" target="_blank">35 frame</a>*
+| <a href="https://www.youtube.com/watch?v=Mxk4cMBaH3g&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=36" target="_blank">36</a>*
+| <a href="https://www.youtube.com/watch?v=HTyN25rnla0&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=37" target="_blank">37 inheritance</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=2otH7ajZF9c&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=38" target="_blank">38 id/type</a>*
+| <a href="https://www.youtube.com/watch?v=2a-WeQMZMLg&index=39&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">39 __init,self</a>*
+| <a href="https://www.youtube.com/watch?v=bOt1ilhZ3tk&index=40&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">40</a>*
+| <a href="https://www.youtube.com/watch?v=N9rPxEvfw1M&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=41" target="_blank">41</a>*
+| <a href="https://www.youtube.com/watch?v=cp3ivNQia2c" target="_blank">42 fullscreen win</a>*
+| <a href="https://www.youtube.com/watch?v=Ho81tTjwwqI" target="_blank">43 fullscreen fstr</a>*
+| <a href="https://www.youtube.com/watch?v=m64ZPOoQnm4&index=45&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&t=0s" target="_blank">44 canvas</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=vdCaAmO_uMs" target="_blank">45 drawline</a>*
+| <a href="https://www.youtube.com/watch?v=fNN57UIGzls&t=0s&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=47" target="_blank">46 hexcolor</a>*
+|</li>
+<!----- John Philip Jones: Python tkinter ----------------------------->
+</div>
+
+<ol>
+<li>
+<a class="listitem" href="http://effbot.org/tkinterbook/" target="_blank">Effbot: An Introduction to Tkinter</a>
+ - <span class="update">(published 2005)</span>
+</li>
+<li>
+<a class="listitem" href="http://effbot.org/zone/tkinter-geometry.htm" target="_blank">Tkinter Geometry Managers</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://effbot.org/tkinterbook/tkinter-classes.htm" target="_blank">Tkinter Classes</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://dzone.com/articles/python-gui-examples-tkinter-tutorial-like-geeks?edition=365217&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202018-03-03" target="_blank">DZone</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.python.org/3.5/library/tkinter.ttk.html#tkinter.ttk.Style.configure" target="_blank">25.2.10. Ttk Styling</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Test the 'tkinter' installatioun</div>
+<div class="propertydescription">[python console] <kbd>import tkinter</kbd><br>
+<kbd>tkinter._test()</kbd></div>
+<p></p>
+<div class="propertyheader">Display 'tkinter' current version</div>
+<div class="propertydescription">[python console] <kbd>import tkinter</kbd><br>
+<kbd>tkinter.TkVersion</kbd></div>
+<p></p>
+<div class="propertyheader">V</div>
+<div class="propertydescription">[python console]</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.tcltk">Tcl Tk Library</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.6/TkCmd/contents.htm" target="_blank">Tk 8.6.8 commands</a>
+| <a href="https://www.tcl.tk/man/tcl8.6/TclCmd/contents.htm" target="_blank">Tcl 8.6.8 commands</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.tcl.tk/" target="_blank">Tcl Developer Xchange</a>
+ - <span class="update">(visited 06 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.ttk">'ttk' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/tkinter.ttk.html" target="_blank">3.7docs</a>
+| <a href="http://www.tcl.tk/man/tcl8.5/TkCmd/contents.htm" target="_blank">Tk command reference</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/firstexample.html" target="_blank">Tkdocs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://pythonprogramming.net/styling-gui-bit-using-ttk/" target="_blank">PythonProgramming</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.python">Python IDLE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/idle.html" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.pycharm">Pycharm IDE</a><br>
+<a class="semanticweb">Version: 2018.3.1  Released: Dec 10, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.jetbrains.com/help/pycharm/meet-pycharm.html" target="_blank">jetbrains: 2018.3 Online Help</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+
+<!----- thenewboston -------------------------------------------------->
+<li>
+| <a href="" target="_blank">JetBrains</a>
+| <a href="https://www.youtube.com/results?search_query=getting+started+with+pycharm+1%2F8" target="_blank">Getting Started</a>
+| <a href="https://www.youtube.com/watch?v=5rSBPGGLkW0" target="_blank">01</a>*
+| <a href="https://www.youtube.com/watch?v=wCJ5kiSmvUY" target="_blank">02 UI</a>*
+| <a href="https://www.youtube.com/watch?v=JLfd9LOdu_U" target="_blank">03</a>*
+| <a href="https://www.youtube.com/watch?v=XOkNJxvNtPw" target="_blank">04</a>*
+| <a href="https://www.youtube.com/watch?v=jmTo5xTRka8" target="_blank">05</a>*
+| <a href="https://www.youtube.com/watch?v=QJtWxm12Eo0" target="_blank">06</a>*
+| <a href="https://www.youtube.com/watch?v=-VzJvNLooj4" target="_blank">07</a>*
+| <a href="https://www.youtube.com/watch?v=y6n3tjP32wg" target="_blank">08</a>*
+| <a href="https://www.youtube.com/watch?v=y6n3tjP32wg" target="_blank">New 2018.2</a>*
+|</li>
+<!----- thenewboston -------------------------------------------------->
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.jetbrains.com/pycharm/" target="_blank">JetBrains</a>
+ - <span class="update">(visited 24 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Installing PyCharm</div>
+<div class="propertydescription">Download PyCharm from 'jetbrains.com'<br>
+Install using Winodows installer (associate .py file type)<br>
+[PyCharm Welcome] Configure 'project interpreter=\python37\python.exe'<br>
+[Create new project] browse to your personal 'Projects' folder {c:\python37\SneedPy\}
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.eclipse">Eclipse IDE</a><br>
+<a class="semanticweb">Version: 2018-12  Released: Dec 19, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Install Eclipse Platform + EP:'Marketplace client' + MP:'pydev' (perspective)</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wiki.eclipse.org/Platform" target="_blank">eclipse: Platform</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=NDFbXIiqT4o&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y&index=5" target="_blank">CoreyMS: eclipse</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.eclipse.org/ide/" target="_blank">eclipse.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.eclipse.pydev">'pydev' IDE for Eclipse</a><br>
+<a class="semanticweb">Version: 7.0.3  Released: Nov 08, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Install Eclipse Platform + EP:'Marketplace client' + MP:'pydev' (perspective)</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://sourceforge.net/projects/pydev/" target="_blank">sourceforge: pydev for eclipse</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">e</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.pydev.org/" target="_blank">pydev.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse" target="_blank">PyDev - Python IDE for Eclipse</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.wingpersonal">Wing-Personal IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.wing101">Wing 101 IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.vim">Vim IDE</a><br>
+<a class="semanticweb">Version: 8.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Vim is a highly configurable text editor for efficiently creating and changing any kind of text. It is included as "vi" with most UNIX systems and with Apple OS X.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://vim.wikia.com/wiki/Use_Vim_like_an_IDE" target="_blank">Use Vim like an IDE</a>
+| <a href="https://www.vim.org/download.php" target="_blank">vim downlaod</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/vim-and-python-a-match-made-in-heaven/" target="_blank">realpython: VIM and Python – A Match Made in Heaven</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://dev.to/bezirganyan/who-said-that-vim-cannot-compete-with-ides-51k4" target="_blank">Who said VIM cannot compete with IDEs?</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/vim.html" target="_blank">Full Stack Python: Vim</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://spacevim.org/use-vim-as-a-python-ide/" target="_blank">SpaceVim: A community-driven vim distribution</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://rapphil.github.io/vim-python-ide/" target="_blank">github: Vim as a Python IDE </a>
+ - <span class="update">(visited 08 Jan 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="solid">Inrupt and Solid</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">solid pod 'JHSinKC' + 'Python2018'</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=jHGcwNmeIRw" target="_blank">NWO Sneak Peek</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+	<li>
+<a class="listitem" href="https://solid.inrupt.com/" target="_blank">Solid</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.inrupt.com/" target="_blank">Inrupt</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.inrupt.com/blog/one-small-step-for-the-web" target="_blank">One Small Step for the Web</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fastcompany.com/90243936/exclusive-tim-berners-lee-tells-us-his-radical-new-plan-to-upend-the-world-wide-web" target="_blank">Tim Berners-Lee tells us his radical new plan to upend the World Wide Web</a>
+ - <span class="update">(visited 28 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Technologies in Solid</div>
+<div class="propertydescription">Solid server + Solid POD + solid-auth-client<br>
+HTTP + REST + HTML + CSS + PureCSS (Yahoo) + Web Annotation Vocabulary + Linked Data + FOAF<br>
+WebID: Identity + TLS + OpenID Connect<br>
+JavaScript + 'npm' + NODE.js + JQuery + Turtle (graphics) + rdflib.js <br>
+Frameworks: Angular v6 + 'ngx' + 'toastr' - Vue - Yeoman - React<br>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.vscode">Visual Studio Code IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="editor.atom">Atom Editor</a><br>
+<a class="semanticweb">Version: 1.33.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=DjEuROpsvp4&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y&index=3" target="_blank">CoreyMS: Atom</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://atom.io/" target="_blank">Atom: Home</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="editor.notepad++">Notepad++ Editor</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="editor.sublimetext">Sublime-Text3 Editor</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://github.com/nourchawich/python" target="_blank">Chawich: Python Style Guide</a>
+| <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 8 - Style Guide for Python Code</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+
+<!----- LevelUpTuts: Sublime Text Tutorials --------------------------->
+<li>
+[LevelUpTuts: Sublime-Text2]
+| <a href="https://www.youtube.com/playlist?list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP" target="_blank">Playlist</a>
+|
+| <a href="https://www.youtube.com/watch?v=k01udDD-UwI&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=2&t=0s" target="_blank">01 install</a>*
+| <a href="https://www.youtube.com/watch?v=KnfWIfCTKro&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=2" target="_blank">02 overview</a>*
+| <a href="https://www.youtube.com/watch?v=jTcwhLk_7xY&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=3" target="_blank">03 preferences</a>*
+| <a href="https://www.youtube.com/watch?v=6Vz5m1_88rw&index=4&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP" target="_blank">04 colors</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=1sHVTzWXG3Q&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=5" target="_blank">05 prgmgmt</a>*
+| <a href="https://www.youtube.com/watch?v=czQipWJA8EU&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=6" target="_blank">06 multiselect</a>*
+| <a href="https://www.youtube.com/watch?v=YvX8uwwJ5kg&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=8&t=0s" target="_blank">07 packctrl</a>*
+| <a href="https://www.youtube.com/watch?v=CWbZ6IVbHiY&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=8" target="_blank">08 theme</a>*
+| <a href="https://www.youtube.com/watch?v=uP2pkvHh2pY&index=9&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP" target="_blank">09 linting</a>*
+| <a href="https://www.youtube.com/watch?v=WU_aZ0gZABU&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=10" target="_blank">10 SFTP</a>*
+| <a href="" target="_blank">11 SFTPsync</a>
+|<br /><span>--&gt;</span>
+| 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21
+|<br /><span>--&gt;</span>
+| 22 | 23
+| <a href="https://www.youtube.com/watch?v=FkoVtZrqvCw&list=PLLnpHn493BHEYF4EX3sAhVG2rTqCvLnsP&index=24" target="_blank">24  Level Up Side Bar</a>
+|</li>
+<!----- LevelUpTuts: Sublime Text Tutorials --------------------------->
+
+<!----- CoreyShafer: Sublime Text Tutorials --------------------------->
+<li>
+[CoreyMS: Sublime-Text3]
+| <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=zVLJfrIwEP8&index=2&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z&t=0s" target="_blank">01 setup</a>*
+| <a href="https://www.youtube.com/watch?v=xFciV6Ew5r4&index=2&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z" target="_blank">02 preferences</a>*
+| <a href="https://www.youtube.com/watch?v=uOMk8MlE_v4&index=3&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z" target="_blank">03 prgmgmt</a>
+| <a href=https://www.youtube.com/watch?v=DwTV5ogPdlU&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z&index=4" target="_blank">04 gotodef</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=4wMKGs2fe4s&index=5&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z" target="_blank">05 launch</a>
+| <a href="https://www.youtube.com/watch?v=9FPFogHkgOc&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z&index=6" target="_blank">06 features</a>
+| <a href="https://www.youtube.com/watch?v=TB3qztdM7V8&index=7&list=PL-osiE80TeTtHH8BZngXEsLPGotQxZa6z" target="_blank">07 shortcuts</a>
+|</li>
+<!----- LevelUpTuts: Sublime Text Tutorials --------------------------->
+
+
+<!----- CoreyShafer: Python Dev Environment w/Sublime Text ------------>
+<li>
+[CoreyMS: Python Dev Environment w/Sublime Text]
+| <a href="https://www.youtube.com/watch?v=xFciV6Ew5r4&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=xFciV6Ew5r4&index=1&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y" target="_blank">01 setup</a>*
+| <a href="https://www.youtube.com/watch?v=xqcTfplzr7c&index=2&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y" target="_blank">02 buildsys</a>*
+| 03 Atom*
+|<br /><span>--&gt;</span>
+| 04 anaconda* | 05 eclipse* | 06 pip* | 07 virtualenv* |
+| <a href=https://youtu.be/9FPFogHkgOc" target="_blank">features + shortcuts</a>
+</li>
+<!----- CoreyShafer: Python Dev Environment w/Sublime Text ------------>
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://scotch.io/courses/getting-started-with-sublime-text" target="_blank">Getting Started with Sublime Text</a>
+| <a href="https://scotch.io/bar-talk/8-awesome-new-features-in-sublime-text-31" target="_blank">8 Awesome New Features in Sublime Text 3.1</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://fosstack.com/setup-sublime-python/" target="_blank">** Must-Have Packages and Settings in Sublime Text for a Python Developer</a>
+ - <span class="update">(Mohit: published 27 Jam 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://janikarhunen.fi/three-steps-to-lint-python-3-6-in-sublime-text.html" target="_blank">Karhunen: Three steps to lint Python 3.6 in Sublime Text</a>
+ - <span class="update">(published Jan 22, 2017)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<p></p>
+<div class="propertyheader">Install new package to Sublime Text</div>
+<div class="propertydescription">
+<kbd>| Tools | Commnad Palette | Install | PACKAGENAME</kbd><br>
+<kbd>| ctrl+shft+P| Install | PACKAGENAME</kbd></div>
+
+<div class="propertyheader">Remove an installed package from Sublime Text</div>
+<div class="propertydescription">
+<kbd>| Tools | Commnad Palette | Remove Package | PACKAGENAME</kbd><br>
+<kbd>| ctrl+shft+P| Remove Package | PACKAGENAME</kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++------------------------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="shell.bash">'bash' Shell</a><br>
+<a class="semanticweb">Version:  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">Bash is the shell, or command language interpreter, for the GNU operating system. The name is an acronym for the ‘Bourne-Again SHell’, a pun on Stephen Bourne, the author of the direct ancestor of the current Unix shell sh, which appeared in the Seventh Edition Bell Labs Research version of Unix.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://ss64.com/bash/" target="_blank">SS64: bash commands</a>
+| <a href="https://tiswww.case.edu/php/chet/bash/bashref.html" target="_blank">Bash Reference Manual</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://ryanstutorials.net/linuxtutorial/" target="_blank">learn the Bash command line interface</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.lifewire.com/bash-linux-command-unix-command-4097154" target="_blank">lifewire: Understanding the Linux/Unix Command bash</a>
+ - <span class="update">(visited 02 Apr 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++------------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<table summary="">
+<tbody>
+<tr><p></p><p></p>
+<td><a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="shell.powershell">Windows PowerShell 5.x</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p class="faqdescription">Windows PowerShell is a command-line shell and scripting language that enables control and automation of system administration, the Windows OS and applications. Built on the Microsoft .NET Framework (Microsoft.PowerShell.Commands).</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://msdn.microsoft.com/en-us/library/ms714674(v=vs.85).aspx" target="_blank">PowerShell Programmer's Guide</a>
+| <a href="http://msdn.microsoft.com/en-us/library/ms714469(v=vs.85).aspx" target="_blank">PowerShell Reference</a>
+| <a href="https://quizlet.com/26896292/70-410-powershell-flash-cards/original" target="_blank">PowerShell Commands</a>
+<br>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.computerperformance.co.uk/powershell/" target="_blank">Guy Thomas: PowerShell</a>
+| <a href="http://powershelltutorial.net/" target="_blank">Powershell Tutorial Online</a>
+| <a href="https://mva.microsoft.com/en-us/training-courses/getting-started-with-microsoft-powershell-8276?l=r54IrOWy_2304984382" target="_blank">MSFT Getting Started</a>
+|<br>
+| <a href="https://www.varonis.com/blog/windows-powershell-tutorials/" target="_blank">PowerShell Tutorial For Beginners</a>
+<br>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://social.technet.microsoft.com/wiki/contents/articles/24187.windows-powershell-portal.aspx" target="_blank">TechNet: Windows PowerShell Portal</a>
+  - <span class="update">(visited 23 Aug 18) </span>
+</li>
+<li>
+<a class="listitem" href="http://technet.microsoft.com/en-US/scriptcenter/dd742419.aspx" target="_blank">PowerShell Documentation</a>
+ - <span class="update">(visited 23 Aug 18)</span>
+</li>
+
+<li>
+<a class="listitem" href="https://mva.microsoft.com/en-us/training-courses/what-s-new-in-powershell-v5-16434#!" target="_blank">MVA: What's New in PowerShell v5</a>
+        - <span class="update">(published May 2016)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.microsoft.com/en-us/download/details.aspx?id=54616" target="_blank">Windows Management Framework 5.1 download</a>
+ - <span class="update">(visited 23 Sep 17) - Windows Management Framework 5.1 includes updates to Windows PowerShell</span>
+</li>
+<li>
+<a class="listitem" href="https://www.microsoft.com/en-us/search/result.aspx?q=powershell+6+download&search=" target="_blank">powershell 6 download</a>
+ - <span class="update">(visited 12 Aug 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://blog.varonis.com/top-10-powershell-tutorials-on-the-web/" target="_blank">Top 10 PowerShell Tutorials on the Web</a>
+ - <span class="update">(visited 12 Aug 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">T</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="shell.cmder">'cmder' Console Emulator</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p class="faqdescription">Clink, Git win, Portable/usb, multiple consoles, search</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://conemu.github.io/" target="_blank">ConEmu</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://github.com/mintisan/mintisan.github.io/blob/master/drafts/cmder-tutorial.md" target="_blank">GitHub</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://cmder.net/" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.youtube.com/watch?v=Xm790AkFeK4" target="_blank">Traversy Media</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.youtube.com/watch?v=_X9UPThjJvg" target="_blank">Programming Knowledge</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="beeware">'beeware' Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=qaPzlIJ57dk" target="_blank">Russell Keith-Magee - Building a cross-platform native app with BeeWare - PyCon 2018</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+</body>
+</html>

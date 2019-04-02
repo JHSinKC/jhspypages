@@ -1,0 +1,3252 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python11 Tkinter</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++------------->
+<ul id="menu">
+
+<!--  START - TKINTER section  ---------------------------------------->
+<li><a href="#">Tkinter</a>
+<div class="menu-container-1">
+
+<!--  START - TKINTER column  ----------------------------------------->
+<div class="column-1"><h3>TKINTER</h3>
+<ul>
+<li><a href="#tkinter">26.1 'tkinter'</a></li>
+<li><a href="#tkinter.fonts">Tk fonts</a></li>
+<li><a href="#tkinter.colors">Tk colors</a></li>
+<li><a href="#tkinter.images">Tk images</a></li>
+<li><a href="#tkinter.tcltk">Tcl Tk Library</a></li>
+<li><a href="#tkinter.ttk">'ttk' Module</a></li>
+<li><a href="#tkinter.scrolledtext">'tkinter.scrolledtext'</a></li>
+<li><a href="">26.3 DEAD:'tkinter.tix'</a></li>
+</ul></div>
+<!--  END - TKINTER column  ------------------------------------------->
+
+</div></li>
+<!--  END - TKINTER section  ------------------------------------------>
+
+
+<!--  START - Geometry Managers section  ------------------------------>
+<li><a href="#">Geometry Managers</a>
+<div class="menu-container-1">
+
+<!--  START - Geometry Managers column  ------------------------------->
+<div class="column-1"><h3>Geometry Managers</h3>
+<ul>
+<li><a href="#gm.place">Place</a></li>
+<li><a href="#gm.grid">Grid</a></li>
+<li><a href="#gm.pack">Pack</a></li>
+</ul></div>
+<!--  END - Geometry Managers column  --------------------------------->
+
+</div></li>
+<!--  END - Geometry Managers section  -------------------------------->
+
+
+<!--  START - top-level windows section  ------------------------------>
+<li><a href="#">Windows</a>
+<div class="menu-container-2">
+
+<!--  START - top-level windows column  ------------------------------->
+<div class="column-1"><h3>Windows</h3>
+<ul>
+<li><a href="#win.toplevel">toplevel</a></li>
+<li><a href="#win.tk_messageBox">tk_messageBox</a></li>
+<li><a href="#win.tk_popup">tk_popup</a></li>
+<li><a href="">-----------------------------</a></li>
+<li><a href="">DIALOG Boxes</a></li>
+<li><a href="#win.tk_dialog">tk_dialog</a></li>
+<li><a href="#win.tk_chooseDirectory">tk_chooseDirectory</a></li>
+<li><a href="#win.tk_getSaveFile">tk_getSaveFile</a></li>
+<li><a href="#win.tk_getOpenFile">tk_getOpenFile</a></li>
+<li><a href="#win.tk_chooseColor">tk_chooseColor</a></li>
+</ul></div>
+<!--  END - top-level windows column  --------------------------------->
+
+<!--  START - Events column  ------------------------------------------>
+<div class="column-1"><h3>Events Managers</h3>
+<ul>
+<li><a href="#event.windows">Window events</a></li>
+<li><a href="#event.mouse">Mouse events</a></li>
+<li><a href="#event.keyboard">Keyboard events</a></li>
+<li><a href="#event.bindref">'bind' Reference</a></li>
+</ul></div>
+<!--  END - Events column  -------------------------------------------->
+
+</div></li>
+<!--  END - top-level windows section  -------------------------------->
+
+
+<!--  START - Widgets section  ---------------------------------------->
+<li><a href="#">Widgets</a>
+<div class="menu-container-1">
+
+<!--  START - Widgets column  ----------------------------------------->
+<div class="column-1"><h3>Widgets</h3>
+<ul>
+<li><a href="#tk.button">button</a></li>
+<li><a href="#tk.canvas">canvas</a></li>
+<li><a href="#tk.checkbutton">checkbutton</a></li>
+<li><a href="#tk.combobox">combobox</a></li>
+<li><a href="#tk.entry">entry</a></li>
+<li><a href="#tk.frame">frame</a></li>
+<li><a href="#tk.label">label</a></li>
+<li><a href="#tk.labelframe">labelframe</a></li>
+<li><a href="#tk.listbox">listbox</a></li>
+<li><a href="#tk.menu">menu</a></li>
+<li><a href="#tk.menubutton">menubutton</a></li>
+<li><a href="#tk.message">message</a></li>
+<li><a href="#tk.notebook">notebook</a></li>
+<li><a href="#tk_optionMenu">tk_optionMenu</a></li>
+<li><a href="#tk.panedwindow">panedwindow</a></li>
+<li><a href="#tk.progressbar">progressbar</a></li>
+<li><a href="#tk.radiobutton">radiobutton</a></li>
+<li><a href="#tk.scale">scale</a></li>
+<li><a href="#tk.scrollbar">scrollbar</a></li>
+<li><a href="#tk.separator">separator</a></li>
+<li><a href="#tk.sizegrip">sizegrip</a></li>
+<li><a href="#tk.spinbox">spinbox</a></li>
+<li><a href="#tk.text">text</a></li>
+<li><a href="#tk.treeview">treeview</a></li>
+</ul></div>
+<!--  END - Widgets column  ------------------------------------------->
+
+</div></li>
+<!--  END - Widgets section  ------------------------------------------>
+
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++--------------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter">'tkinter' Windows GUI with Tcl/Tk</a><br>
+<a class="semanticweb">Version: 8.6  Released: Dec 11, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/contents.htm" target="_blank">Tcl 8.5.19 docs</a>
+| <a href="https://docs.python.org/3.7/library/tkinter.html" target="_blank">docs3.7.1</a>
+| <a href="https://tkdocs.com/" target="_blank">TkDocs</a>
+| <a href="http://effbot.org/tkinterbook/" target="_blank">Effbot</a>
+| <a href="http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/ttk-style-layer.html" target="_blank">NMT: Tkinter 8.5 reference</a>
+|<br>
+
+| <a href="" target="_blank">1</a>
+| <a href="" target="_blank">1</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="https://www.tutorialspoint.com/python/python_gui_programming.htm" target="_blank">TutorialsPoint: </a>
+| <a href="https://www.geeksforgeeks.org/python-gui-tkinter/" target="_blank">geeksforgeeks</a>*
+| <a href="https://www.python-course.eu/python_tkinter.php" target="_blank">python-course.eu: </a>
+|<br>
+| <a href="https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html" target="_blank">python-textbok:  Intro to GUI programming w/tkinter</a>
+|<br>
+
+<!----- CodeInPython: Tkinter ----------------------------------------->
+<li>
+[CodeInPython]
+| <a href="https://codeinpython.com/tutorials/getting-started-tkinter-python/" target="_blank">01 Start</a>
+| <a href="https://codeinpython.com/tutorials/organize-tkinter-layout/" target="_blank">02 Layout management</a>
+| <a href="https://codeinpython.com/tutorials/fit-widgets-tkinter-layout/" target="_blank">03 widgets</a>
+| <a href="https://codeinpython.com/tutorials/working-grid-layout-tkinter/" target="_blank">04 grid</a>
+| <a href="https://codeinpython.com/tutorials/how-to-bind-functions-to-tkinter-layout/" target="_blank">05 bind functions</a>
+| <a href=https://codeinpython.com/tutorials/implement-mouse-click-event-tkinter/" target="_blank">06 mouse</a>
+|<br /><span>--&gt;</span>
+| <a href="https://codeinpython.com/tutorials/learn-use-classes-tkinter/" target="_blank">07 Classes</a>
+| <a href="https://codeinpython.com/tutorials/how-to-create-drop-down-menus-in-tkinter/" target="_blank">08 Menus</a>
+| <a href="https://codeinpython.com/tutorials/learn-add-status-bar-tkinter/" target="_blank">09 statusbar</a>
+
+| <a href="https://codeinpython.com/tutorials/create-message-box-tkinter/" target="_blank">10 msgbox</a>
+
+|</li>
+<!----- CodeInPython: Tkinter ----------------------------------------->
+
+<!----- zetcode: Tkinter ---------------------------------------------->
+<li>
+[zetcode: Tkinter]
+| <a href="http://zetcode.com/gui/tkinter/" target="_blank">playlist</a>
+| <a href="http://zetcode.com/gui/tkinter/introduction/" target="_blank">01 Intro</a>
+| <a href="http://zetcode.com/gui/tkinter/layout/" target="_blank">Layout management</a>
+| <a href="http://zetcode.com/gui/tkinter/attributes/" target="_blank">widget attributes</a>
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">widgets</a>
+|<br /><span>--&gt;</span>
+| <a href="http://zetcode.com/gui/tkinter/menustoolbars/" target="_blank">Menus & toolbars</a>
+| <a href="http://zetcode.com/gui/tkinter/dialogs/https://codeinpython.com/tutorials/implement-mouse-click-event-tkinter/" target="_blank">Dialogs</a>
+| <a href="http://zetcode.com/gui/tkinter/drawing/" target="_blank">Drawing</a>
+| <a href="http://zetcode.com/gui/tkinter/snake/" target="_blank">Snake</a>
+|</li>
+<!----- zetcode: Tkinter ---------------------------------------------->
+
+<!----- tkdocs: Tkinter ----------------------------------------------->
+<li>
+[tkdocs: Tkinter]
+| <a href="https://tkdocs.com/tutorial/concepts.html" target="_blank">Tk Concepts</a>*
+| Grid Geometry*
+| <a href="https://tkdocs.com/tutorial/firstexample.html" target="_blank">First Example</a>*
+| <a href="https://tkdocs.com/tutorial/widgets.html" target="_blank">Basic widgets</a>*
+| <a href="https://tkdocs.com/tutorial/morewidgets.html" target="_blank">More widgets</a>*
+|<br /><span>--&gt;</span>
+| Canvas* | Text* | Tree* | Menus*
+| <a href="https://tkdocs.com/tutorial/windows.html" target="_blank">Windows + Dialogs</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://tkdocs.com/tutorial/styles.html" target="_blank">Styles + Themes</a>*
+| <a href="https://tkdocs.com/tutorial/complex.html" target="_blank">Complex Interfaces</a>*
+| <a href="https://tkdocs.com/tutorial/fonts.html" target="_blank">Fonts + Colors + Images</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://tkdocs.com/tutorial/index.html" target="_blank">TOC</a>*
+| <a href="https://tkdocs.com/tutorial/intro.html" target="_blank">Intro</a>*
+| <a href="https://tkdocs.com/tutorial/install.html" target="_blank">Installing</a>*
+| <a href="https://tkdocs.com/tutorial/idle.html" target="_blank">IDLE Study</a>*
+|</li>
+<!----- tkdocs: Tkinter ----------------------------------------------->
+
+<!----- flylib: Tkinter ----------------------------------------------->
+<li>
+[flylib: Tkinter]
+| <a href="https://flylib.com/books/en/2.723.1/widgets_and_gadgets_and_guis_oh_my_.html" target="_blank">Widgets + Gadgets</a>*
+| <a href="https://flylib.com/books/en/2.723.1/configuring_widget_appearance.html" target="_blank">Configuring Widget Appearance</a>
+| <a href="https://flylib.com/books/en/2.723.1/toplevel_windows.html" target="_blank">Toplevel Windows</a>
+| <a href="https://flylib.com/books/en/2.723.1/dialogs.html" target="_blank">Dialogs</a>
+|<br /><span>--&gt;</span>
+| <a href="https://flylib.com/books/en/2.723.1/binding_events.html" target="_blank">Binding Event</a>
+| <a href="https://flylib.com/books/en/2.723.1/message_and_entry.html" target="_blank">Message + Entry</a>
+| <a href="https://flylib.com/books/en/2.723.1/checkbutton_radiobutton_and_scale.html" target="_blank">Checkbutton + Radiobutton + Scale</a>
+| <a href="https://flylib.com/books/en/2.723.1/running_gui_code_three_ways.html" target="_blank">Running GUI Code Three Ways</a>
+|<br /><span>--&gt;</span>
+| <a href="https://flylib.com/books/en/2.723.1/images.html" target="_blank">Images</a>
+| <a href="https://flylib.com/books/en/2.723.1/on_todays_menu_spam_spam_and_spam.html" target="_blank">Menus</a>
+| <a href="https://flylib.com/books/en/2.723.1/menus.html" target="_blank">Menus</a>
+| <a href="https://flylib.com/books/en/2.723.1/listboxes_and_scrollbars.html" target="_blank">Listboxes + Scrollbars</a>
+| <a href="https://flylib.com/books/en/2.723.1/text.html" target="_blank">Text</a>
+| <a href="https://flylib.com/books/en/2.723.1/canvas.html" target="_blank">Canvas</a>
+| <a href="https://flylib.com/books/en/2.723.1/grids.html" target="_blank">Grids</a>
+|<br /><span>--&gt;</span>
+| <a href="https://flylib.com/books/en/2.723.1/time_tools_threads_and_animation.html" target="_blank">Time Tools + Threads + Animation</a>
+| <a href="https://flylib.com/books/en/2.723.1/the_end_of_the_tour.html" target="_blank">The End of the Tour</a>
+| <a href="https://flylib.com/books/en/2.723.1/the_pydemos_and_pygadgets_launchers.html" target="_blank">PyDemos and PyGadgets Launchers</a>
+|</li>
+<!----- flylib: Tkinter ----------------------------------------------->
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+
+<!----- Sentdex: GUIs w/Tkinter --------------------------------------->
+<li>
+[Sentdex: GUIs w/Tkinter]
+| <a href="https://www.youtube.com/playlist?list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=HjNHATw6XgY&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&index=2&t=0s" target="_blank">01 intro</a>*
+| <a href="https://www.youtube.com/watch?v=A0gaXfM1UN0&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&index=2" target="_blank">02</a>*
+
+| <a href="" target="_blank">04</a>
+| <a href="" target="_blank">05</a>
+| <a href="" target="_blank">06</a>
+| <a href="" target="_blank">07</a>
+| <a href="" target="_blank">08</a>
+| <a href="" target="_blank">09</a>
+| <a href="" target="_blank">10</a>
+|<br /><span>--&gt;</span>
+| <a href="" target="_blank">11</a>
+| <a href="" target="_blank">12</a>
+| <a href="" target="_blank">13</a>
+| <a href="" target="_blank">14</a>
+| <a href="" target="_blank">15</a>
+| <a href="" target="_blank">16</a>
+| <a href="" target="_blank">17</a>
+| <a href="" target="_blank">18</a>
+| <a href="" target="_blank">19</a>
+| <a href="" target="_blank">20</a>
+| <a href="" target="_blank">21</a>
+| <a href="" target="_blank">22</a>
+| <a href="" target="_blank">23</a>
+| <a href="" target="_blank">24</a>
+| <a href="" target="_blank">25</a>
+| <a href="" target="_blank">26</a>
+| <a href="" target="_blank">27</a>
+| <a href="" target="_blank">28</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=HosXxXE24hA&index=30&list=PLQVvvaa0QuDclKx-QpC9wntnURXVJqLyk&t=0s" target="_blank">29 Converting to exe</a>
+|</li>
+<!----- Sentdex: GUIs w/Tkinter --------------------------------------->
+
+<!----- TheNewBoston: Python GUI w/Tkinter ---------------------------->
+<li>
+[TheNewBoston: Python GUI w/Tkinter]
+| <a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=RJB1Ek2Ko_Y&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=1" target="_blank">01 intro</a>*
+| <a href="https://www.youtube.com/watch?v=RTM9tiV_HoY&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=2" target="_blank">02 layout</a>*
+| <a href="https://www.youtube.com/watch?v=Ko4EPJ8DDjg&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=3" target="_blank">03 Fitting Widgets</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=-nmzq3xiZ6I&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=4" target="_blank">04 Grid layout</a>*
+| <a href="https://www.youtube.com/watch?v=wNBqM28MMjs&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=5" target="_blank">05 grid</a>
+| <a href="https://www.youtube.com/watch?v=qWnE-yp6wzU&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=6" target="_blank">06 binding functions</a>
+| <a href="https://www.youtube.com/watch?v=XkCbinbgbdw&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=7" target="_blank">07 mouse</a>
+| <a href="https://www.youtube.com/watch?v=IYHJRnVOFlw&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=8" target="_blank">08 classes</a>
+| <a href="https://www.youtube.com/watch?v=PSm-tq5M-Dc&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=9" target="_blank">09 menus</a>
+| <a href="https://www.youtube.com/watch?v=D24Vx3_IM8U&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=10" target="_blank">10 toolbar</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=FqIKEW-S8W0&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=11" target="_blank">11 statusbar</a>
+| <a href="https://www.youtube.com/watch?v=IB6VkXJVf0Y&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=12" target="_blank">12 msgbox</a>
+| <a href="https://www.youtube.com/watch?v=O12aT42okYE&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&index=13" target="_blank">13 shapes</a>
+| 14 images in labels* |</li>
+<!----- TheNewBoston: Python GUI w/Tkinter ---------------------------->
+
+<!----- John Philip Jones: Python tkinter ----------------------------->
+<li>
+[John Philip Jones: Python tkinter]
+| <a href="https://www.youtube.com/playlist?list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=yuoSKkSEhQg&index=2&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&t=5s" target="_blank">01</a>*
+| <a href="https://www.youtube.com/watch?v=wZ6yiUTK3Zs&index=2&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">02</a>*
+| <a href="https://www.youtube.com/watch?v=8_SXLM-a120&index=3&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">03</a>*
+| <a href="https://www.youtube.com/watch?v=rQ9XMB-0hu0&index=4&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">04</a>*
+| <a href="https://www.youtube.com/watch?v=reSF2lfrRVE&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=5" target="_blank">05</a>*
+| <a href="https://www.youtube.com/watch?v=OelKSd2nL5w&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=6" target="_blank">06</a>*
+| <a href="https://www.youtube.com/watch?v=9b1x6dZakuk&index=7&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">07</a>*
+| <a href="https://www.youtube.com/watch?v=SVW0ofsBKCU&index=8&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">08</a>*
+| <a href="https://www.youtube.com/watch?v=gjU3Lx8XMS8&index=9&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">09</a>*
+| <a href="https://www.youtube.com/watch?v=pD6a9MoQCVc&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=10" target="_blank">10 label</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=mYmqsJ_eSbU&index=11&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">11</a>*
+| <a href="https://www.youtube.com/watch?v=Xfq7l1PlJvo&index=12&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">12</a>*
+| <a href="https://www.youtube.com/watch?v=RmrJqviSi2Y&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=13" target="_blank">13</a>*
+| <a href="https://www.youtube.com/watch?v=iIa1QH-QGgM&index=14&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">14</a>*
+| <a href="https://www.youtube.com/watch?v=OcjJOz-UM98&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=15" target="_blank">15</a>*
+| <a href="https://www.youtube.com/watch?v=Typ6Q8zKq1w&index=16&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">16 anchor</a>*
+| <a href="https://www.youtube.com/watch?v=7C47_rPzH0U&index=17&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">17 padx</a>*
+| <a href="https://www.youtube.com/watch?v=LV1GBHsz5YY&index=18&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">18 justify</a>*
+| <a href="https://www.youtube.com/watch?v=EJHUhSwLde0&index=19&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">19</a>*
+| <a href="https://www.youtube.com/watch?v=kIzKaS-_4sY&index=20&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">20 options</a>*
+| <a href="https://www.youtube.com/watch?v=ZHix5eYa0m8&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=21" target="_blank">21</a>*
+| <a href="https://www.youtube.com/watch?v=yTJ8CERZGdU&index=22&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">22 keys</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=ixoXj1WDPbw&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=23" target="_blank">23 stringVar</a>*
+| <a href="https://www.youtube.com/watch?v=WYzC7lPswaE&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=24" target="_blank">24 set()</a>*
+| <a href="https://www.youtube.com/watch?v=ZPg_oZT-8rQ&index=25&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">25 button</a>*
+| <a href="https://www.youtube.com/watch?v=qJtf0J0Vrkg&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=26" target="_blank">26 grid</a>*
+| <a href="https://www.youtube.com/watch?v=XZ2G29ZUaII&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=27" target="_blank">27 summary</a>*
+| <a href="https://www.youtube.com/watch?v=qCnBkZLb-E4&index=28&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">28 entry</a>*
+| <a href="https://www.youtube.com/watch?v=xDFMpNxupzo&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=29" target="_blank">29 StringVar</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=H1-6DfphTKQ&index=30&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">30 metric con</a>*
+| <a href="https://www.youtube.com/watch?v=gkBgMmVVzJg&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=31" target="_blank">31</a>*
+| <a href="https://www.youtube.com/watch?v=l1Joyw6UkTo&index=32&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">32 focus</a>*
+| <a href="https://www.youtube.com/watch?v=L4YmYBTaTDs&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=33" target="_blank">33 taborder</a>*
+| <a href="https://www.youtube.com/watch?v=HyKaZggBAU4&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=34" target="_blank">34</a>*
+| <a href="https://www.youtube.com/watch?v=2j9sYld4uaM&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=35" target="_blank">35 frame</a>*
+| <a href="https://www.youtube.com/watch?v=Mxk4cMBaH3g&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=36" target="_blank">36</a>*
+| <a href="https://www.youtube.com/watch?v=HTyN25rnla0&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=37" target="_blank">37 inheritance</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=2otH7ajZF9c&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=38" target="_blank">38 id/type</a>*
+| <a href="https://www.youtube.com/watch?v=2a-WeQMZMLg&index=39&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">39 __init,self</a>*
+| <a href="https://www.youtube.com/watch?v=bOt1ilhZ3tk&index=40&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">40</a>*
+| <a href="https://www.youtube.com/watch?v=N9rPxEvfw1M&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=41" target="_blank">41</a>*
+| <a href="https://www.youtube.com/watch?v=cp3ivNQia2c" target="_blank">42 fullscreen win</a>*
+| <a href="https://www.youtube.com/watch?v=Ho81tTjwwqI" target="_blank">43 fullscreen fstr</a>*
+| <a href="https://www.youtube.com/watch?v=m64ZPOoQnm4&index=45&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&t=0s" target="_blank">44 canvas</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=vdCaAmO_uMs" target="_blank">45 drawline</a>*
+| <a href="https://www.youtube.com/watch?v=fNN57UIGzls&t=0s&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=47" target="_blank">46 hexcolor</a>*
+| <a href="https://www.youtube.com/watch?v=-wmnm2fnAAo&t=0s&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=48" target="_blank">47 random color</a>
+| <a href="https://www.youtube.com/watch?v=41GDcp4IIm4&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=48" target="_blank">48 draw random</a>
+| <a href="https://www.youtube.com/watch?v=5WmCvzlA5pc&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=49" target="_blank">49 f-random</a>
+| <a href="https://www.youtube.com/watch?v=RAcYhQnNrAU&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=50" target="_blank">50 Canvas: draw lines</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=p92jywniWvk&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=51" target="_blank">51 Canvas: draw arrows</a>
+| <a href="https://www.youtube.com/watch?v=U29HMoaCagg&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=52" target="_blank">52 Canvas: draw arrows</a>
+| <a href="https://www.youtube.com/watch?v=heABx19nYwc&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=53" target="_blank">53 Canvas: delete arrows</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=5IgzIrxpaPA&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=54" target="_blank">54 Draw w/mouse clicks</a>
+| <a href="https://www.youtube.com/watch?v=XC4eJQCem_0&index=55&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_" target="_blank">55 Accessing the coordinate position</a>
+| <a href="https://www.youtube.com/watch?v=fj-SIM9nXOw&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=56" target="_blank">56 Draw line between two mouse clicks</a>
+|</li>
+<!----- John Philip Jones: Python tkinter ----------------------------->
+</div>
+
+<ol>
+<li>
+<a class="listitem" href="http://effbot.org/tkinterbook/" target="_blank">Effbot: An Introduction to Tkinter</a>
+ - <span class="update">(published 2005)</span>
+</li>
+<li>
+<a class="listitem" href="http://effbot.org/zone/tkinter-geometry.htm" target="_blank">Tkinter Geometry Managers</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://effbot.org/tkinterbook/tkinter-classes.htm" target="_blank">Tkinter Classes</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://dzone.com/articles/python-gui-examples-tkinter-tutorial-like-geeks?edition=365217&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202018-03-03" target="_blank">DZone</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.python.org/3.5/library/tkinter.ttk.html#tkinter.ttk.Style.configure" target="_blank">25.2.10. Ttk Styling</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Test the 'tkinter' installatioun</div>
+<div class="propertydescription">[python console] <kbd>import tkinter</kbd><br>
+<kbd>tkinter._test()</kbd></div>
+<p></p>
+<div class="propertyheader">Display 'tkinter' current version</div>
+<div class="propertydescription">[python console] <kbd>import tkinter</kbd><br>
+<kbd>tkinter.TkVersion</kbd></div>
+<p></p>
+<div class="propertyheader">Display which platform you're running on</div>
+<div class="propertydescription">[python console] <kbd>root.tk.call('tk', 'windowingsystem')</kbd>
+<br># will return x11 (Linux), win32 (Windows) or aqua (Mac)</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.fonts">Tk Fonts</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/font.htm" target="_blank">tc: fonts</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.colors">Tk Colors</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/colors.htm" target="_blank">tcl: color ref</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.images">Tk Images</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/image.htm" target="_blank">tcl: image commands</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/photo.htm" target="_blank">tcl: photo commands</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.tcltk">Tcl Tk Library</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.6/TkCmd/contents.htm" target="_blank">Tk 8.6.8 commands</a>
+| <a href="https://www.tcl.tk/man/tcl8.6/TclCmd/contents.htm" target="_blank">Tcl 8.6.8 commands</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.tcl.tk/" target="_blank">Tcl Developer Xchange</a>
+ - <span class="update">(visited 06 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tkinter.ttk">'ttk' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/tkinter.ttk.html" target="_blank">3.7docs</a>
+| <a href="http://www.tcl.tk/man/tcl8.5/TkCmd/contents.htm" target="_blank">Tk command reference</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/firstexample.html" target="_blank">Tkdocs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://pythonprogramming.net/styling-gui-bit-using-ttk/" target="_blank">PythonProgramming</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gm.place">Place Geometry Manager</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">Do not use "place" for ordinary window and dialog layouts;<br>it is too much work to specify locations. Use "pack" or "grid" managers instead.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">place() method organizes the widgets by placing them on specific positions directed by the programmer.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://effbot.org/tkinterbook/place.htm" target="_blank">effbot: ref</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/layout/" target="_blank">zetcode: layout</a>
+| <a href="https://www.tutorialspoint.com/python/tk_place.htm" target="_blank">tutorialspoint: place</a>
+| <a href="https://riptutorial.com/tkinter/example/29714/place--" target="_blank">riptutorial: place</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">When to use the Place Manager</div>
+<div class="propertydescription">Do not use "place" for ordinary window and dialog layouts;<br>it is too much work to specify locations. Use "pack" or "grid" managers instead.<br>
+There have been no studies that I know of that show where place has failed. I would argue, however, that just about anyone who has spent any time at all maintaining a complex GUI in tkinter can tell you that absolute positioning is doing it the hard way. I think you would be hard pressed to find a single good tkinter (or tcl/tk)-based GUI that used place for the majority of its layout.</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gm.grid">Grid Geometry Manager</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">grid() geometry manager puts the widgets in a 2-dimensional table. The 'root' widget is split into a number of rows and columns, and each “cell” in the resulting table can hold one widget.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/grid.htm" target="_blank">tcl: grid</a>
+| <a href="https://effbot.org/tkinterbook/grid.htm" target="_blank">effbot: grid</a>
+| <a href="https://tkdocs.com/tutorial/grid.html" target="_blank">tkdocs: grid</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/layout/" target="_blank">zetcode: layout</a>
+| <a href="https://tkdocs.com/tutorial/grid.html" target="_blank">tkdocs: Grid</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">When to use the Grid Manager</div>
+<div class="propertydescription">The grid manager is convenient when designing dialog boxes.</div>
+<p></p>
+<div class="propertyheader">Forget and Remove</div>
+<div class="propertydescription">The "forget" method of grid, taking as arguments a list of one or more slave widgets, can be used to remove slaves from the grid they're currently part of. This does not destroy the widget altogether, but takes it off the screen, as if it had not been gridded in the first place. You can grid it again later, though any grid options you'd originally assigned will have been lost.<br>
+The "remove" method of grid works the same, except that the grid options will be remembered.</div>
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gm.pack">Pack Geometry Manager</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Pack() geometry manager packs widgets in rows or columns. You can use options like fill, expand, and side to control this geometry manager.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://effbot.org/tkinterbook/pack.htm" target="_blank">effbot: ref</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/layout/" target="_blank">zetcode: layout</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">When to use the Pack Manager</div>
+<div class="propertydescription">Compared to the grid manager, the pack manager is somewhat limited, but it’s much easier to use in a few, but quite common situations:
+<li>Put a widget inside a frame (or any other container widget), and have it fill the entire frame</li>
+<li>Place a number of widgets on top of each other</li>
+<li>Place a number of widgets side by side</li>
+It's normal to use both grid and pack in different parts of an applications. I rarely ever create a GUI where I don't use both grid and pack. I rarely use place.
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_chooseColor">tk_chooseColor Dialog</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_chooseDirectory">tk_chooseDirectory Dialog</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_dialog">tk_dialog Window</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_getOpenFile">tk_getOpenFile Dialog</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_getSaveFile">tk_getSaveFile Dialog</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_messageBox">tk_messageBox Window</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.tk_popup">tk_popup Window</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="win.toplevel">toplevel Window</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">The main root window is the one that opens when your program runs, and is where you generally pack your most important widgets. In addition, Tkinter scripts can create any number of independent windows, generated and popped up on demand, by creating Toplevel widget objects.<br>
+Each Toplevel object created produces a new window on the display, and automatically adds it to the program's GUI event-loop processing stream (you don't need to call the mainloop method of new windows to activate them).</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://flylib.com/books/en/2.723.1/toplevel_windows.html" target="_blank">flylib: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.button">button Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A button, unlike a frame or label, is very much designed for the user to interact with, and in particular, press to perform some action. Like labels, they can display text or images, but also have a whole range of new options used to control their behavior.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.canvas">canvas Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5"> Canvas is a classic Tk widget, not a 'ttk' widget.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A canvas widget manages a 2D collection of graphical objects — lines, circles, images, other widgets and more. Tk's canvas is an incredibly powerful and flexible widget, and truly one of Tk's highlights. It is suitable for a wide range of uses, including drawing or diagramming, CAD tools, displaying or monitoring simulations or actual equipment, and for building more complex widgets out of simpler ones.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/canvas.htm" target="_blank">tcl: canvas</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/canvas.html" target="_blank">tkdocs: Canvas</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.checkbutton">checkbutton Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A checkbutton is like a regular button, except that not only can the user press it, which will invoke a command callback, but it also holds a binary value of some kind (i.e. a toggle). Checkbuttons are used all the time when a user is asked to choose between e.g. two different values for an option.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">zetcode: widgets</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.combobox">combobox Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A combobox combines an entry with a list of choices available to the user. This lets them either choose from a set of values you've provided (e.g. typical settings), but also put in their own value (e.g. for less common cases you don't want to include in the list).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_combobox.htm" target="_blank">tcl: combobox</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.entry">entry Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">An {text}entry presents the user with a single line text field that they can use to type in a string value. These can be just about anything: their name, a city, a password, social security number, and so on.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_entry.htm" target="_blank">tcl: entrybox</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Detecting a value change.</div>
+<div class="propertydescription">Note that entry widgets do not have a "command" option which will invoke a callback whenever the entry is changed. To watch for changes, you should watch for changes on the linked variable ('username').</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.frame">frame Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">A frame widget displays as a simple rectangle. Primarily used as a container for other widgets, which are under the control of a geometry manager.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_frame.htm" target="_blank">tcl: frame</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://www.youtube.com/watch?v=RTM9tiV_HoY&index=3&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d&t=0s" target="_blank">thenewboston: layout</a>
+| <a href="https://www.youtube.com/watch?v=2j9sYld4uaM&list=PL6lxxT7IdTxGoHfouzEK-dFcwr_QClME_&index=35" target="_blank">JPJ: frame</a>*
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.label">label Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://effbot.org/tkinterbook/#g" target="_blank">effbot reference</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.python-course.eu/tkinter_labels.php" target="_blank">label example</a>
+| <a href="https://effbot.org/tkinterbook/label.htm" target="_blank">effbot: label</a>
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">zetcode: widgets</a>
+| <a href="https://www.youtube.com/watch?v=lt78_05hHSk&index=14&list=PL6gx4Cwl9DGBwibXFtPtflztSNPGuIB_d" target="_blank">boston: images in labels</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.labelframe">labelframe (groupbox) Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">A labelframe widget, also commonly known as a group box, provides another way to group related components. It acts like a normal ttk::frame, used as a container for other widgets you grid inside it. However, it displays in a way that visually sets it off from the rest of the user interface. You can optionally provide a text label to be displayed outside the labelframe.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl/TkCmd/ttk_labelframe.htm" target="_blank">tcl: labelframe</a>
+| <a href="https://effbot.org/tkinterbook/labelframe.htm" target="_blank">effbot: </a>
+| <a href="https://infohost.nmt.edu/tcc/help/pubs/tkinter/web/labelframe.html" target="_blank">nmt: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tutorialspoint.com/python/tk_labelframe.htm" target="_blank">tutorialspoint: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://tkdocs.com/tutorial/complex.html" target="_blank">tkdocs: complex layout</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.listbox">listbox Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A listbox displays a list of single-line text items, usually lengthy, and allows the user to browse through the list, selecting one or more.<br>
+Listboxes are part of the classic Tk widgets; there is not presently a listbox in the themed 'ttk' widget set.<br>
+Tk's treeview widget (which is themed) can also be used as a listbox (a one level deep tree), allowing you to use icons and styles with the list. It's also likely that a multi-column (table) list widget will make it into Tk at some point, based on one of the available extensions.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/listbox.htm" target="_blank">tcl: listbox</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">zetcode: widgets</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.menu">menu Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">Menus are implemented as widgets in Tk, just like buttons and entries. Each menu widget consists of a number of different items in the menu. Items are things like the "Open..." command in a File menu, but also separators between other items, and items which open up their own submenu (so-called cascading menus). Each of these menu items also has attributes, such as the text to display for the item, a keyboard accelerator, and a command to invoke.<br>
+Menus are arranged in a hierarchy. The menubar is itself a menu widget. It has several children (submenus) consisting of items like "File", "Edit" and so on. Each of those in turn is a menu containing different items, some of which might themselves contain submenus. As you'd expect from other things you've seen already in Tk, anytime you have a submenu, it must be created as a child of its parent menu.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/menu.htm" target="_blank">tcl: menu</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/menus.html" target="_blank">tkdocs: Menus</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Menubars</div>
+<div class="propertydescription">In Tk, menubars are associated with individual windows; each toplevel window can have at most one menubar. On Windows and X11, this is visually obvious, as the menus are part of each window, sitting just below the title bar at the top. </div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.menubutton">menubutton Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/menu.htm" target="_blank">tcl: menu</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.message">message Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.notebook">notebook Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A notebook widget uses the metaphor of a tabbed notebook to let the user switch between one of several pages, using an index tab. In this case, unlike with paned windows, we're only allowing the user to look at a single page (akin to a pane) at a time.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_notebook.htm" target="_blank">tcl: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk_optionmenu">tk_optionmenu Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.panedwindow">panedwindow Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">A panedwindow widget lets you stack two or more resizable widgets above and below each other (or to the left and right). The user can adjust the relative heights (or widths) of each pane by dragging a sash located between them. Typically the widgets you're adding to a panedwindow will be frames containing many other widgets.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_panedwindow.htm" target="_blank">tcl: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.progressbar">progressbar Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A progressbar widget provides a way to give feedback to the user about the progress of a lengthy operation. This may be done either as a percentage complete display for operations where this can be estimated, or a display that changes to indicate the operation is continuing, but without an estimate of completion.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.radiobutton">radiobutton Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A radiobutton lets you choose between one of a number of mutually exclusive choices; unlike a checkbutton, it is not limited to just two choices. Radiobuttons are always used together in a set, and are a good option when the number of choices is fairly small, e.g. 3-5.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_radiobutton.htm" target="_blank">tcl: radiobutton</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.scale">scale Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">The scale widget does not display the actual values, you may want to add those as labels.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A scale widget provides a way for users to choose a numeric value through direct manipulation.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_scale.htm" target="_blank">tcl: sclae</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/tkinter/widgets/" target="_blank">zetcode: widgets</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.scrollbar">scrollbar Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A scrollbar helps the user to see all parts of another widget, whose content is typically much larger than what can be shown in the available screen space.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_scrollbar.htm" target="_blank">tcl: scrollbar</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">Set scrollbar position</div>
+<div class="propertydescription">To move the scrollbar to a particular position call the "set first last" method from within your program. Pass it two values between 0 and 1 indicating the start and end percentage of the content area that is visible.</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.separator">separator Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">If a window is sufficient size, it may be more efficient to use white space to visually group objects.<br>
+If the window is crowded, a thin horizontal or vertical rule can be used to visually seperate groups of widgets.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_separator.htm" target="_blank">tcl: separator</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.sizegrip">sizegrip Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The sizegrip is the little box at the bottom right corner of the window that allows you to resize it.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_sizegrip.htm" target="_blank">tcl: sizegrip</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.spinbox">spinbox Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A spinbox widget allows users to choose numbers (or in fact, items from an arbitrary list). It does this by combining an entry-like widget showing the current value with a pair of small up/down arrows which can be used to step through the range of possible choices.<br>
+Spinboxes are part of the classic Tk widgets. There is not presently a spinbox in the themed Tk widget set.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/spinbox.htm" target="_blank">tcl: spinbox</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.text">text Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">Text widgets are part of the classic Tk widgets, not the themed ttk widgets.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A text widget manages a multi-line text area. Like the canvas widget, Tk's text widget is an immensely flexible and powerful tool which can be used for a wide variety of tasks. Some example uses of text widgets have included anything from providing a simple multi-line text area as part of a form, to a stylized code editor, to an outliner, to a web browser.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/text.htm" target="_blank">tcl: text</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/text.html" target="_blank">tkdocs: Text</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">To retrieve the content of the text object.</div>
+<div class="propertydescription">Text widgets do not have a linked variable associated with them, like for example entry widgets do. Call the method "get 1.0 end"; the "1.0" is an index into the text, and means the first character of the first line, and "end" is a shortcut for the index of the last character, last line. Other indices could be passed to retrieve smaller ranges of text if needed.</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="tk.treeview">treeview Widget</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A treeview widget can display and allow browsing through a hierarchy of items, and can show one or more attributes of each item as columns to the right of the tree. It allows you to build user interfaces similar to the tree display you'd find in file managers like the OS X Finder or Windows Explorer. As with most Tk widgets, there is a ton of flexibility to make it behave as you need for a wide range of situations.
+<br>Tk's treeview widget (which is themed) can also be used as a listbox (a one level deep tree), allowing you to use icons and styles with the list. It's also likely that a multi-column (table) list widget will make it into Tk at some point, based on one of the available extensions.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/ttk_treeview.htm" target="_blank">tcl: treeview</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://tkdocs.com/tutorial/tree.html" target="_blank">tkdocs: Treeview</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="event.windows">Window Events</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="event.mouse">Mouse Events</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="event.keyboard">Keyboard Events</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="event.bindref">'bind' Reference</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tcl.tk/man/tcl8.5/TkCmd/bind.htm" target="_blank">tcl: bind reference</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+</body>
+</html>

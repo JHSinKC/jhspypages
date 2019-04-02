@@ -1,0 +1,2037 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python14 Machine Learning</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++ ------->
+<ul id="menu">
+
+
+<!--  START - Machine Learning section  ------------------------------->
+<li><a href="#">Machine Learning</a>
+<div class="menu-container-1">
+<!--  START - Machine Learning column  -------------------------------->
+<div class="column-1"><h3>Machine Learning</h3>
+<ul>
+<li><a href="#machine learning">Machine Learning</a></li>
+<li><a href="#milk">'milk' Library</a></li>
+<li><a href="#numpy">'numpy' Module</a></li>
+<li><a href="#sympy">'sympy' Module</a></li>
+<li><a href="#pytorch">'pytorch' Module</a></li>
+<li><a href="#pybrain">'pybrain' Library</a></li>
+<li><a href="#pyml">'PyML' Framework</a></li>
+<li><a href="#scikit">'scikit-learn'</a></li>
+<li><a href="#scipy">'scipy' Module</a></li>
+<li><a href="#shogun">'shogun' Toolbox</a></li>
+<li><a href="#gym">'gym' Module</a></li>
+<li><a href="#detectron">'detectron' Module</a></li>
+</ul></div>
+<!--  START - Machine Learning column  -------------------------------->
+</div></li>
+<!--  END - Machine Learning section  --------------------------------->
+
+
+<!--  START - Robotics section  --------------------------------------->
+<li><a href="#">Robotics</a>
+<div class="menu-container-1">
+
+<!--  START - Robotics column  ---------------------------------------->
+<div class="column-1"><h3>Robotics</h3>
+<ul>
+<li><a href="#robotics">Robotics</a></li>
+<li><a href="">------------------------------</a></li>
+<li><a href="#Navigation">NAVIGATION</a></li>
+<li><a href="">------------------------------</a></li>
+<li><a href="#Avoidance">AVOIDANCE (obstacles)</a></li>
+<li><a href="#Assembly">Assembly</a></li>
+<li><a href="#Manipulation">Manipulation</a></li>
+<li><a href="#HRI">Human Robot Interaction (HRI)</a></li>
+<li><a href="#Localization">Localization</a></li>
+<li><a href="">------------------------------</a></li>
+<li><a href="#raspberry">Raspberry PI</a></li>
+<li><a href="">HARDWARE</a></li>
+</ul></div>
+<!--  END - Robotics column  ------------------------------------------>
+</div></li>
+<!--  END - Robotics section  ----------------------------------------->
+
+
+<!--  START - Game Development section  ------------------------------->
+<li><a href="#">Game Development</a>
+<div class="menu-container-1">
+<!--  START - Game Development column  -------------------------------->
+<div class="column-1"><h3>Game Development</h3>
+<ul>
+<li><a href="#game.development">Game Development</a></li>
+<li><a href="#engine.panda3D">'panda3D' Module</a></li>
+<li><a href="#engine.renpy">'renpy' Engine</a></li>
+<li><a href="#engine.unity3D">'unity3D' Engine</a></li>
+<li><a href="#engine.unreal">'unreal' Engine</a></li>
+<li><a href="#aws.lumberyard">AWS Lumberyard</a></li>
+<li><a href="#pygame">'pygame' Module</a></li>
+<li><a href="#pyglet">'pyglet' Module</a></li>
+</ul></div>
+<!--  START - Game Development column  -------------------------------->
+</div></li>
+<!--  END - Game Development section  --------------------------------->
+
+
+<!--  START - Computer Vision section  -------------------------------->
+<li><a href="#">Computer Vision</a>
+<div class="menu-container-1">
+<!--  START - Computer Vision column  --------------------------------->
+<div class="column-1"><h3>Computer Vision</h3>
+<ul>
+<li><a href="#computervision">Computer Vision</a></li>
+<li><a href="#facialrecognition">Facial Recognition</a></li>
+<li><a href="#face_recognition">'face_recognition' Module</a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+<li><a href="#"></a></li>
+</ul></div>
+<!--  START - Computer Vision column  --------------------------------->
+</div></li>
+
+<!--------------------------------
+<li>Biometrics (iris, finger print, face recognition, scars/marks/tattoos)</li>
+<li>Barcode and package label reading</li>
+<li>Object sorting</li>
+<li>Document understanding (e.g. OCR)</li>
+----------------------------------------->
+
+<!--  END - Computer Vision section  ---------------------------------->
+</ul>
+<!-- +++++ end table of contents  ------------------------------------->
+<br><p></p>
+
+<!--------------------------------------------------------------------->
+<ol>
+<li>search engines</li>
+<li>speech recognition</li>
+<li>text to speech (TTS)</li>
+<li>recommender systems</li>
+<li>financial market analysis</li>
+
+<li>Medicine</li>
+<ul>
+<li>Classification and detection (e.g. lesion or cells classification and tumor detection)</li>
+<li>2D/3D segmentation</li>
+<li>3D human organ reconstruction (MRI or ultrasound)</li>
+<li>Vision-guided robotics surgery</li>
+</ul>
+
+<li>Security</li>
+<ul>
+<li>surveillance-detecting certain suspicious activities or behaviors</li>
+</ul>
+
+<li>Transportation</li>
+<ul>
+<li>Autonomous vehicle</li>
+<li>Safety, e.g., driver vigilance monitoring</li>
+</ul>
+
+<li>Industrial Automation Application</li>
+<ul>
+<li>Industrial inspection (defect detection)</li>
+<li>Assembly</li>
+</ul>
+
+</ol>
+<!--------------------------------------------------------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="robotics">Theory: Python Robotics</a><br>
+<a class="semanticweb">Version: B+  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://learn.adafruit.com/pigrrl-zero" target="_blank">Adafruit</a>
+ - <span class="update">(visited 03 Feb 17)</span>
+ <
+</li>
+<li>
+<a class="listitem" href="http://www.logicsupply.com/product_info.php/products_id/544" target="_blank">Logic Supply</a>
+- <span class="update">(visited 03 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.measurementcomputing.com" target="_blank">Measurement Computing</a>
+- <span class="update">(visited 03 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.roborealm.com" target="_blank">RoboRealm</a>
+- <span class="update">(visited 03 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.trossenrobotics.com/" target="_blank">Trossen Robotics</a>
+- <span class="update">(visited 03 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.sparkfun.com/" target="_blank">Sparkfun</a>
+- <span class="update">(visited 19 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.promixis.com/" target="_blank">Promixis and Girder</a>
+- <span class="update">(visited 19 Feb 08)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<table summary="">
+<tbody>
+<tr><p></p><p></p>
+<td><a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="raspberry">Raspberry PI</a><br>
+<a class="semanticweb">Version: B+  Released: 2018</a>
+<a class="newhtml5">no warnings</a>
+</p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<p class="menuitem"><a id="pi">Raspberry PI 3</a></p>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank"></a>
+ - <span class="update">(visited 22 Mar 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a>
+ - <span class="update">(visited 22 Mar 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.yolinux.com/TUTORIALS/VNC.html" target="_blank">VNC installation, configuration, use w/Linux + Windows</a>
+ - <span class="update">(visited 22 Mar 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank"></a>
+ - <span class="update">(visited 22 Mar 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://makezine.com/" target="_blank">Makezine</a>
+ - <span class="update">(visited 22 Feb 18)</span>
+ </li>
+<li>
+<a class="listitem" href="https://www.wyzecam.com/" target="_blank">Wyze Cam</a>
+ - <span class="update">(visited 22 Aug 18)</span>
+ </li>
+</ol>
+
+
+<p class="menuitem"><a id="Arduino">Arduino</a></p>
+<ol>
+<li>
+<a class="listitem" href="http://www.arduino.cc/" target="_blank">Arduino</a>
+- <span class="update">(visited 19 Mar 12)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.arduino.org/" target="_blank">Arduino.Org</a>
+- <span class="update">(visited 19 Mar 12)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.freeduino.org/" target="_blank">Freeduino</a>
+- <span class="update">(visited 19 Mar 12)</span>
+</li>
+</ol>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="game.development">Theory: Python Game Development</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://codeburst.io/the-2018-game-developer-roadmap-e07e45b3c423" target="_blank">codeburst: 2018 Game Developer Roadmap</a>
+ - <span class="update">(visited 16 Feb 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="serpent.ai">Framework: 'serpent.ai' - Game Agent</a><br>
+<a class="semanticweb">Version:</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://serpent.ai/" target="_blank">serpent.ai</a>
+ - <span class="update">(visited 02 Jan 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="engine.panda3D">Toolkit: Panda3D Engine</a><br>
+<a class="semanticweb">Version: 1.8.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Panda3D is a game engine, a framework for 3D rendering and game development for Python and C++ programs. Panda3D is open-source and free for any purpose,</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://www.panda3d.org/manual/index.php/Main_Page" target="_blank">panda3d: docs</a>
+| <a href="http://www.panda3d.org/reference/python" target="_blank">python API</a>
+| <a href="https://github.com/panda3d/panda3d" target="_blank">github: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=_Ya9U0WTmYs" target="_blank">loasinaa: Tutorial for Panda3D: Getting Started</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.panda3d.org/" target="_blank">Panda3D</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.moddb.com/engines/panda3d" target="_blank">ModDB</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://discourse.panda3d.org/" target="_blank">discourse forum: panda3d</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://dimensionless.in/complete-tutorial-learn-data-science-in-python/" target="_blank">Introduction to Pandas, NumPy and RegEx in Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pygame">Framework: 'pygame'</a><br>
+<a class="semanticweb">Version: 1.9.5  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">Which developer does not like to play games and develop them ? This library will help you achieve your goal of 2d game development.  Pygame is the best game development engine for Python. You can handle input, output events, render images, surface, handle events and responses pretty easily by integrating this best Python package and module. You can also control drives, cameras, video makers and external devices with this powerful library.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.pygame.org/docs/" target="_blank">pygame: docs</a>
+| <a href="https://code.google.com/archive/p/tonk-engine/wikis/GameProgrammingResourcesWiki.wiki" target="_blank">tonk-engine - GameProgrammingResourcesWiki.wiki</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<br>
+
+
+<!----- Kids Can Code ------------------------------------------------->
+<li>
+| <a href="https://www.youtube.com/playlist?list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">Kids Can Code: Game Development with Pygame</a>
+| <a href="https://www.youtube.com/watch?v=VO8rTszcW4s&index=2&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">1-1 Basics</a>
+| <a href="https://www.youtube.com/watch?v=Eltz-XJMxuU&index=3&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">1-2 Sprites</a>
+| <a href="https://www.youtube.com/watch?v=fcryHcZE_sM&index=4&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">1-3</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=nGufy7weyGY&index=5&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">01</a>
+| <a href="https://www.youtube.com/watch?v=-5GNbL33hz0&index=6&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">02 Enemy</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=DZYY9hCOxLQ&index=59&list=PLsk-HSGFjnaH5yghzu7PcOzm9NhsW0Urw&t=0s" target="_blank">58 GameOver</a>
+|</li>
+<!----- Kids Can Code ------------------------------------------------->
+
+<!----- Tech With Tim ------------------------------------------------->
+<li>
+| <a href="https://www.youtube.com/playlist?list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">Tech With Tim: Pygame Tutorials playlist</a>
+| <a href="https://www.youtube.com/watch?v=i6xMBig-pP4&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=2&t=0s" target="_blank">01 Basic Movement and Key Presses</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=2-DNswzCkqk&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=2" target="_blank">02 Jumping and Boundaries</a>
+| <a href="https://www.youtube.com/watch?v=UdsNBIzsmlI&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=3" target="_blank">03 Character Animation & Sprites</a>
+| <a href="https://www.youtube.com/watch?v=xfnRywBv5VM&index=4&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">04 Optimization & OOP</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=PVY46hUp2EM&index=5&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">05 Projectiles</a>
+| <a href="https://www.youtube.com/watch?v=vc1pJ8XdZa0&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=6" target="_blank">06 Enemies</a>
+| <a href="https://www.youtube.com/watch?v=1aGuhUFwvXA&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=7" target="_blank">07 Collision and Hit Boxes</a>
+| <a href="https://www.youtube.com/watch?v=JLUqOmE9veI&index=8&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">08 Scoring and Health Bars</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=2BikxsbkuIU&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5&index=9" target="_blank">09 Sound Effects, Music & More Collision</a>
+| <a href="https://www.youtube.com/watch?v=PyblLBlpf0s&index=10&list=PLzMcBGfZo4-lp3jAExUCewBfMx3UZFkh5" target="_blank">10 Finishing Touches & Next Steps</a>
+|</li>
+<!----- Tech With Tim ------------------------------------------------->
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pygame.org/docs/tut/PygameIntro.html" target="_blank">pygame: basics</a>
+| <a href="http://inventwithpython.com/pygame/" target="_blank">Making Games with Python & Pygame</a>
+| <a href="http://programarcadegames.com/" target="_blank">Program Arcade Games
+With Python And Pygame</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>2D models</li>
+<li>3D models</li>
+<li>Fonts</li>
+<li>Images</li>
+<li>Music</li>
+<li>Music/NoRoyalty</li>
+<li>Pixel Art</li>
+<li>Sound Effects</li>
+<li>Sound Effects/NoRoyalty</li>
+<li>Textures</li>
+</ol>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.pygame.org/" target="_blank">pygame: org</a>
+ - <span class="update">(visited 04 Dec 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://inventwithpython.com/pygame/chapter2.html" target="_blank">inventwithpython: </a>
+ - <span class="update">(visited 04 Dec 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.youtube.com/watch?v=G7NQF6oCmoo" target="_blank">Python Game Engines</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://wiki.python.org/moin/GameProgramming" target="_blank">PyOrg: Game Programming With Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyglet">Module: 'pyglet'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">A 3d animation and game creation engine. This is the engine in which the famous python port of minecraft was made.  Pyglet is cross-platform framework for multimedia and windows graphics in pure Python.
+It provides handy access to items that are tedious to implement from scratch for a GUI application: window functions, OpenGL graphics, audio and video playback, keyboard and mouse handling, and working with image files. (It doesn't provide UI widgets like buttons, toolbars, or menus, though.)</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.renpy.org/doc/html/" target="_blank">renpy: docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="engine.renpy">Toolkit: 'renpy' Visual Novel Engine</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.renpy.org/doc/html/" target="_blank">renpy: docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="engine.unity3D">Toolkit: Unity3D Engine</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.unity3d.com/Manual/index.html" target="_blank">Unity User Manual (2018.2)</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://unity3d.com/learn/tutorials" target="_blank">unity3D: tutorials</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://docs.unity3d.com/Manual/UnityOverview.html" target="_blank">unity3D: overview</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://unity3d.com/" target="_blank">Unity3D</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="engine.unreal">Toolkit: UnrealEngine Studio v4.21</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.unrealengine.com/en-US/studio" target="_blank">unrealengine: demo</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.unrealengine.com/en-US/feed" target="_blank">Unreal Engine</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="aws.lumberyard">Toolkit: Amazon Lumberyard b1.16</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.aws.amazon.com/lumberyard/index.html#lang/en_us" target="_blank">aws: docs</a>
+| <a href="https://docs.aws.amazon.com/lumberyard/latest/gettingstartedguide/intro.html" target="_blank">aws: gettingstartedguide</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://gamedev.amazon.com/forums/tutorials" target="_blank">aws: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://aws.amazon.com/lumberyard/" target="_blank">AWS: Lumberyard</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="machine learning">Theory: Python Machine Learning</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/python-windows-machine-learning-setup/" target="_blank">RealPython: Setting Up Python for Machine Learning on Windows</a>
+ - <span class="update">(visited 05 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="milk">Module: 'milk'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="numpy">Module: 'numpy'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The main scientific library in Python, offering comparable functionality to MATLAB. A number of other science or data related Python libraries make use of it, such as SciPy, Pandas, and scikit-learn. Numpy provides multi-dimensional arrays and fast operators and routines for manipulating these arrays.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sympy">Module: 'sympy'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">SymPy can do algebraic evaluation, differentiation, expansion, complex numbers, etc. It is contained in a pure Python distribution.  A Python library for symbolic mathematics. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pybrain">Module: 'pybrain'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyml">Module: 'pyml'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="scikit-learn">Module: 'scikit-learn'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="scipy">Module: 'scipy'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">When we talk about NumPy then we have to talk about scipy. It is a library of algorithms and mathematical tools for python and has caused many scientists to switch from ruby to python.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="shogun">Module: 'shogun'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gym">Module: 'gym'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="neural networks">Theory: Python Neural Networks</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="fannlibrary">Library: Fast Artificial Neural Network (FANN)</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://secure.php.net/manual/en/book.fann.php" target="_blank">php: FANN manual</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://swizec.com/blog/fann-neural-networks-made-easy/swizec/3714" target="_blank">FANN – neural networks made easy</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="neurolab">Module: 'neurolab'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyann">Module: 'pyann'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyrenn">Module: 'pyrenn'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="computervision">Theory: Computer Vision</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++-------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="facialrecognition">Function: Facial Recognition</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++-------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="face.recognition">Module: 'face_recognition'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++-------------------->
+</body>
+</html>

@@ -1,0 +1,2414 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python10 Database Files</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++------------->
+<ul id="menu">
+
+
+<!--  START - SQL Database section  ----------------------------------->
+<li><a href="#">SQL Database</a>
+<div class="menu-container-2">
+
+<!--  START - SQL Database column  ------------------------------------>
+<div class="column-1"><h3>SQL Database</h3>
+<ul>
+<li><a href="#sqlprinciples">SQL Principles</a></li>
+<li><a href="#doc12.dbapi">Python DB2-API</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#sql.postgresql">PostgreSQL</a></li>
+<li><a href="#sql.postgresql.psycopg2">'psycopg2'</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#sql.sqlalchemy">SQLAlchemy</a></li>
+<li><a href="#sql.sqlalchemy.records">Records</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#sql.mysql">Oracle MySQL</a></li>
+<li><a href="#sql.mysql-python">'mySQL-python'</a></li>
+<li><a href="">-------------------------------</a></li>
+<li><a href="#sql.sqlite">SQLite db</a></li>
+<li><a href="#sql.sqlite.dbbrowser">SQLite-DB Browser</a></li>
+<li><a href="#sql.mariadb">mariaDB</a></li>
+</ul></div>
+<!--  END - SQL Database column  -------------------------------------->
+
+<!--  START - Object Relational Mapping column  ----------------------->
+<div class="column-1"><h3>Object Relational Mapping</h3>
+<ul>
+<li><a href="#orm">OBJECT RELATIONAL MAPPING</a></li>
+<li><a href="#orm.peewee">peewee ORM</a></li>
+<li><a href="#orm.pony">Pony ORM</a></li>
+<li><a href="#orm.django">Django ORM</a></li>
+<li><a href="#orm.sqlobject">SQL Object</a></li>
+</ul></div>
+<!--  START - Object Relational Mapping column  ----------------------->
+
+</div></li>
+<!--  END - SQL Database section  ------------------------------------->
+
+
+<!--  START - Non-SQL Database section  ------------------------------->
+<li><a href="#">Non-SQL Database</a>
+<div class="menu-container-1">
+
+<!--  START - Non-SQL Database column  -------------------------------->
+<div class="column-1"><h3>Non-SQL Database</h3>
+<ul>
+<li><a href="#doc12.linq">12.9 LINQ</a></li>
+<li><a href="#doc12.JQuery">JQuery</a></li>
+<li><a href="#sql.presto">PrestoDB</a></li>
+<li><a href="#pymongo">'pymongo'</a></li>
+</ul></div>
+<!--  END - Non-SQL Database column  ---------------------------------->
+
+</div></li>
+<!--  END - Non-SQL Database section  --------------------------------->
+
+
+<!--  START - File Data section  -------------------------------------->
+<li><a href="#">File Data</a>
+<div class="menu-container-2">
+
+<!--  START - XML Data column  ---------------------------------------->
+<div class="column-1"><h3>XML Data</h3>
+<ul>
+<li><a href="#xml">XML</a></li>
+<li><a href="#xml.python">21.4 'xml' Python</a></li>
+<li><a href="#xml.etree.ElementTree">21.5 'xml ElementTree'</a></li>
+<li><a href="#xml.dom">21.6 'dom'</a></li>
+<li><a href="#xml.dom.minidom">21.7 'xml.dom.minidom'</a></li>
+<li><a href="#xml.dom.pulldom">21.8 'xml.dom.pulldom'</a></li>
+<li><a href="#xml.sax">21.9 'xml.sax'</a></li>
+<li><a href="#xml.sax.handler">21.10 'xml.sax.handler'</a></li>
+<li><a href="#xml.sax.saxutils">21.11 'xml.sax.saxutils'</a></li>
+<li><a href="#xml.sax.xmlreader">21.12 'xml.sax.xmlreader'</a></li>
+<li><a href="#xml.parsers.expat">21.13 'xml.parsers.expat'</a></li>
+<li><a href="#xmlrpc">22.25 'xmlrpc'</a></li>
+<li><a href="#xmlrpc.client">22.26 'xmlrpc.client'</a></li>
+<li><a href="#xmlrpc.server">22.6 'xmlrpc.server'</a></li>
+
+</ul></div>
+<!--  END - XML Data column ------------------------------------------->
+
+<!--  START - Json data column  --------------------------------------->
+<div class="column-1"><h3>JSON Data</h3>
+<ul>
+<li><a href="#json">'json' module</a></li>
+</ul></div>
+<!--  END - Json data column  ----------------------------------------->
+
+</div></li>
+<!--  END - File Data section  ---------------------------------------->
+
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++--------------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++  ----------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sqlprinciples">SQL Principles</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<br>
+
+<!----- Socratica: SQL for Beginners ---------------------------------->
+<li>
+[Socratica: SQL for Beginners] <a href="https://www.youtube.com/watch?v=nWyyDHhTxYU&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=nWyyDHhTxYU" target="_blank">01 Learn SQL with Socratica</a>*
+| <a href="https://www.youtube.com/watch?v=OfM5lC-7R4Y" target="_blank">02 SQL - A Quick Overview</a>*
+|<br><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=WzfDLqt-WIg" target="_blank">03 Relational Databases - How to Choose</a>*
+| <a href="https://www.youtube.com/watch?v=fZQI7nBu32M" target="_blank">04 PostgreSQL (Postgres) - Installation & Overview</a>
+|<br><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=YufocuHbYZo&list=PLi01XoE8jYojRqM4qGBF1U90Ee1Ecb5tt&index=5" target="_blank">05 SQL SELECT Tutorial</a>*
+|</li>
+<!----- Socratica: SQL for Beginners ---------------------------------->
+</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.dbapi">Python Database API</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The Python Database API (DB-API) defines a standard interface for Python database access modules. It’s documented in PEP 249. Nearly all Python database modules such as sqlite3, psycopg and mysql-python conform to this interface.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0249/" target="_blank">PEP 249 Python DB-API v2.0x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://halfcooked.com/presentations/osdc2006/python_databases.html" target="_blank">halfcooked: Using Relational Databases with Python</a>
+| <a href="http://web.archive.org/web/20120815130844/http://www.amk.ca/python/writing/DB-API.html" target="_blank">DB-API</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/scenarios/db/#db-api" target="_blank">hitchhikers: DB-API</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<table summary="">
+<tbody>
+<tr>
+<p></p><p></p>
+<td><a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.linq">12.9 Language Integrated Query (LINQ)</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://msdn.microsoft.com/en-us/library/bb308959.aspx" target="_blank">MSDN</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://en.wikipedia.org/wiki/Language_Integrated_Query" target="_blank">Wikipedia</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.deitel.com/ResourceCenters/Programming/MicrosoftLINQ/tabid/2659/Default.aspx" target="_blank">Deitel LINQ Resource Center</a>
+ - <font class="update">(visited 27 Aug 18)</font>
+</li>
+<li>
+<a class="listitem" href="http://www.dotnetcurry.com/ShowArticle.aspx?ID=727" target="_blank">.NETCurry: 50 Linq examples</a>
+ - <font class="update">(visited 27 Aug 18)</font>
+</li>
+<li>
+<a class="listitem" href="http://www.linqpad.net/" target="_blank">LINQpad</a>
+ - <span class="update">(visited 27 Aug 18)</span>
+</li>
+</ol>
+
+<p class=head3>LINQ to Objects</p>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <font class="update">(visited 11 Nov 11)</font>
+</li>
+</ol>
+
+<p class=head3>LINQ to Datasets</p>
+<ol>
+<li>
+<a class="listitem" href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/linq-to-dataset" target="_blank">Microsoft docs</a>
+ - <font class="update">(published 29 Mar 17)</font>
+</li>
+</ol>
+
+<p class=head3>LINQ to XML</p>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <font class="update">(visited 11 Nov 11)</font>
+</li>
+</ol>
+
+<p class=head3>LINQ to SQL</p>
+<ol>
+<li>
+<a class="listitem" href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/index" target="_blank">Microsoft docs</a>
+ - <font class="update">(published 29 Mar 17)</font>
+</li>
+</ol>
+
+<p class=head3>LINQ to Entities</p>
+<ol>
+<li>
+<a class="listitem" href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities" target="_blank">Microsoft docs</a>
+ - <font class="update">(published 29 Mar 17)</font>
+</li>
+</ol>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pymongo">'pymongo' </a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">MongoDB is the best database platform for the modern dynamic, ever-changing database systems. PyMongo is the library for Python which lets you integrate and use the Python’s no SQL oriented elements with MongoDB platform.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/psycopg2/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://wiki.postgresql.org/wiki/Psycopg2_Tutorial" target="_blank">PostgreSQL: Psycopg2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://initd.org/psycopg/" target="_blank">
+initd: psycopg</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.postgresql">PostgreSQL Database</a><br>
+<a class="semanticweb">Version: 11.2  Released: Feb 02, 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">pgAdmin; pgDash; </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wiki.postgresql.org/wiki/Community_Guide_to_PostgreSQL_GUI_Tools" target="_blank">Community Guide to PostgreSQL GUI Tools</a>
+| <a href="https://www.postgresql.org/download/products/1-administrationdevelopment-tools/" target="_blank">Software Catalogue - Administration/development tools</a>
+| <a href="https://pgdash.io/blog/postgres-configuration-cheatsheet.html" target="_blank">PostgreSQL Configuration Cheat Sheet</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.postgresqltutorial.com/postgresql-python/" target="_blank">PostgreSQL Python</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/postgresql.html" target="_blank">fullstackpython: PostgreSQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.pgadmin.org/" target="_blank">pgAdmin4: PostgreSQL Tools</a>
+ - <span class="update">(visited 02 Feb 19)</span>
+</li>
+<li>
+<a class="listitem" href="https://pgdash.io/blog/postgres-features.html" target="_blank">pgDash: PostgreSQL Features You May Not Have Tried But Should</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.aquafold.com/dbspecific/postgresql_client?utm_source=google&utm_medium=cpc&utm_campaign=ads&utm_content=ads+db&utm_term=postgresql%20tools&gclid=EAIaIQobChMIgfSLvrjh4AIVobSzCh3PYQHKEAAYAyAAEgJc7vD_BwE" target="_blank">Aquafold: Aqua Data Studio for PostgreSQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://aws.amazon.com/rds/postgresql/?trk=ps_a131L000005OcZLQA0&trkCampaign=PAC_RDS_webpage_paidsearch_Q42018_update_PostgreSQL&sc_channel=ps&sc_campaign=PAC_paas_Q4_20_2018_RDS_paidsearch_google_Ad7&sc_outcome=PaaS_Digital_Marketing&sc_geo=NAMER&sc_country=US&sc_publisher=Google&sc_medium=PAC-PaaS-P|PS-GO|Non-Brand|Desktop|PA|Database|RDS|US|EN|Tex&s_kwcid=AL!4422!3!302421441828!b!!g!!%2Bpostgresql&ef_id=EAIaIQobChMIgfSLvrjh4AIVobSzCh3PYQHKEAAYAiAAEgIl2fD_BwE:G:s" target="_blank">Amazon RDS for PostgreSQL (Cloud)</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Databases learning checklist</div>
+<div class="propertydescription">
+<li>Install PostgreSQL on your server. Assuming you went with Ubuntu run sudo apt-get install postgresql.</li>
+<li>Make sure the <a href="#postgresql.psycopg2">psycopg2 library</a> is in your application's dependencies.</li>
+<li>Configure your web application to connect to the PostgreSQL instance.</li>
+<li>Create models in your ORM, either with <a href="#orm.django">Django's built-in ORM</a> or <a href="#sqlalchemy">SQLAlchemy</a> with <a href="#flask">Flask</a>.</li>
+<li>Build your database tables or sync the ORM models with the PostgreSQL instance, if you're using an ORM.</li>
+<li>Start creating, reading, updating and deleting data in the database from your web application.</li>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.postgresql.pgadmin">pgAdmin PostgreSQL adapter</a><br>
+<a class="semanticweb">Version: 11.2  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/psycopg2/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://wiki.postgresql.org/wiki/Psycopg2_Tutorial" target="_blank">PostgreSQL: Psycopg2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://initd.org/psycopg/" target="_blank">
+initd: psycopg</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.postgresql.psycopg">'psycopg2' PostgreSQL adapter</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'psycopg2' v2.7.6.1 is the most popular PostgreSQL database adapter for the Python programming language. Its main features are the complete implementation of the Python DB API 2.0 specification and the thread safety (several threads can share the same connection).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/psycopg2/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://wiki.postgresql.org/wiki/Psycopg2_Tutorial" target="_blank">PostgreSQL: Psycopg2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://initd.org/psycopg/" target="_blank">
+initd: psycopg</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.sqlalchemy">SQLAlchemy - The Python SQL Toolkit and Object Relational Mapper</a><br>
+<a class="semanticweb">Version: 12.14  Released: Oct 20, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">SQLAlchemy is a commonly used database toolkit. Unlike many database libraries it not only provides an ORM layer but also a generalized API for writing database-agnostic code without SQL.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Flask-SQLAlchemy/" target="_blank">PyPI: <a href="#flask">'flask'</a> + <a href="#sqlalchemy">SQL-Alchemy</a></a>
+| <a href="https://github.com/sqlalchemy/sqlalchemy" target="_blank">github: </a>
+| <a href=https://pypi.org/project/SQLAlchemy/" target="_blank">PyPI</a>
+| <a href="https://github.com/crazyguitar/pysheeet/blob/master/docs/notes/python-sqlalchemy.rst" target="_blank">Cheatshett</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/introductory-tutorial-python-sqlalchemy/" target="_blank">pythoncentral: </a>
+| <a href="https://overiq.com/sqlalchemy-101/intro-to-sqlalchemy/" target="_blank">OverIQ: </a>
+| <a href="https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/" target="_blank">auth0</a>
+| <a href="https://pythonspot.com/orm-with-sqlalchemy/" target="_blank">pythonspot: </a>
+| <a href="http://www.rmunn.com/sqlalchemy-tutorial/tutorial.html" target="_blank">rmunn: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.sqlalchemy.org/" target="_blank">sqlalchemy.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/sqlalchemy.html" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91" target="_blank">towardsdatascience: SQLAlchemy — Python Tutorial</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://hackingandslacking.com/manage-database-models-with-flask-sqlalchemy-237135cbf7cc" target="_blank">hackingandslacking: Manage Database Models with Flask-SQLAlchemy</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://hackingandslacking.com/pythonic-database-management-with-sqlalchemy-3a6b99b102a0" target="_blank">Pythonic Database Management with SQLAlchemy</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">Active Record (<a href="#orm.django">Django ORM</a>) vs Data Mapper</div>
+<div class="propertydescription">SQLAlchemy uses the Data Mapper implementation – When using this kind of implementation, there is a separation between the database structure and the objects structure (they are not 1:1 as in the Active Record implementation). In most cases, you’ll have to use another persistence layer to keep interact with the database (for example, to save the object). So you can’t just call the save() method as you can when using the Active Record implementation (which is a con) but on the other hand, you code doesn’t have to know the entire relational structure in the database to function, as there is no direct relationship between the code and the database.</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.sqlalchemy.records">Records: SQL for Humans</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Records is minimalist SQL library, designed for sending raw SQL queries to various databases. Data can be used programmatically, or exported to a number of useful data formats.<br>
+Database support includes RedShift, Postgres, MySQL, SQLite, Oracle, and MS-SQL (drivers not included).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://github.com/kennethreitz/records" target="_blank">Github: Records</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.mysql">Oracle MySQL Database</a><br>
+<a class="semanticweb">Version:   Released: 2018; id=jhs@gmail.com, pw=August</a><br>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://dev.mysql.com/doc/connector-python/en/" target="_blank">MySQL Connector/Python Developer Guide</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|<br>
+
+<!----- thenewboston: MySQL Database ---------------------------------->
+<li>
+[thenewboston: MySQL Database] <a href="https://www.youtube.com/playlist?list=PL32BC9C878BA72085" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=KgiCxe-ZW8o&list=PL32BC9C878BA72085&t=0s&index=2" target="_blank">01</a>
+|<br><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=DOLL20iUUXg&index=33&list=PL32BC9C878BA72085" target="_blank">33</a>
+|</li>
+<!----- thenewboston: MySQL Database ---------------------------------->
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href=https://www.w3schools.com/python/python_mysql_getstarted.asp" target="_blank">w3schools: </a>
+| <a href="https://pythonspot.com/mysql-with-python/" target="_blank">pythonspot: MySQL with Python</a>
+| <a href="http://www.mysqltutorial.org/python-mysql/" target="_blank">mysqltutorial: Python MySQL Tutorial</a>
+|<br />
+| <a href="http://zetcode.com/db/mysqlpython/" target="_blank">zetcode: MySQL Python tutorial</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.oracle.com/mysql/" target="_blank">Oracle: MySQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.mysql.com/downloads/" target="_blank">Oracle: Download MySQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.oracle.com/database/technologies/appdev/sql-developer.html" target="_blank">
+Oracle: SQL Developer</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.mysql-python">'MySQL-python' Database</a><br>
+<a class="semanticweb">Version: 1.2.5  Released: Jan 2, 2014</a><br>
+<a class="newhtml5">Last released: Jan 2, 2014<br>
+MySQL-3.23 through 5.5 and Python-2.4 through 2.7 are currently supported.<br>
+Python-3.0 will be supported in a future release.<br>
+MySQLdb2 (sourceforge) is obsolete.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">"MySQLdb" is an interface to the popular MySQL database server for Python. The design goals are:<br>
+<li>Compliance with Python database API version 2.0 [PEP-0249]</li>
+<li>Thread-safety</li>
+<li>Thread-friendliness (threads will not block each other)</li>
+MySQL-3.23 through 5.5 and Python-2.4 through 2.7 are currently supported. Python-3.0 will be supported in a future release. PyPy is supported.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/MySQL-python/" target="_blank">PyPI</a>
+| <a href="http://mysql-python.sourceforge.net/MySQLdb.html" target="_blank">MySQLdb User's Guide</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href=https://www.w3schools.com/python/python_mysql_getstarted.asp" target="_blank">w3schools: </a>
+| <a href="https://pythonspot.com/mysql-with-python/" target="_blank">pythonspot: MySQL with Python</a>
+| <a href="http://www.mysqltutorial.org/python-mysql/" target="_blank">mysqltutorial: Python MySQL Tutorial</a>
+|<br />
+| <a href="http://zetcode.com/db/mysqlpython/" target="_blank">zetcode: MySQL Python tutorial</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/farcepest/MySQLdb1" target="_blank">github: MySQLdb1</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.datacamp.com/community/tutorials/mysql-python" target="_blank">datacamp: Getting Started With MySQL In Python</a>
+ - <span class="update">(visited 10 Jan 19)</span>
+</li>
+<li>
+<a class="listitem" href="https://hackingandslacking.com/using-pymysql-8480a714b909" target="_blank">Birchard: Using PyMySQL</a>
+ - <span class="update">(published Jun 15, 2018)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<table summary="">
+<tbody>
+<tr>
+<p></p><p></p>
+<td><a href="#top"><img height="40" alt="Go to the Top" src="images/SQLite.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.sqlite">SQLite</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">SQLite is a database that is stored in a single file on disk. SQLite is built into Python but is only built for access by a single connection at a time. Therefore is highly recommended to not run a production web application with SQLite.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://www.sqlite.org/docs.html" target="_blank">SQLlite</a>
+| <a href="http://www.sqlitetutorial.net/download-install-sqlite/" target="_blank">Download</a>
+| <a href="http://docs.python.org/3/library/sqlite3.html" target="_blank">DB-API 2.0</a>
+| <a href="http://www.pythonlake.com/python/sqlite3" target="_blank">Python Lake</a>
+| <a href="http://www.tcl.tk/man/tcl8.6/TdbcsqliteCmd/contents.htm" target="_blank">Tdbc docs</a>
+| <a href="http://www.tcl.tk/man/tcl8.6/SqliteCmd/sqlite3.htm" target="_blank">Tcl 8.6docs</a>
+| <a href="http://github.com/pawelsalawa/sqlitestudio/wiki/User_Manual" target="_blank">SqliteStudio User Manual</a>
+|<br />
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://youtu.be/o-vsdfCBpsU" target="_blank">sentdex</a>
+| <a href="https://www.youtube.com/playlist?list=PLGLfVvz_LVvTsslWD1HBQEjBbmAaAF9Xy" target="_blank">Derek Banas</a>
+| <a href="https://www.youtube.com/watch?v=U7nfe4adDw8&list=PLS1QulWo1RIa0-Cs2Qx6GFyiIVVVS9lCS" target="_blank">ProgrammingKnow</a>
+|<br />
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.sqlitetutorial.net/sqlite-python/" target="_blank">SQLitetutorial['install']</a>
+| <a href="https://www.tutorialspoint.com/sqlite/index.htm" target="_blank">TutorialsPoint [DETACH]</a>
+| <a href="https://www.tutorialspoint.com/sqlite/sqlite_tutorial.pdf" target="_blank">tutorialspoint: SQLite Tutorial PDF</a>
+| <a href="https://stackabuse.com/a-sqlite-tutorial-with-python/" target="_blank">StackAbuse</a>
+| <a href="https://www.blog.pythonlibrary.org/2012/07/18/python-a-simple-step-by-step-sqlite-tutorial/#more-1960" target="_blank">Driscoll</a>
+| <a href="https://www.javatpoint.com/sqlite-tutorial" target="_blank">JavaTpoint</a>
+| <a href="https://www.w3resource.com/sqlite/" target="_blank">W3resource</a>
+| <a href="https://www.guru99.com/sqlite-tutorial.html" target="_blank">Guru99</a>
+| <a href="https://www.techonthenet.com/sqlite/index.php" target="_blank">TOTN</a>
+| <a href="https://pythonspot.com/en/python-database-programming-sqlite-tutorial/" target="_blank">PythonSpot</a>
+| <a href="http://opentechschool.github.io/python-flask/extras/databases.html" target="_blank">OpenTechSchool</a>
+| <a href="http://zetcode.com/db/sqlitepythontutorial/" target="_blank">Zetcode</a>
+| <a href="https://www.pythoncentral.io/series/python-sqlite-database-tutorial/" target="_blank">pythoncentral</a>
+|<br />
+| <a href="" target="_blank">C</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">G</a>
+|</div>
+<p></p>
+
+
+<ol>
+<li>
+<a class="listitem" href="https://www.sqlite.org/index.html" target="_blank">SQLlite.Org</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.sqlitetutorial.net/" target="_blank">SQLliteTutorial</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://lazyprogrammer.me/how-to-install-sqlite-on-windows-a-visual-walkthrough/" target="_blank">Lazy Programmer</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://sandersonforensics.com/forum/content.php?195-SQLite-Forensic-Toolkit" target="_blank">Tool: Forensic Toolkit for SQLite</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://sqlitebrowser.org/" target="_blank">Tool: DB Browser</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://sqlitestudio.pl/index.rvt" target="_blank">Tool: SQLite Studio</a>
+ - <span class="update">(visited 22 Jun 18)</span>
+</li>
+</ol>
+
+<p></p>
+<div class="propertyheader">How to install SQLite3 in Windows</div>
+<div class="propertydescription"><kbd>[Windows CMD] create folder=C:\sqlite3 </kbd><br>
+[Windows] Add 'c:\sqlite3' to Environment PATH<br>
+<kbd>[SQLite.Org] Download sqlite-dll-win64-x64-3240000.zip. Unpack it in c:\sqlite3 folder (2 files)</kbd><br>
+<kbd>[SQLite.Org] Download sqlite-tools-win32-x86-3240000.zip. Unpack it in c:\sqlite3 folder (3 files)</kbd><br>
+<kbd>[Windows CMD] C:\sqlite3\sqlite3.exe</kbd><br>
+</div>
+<p></p>
+
+<p></p>
+<div class="propertyheader">How to install DB Browser for SQLite3 in Windows</div>
+<div class="propertydescription">
+[Windows] Add 'c:\DB Browser For SQLite' to Environment PATH<br>
+[SQLiteBrowser.Org] Download dbrowser.for.sqlite....<br>
+<kbd>Install it to the 'c:\sqlite3 DB Browser' folder</kbd><br>
+</div>
+<p></p>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sql.sqlite.dbbrowser">DB Browser for SQLite</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://sqlitebrowser.org/" target="_blank">DB Browser for SQLite</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Howq to install DB Browser for SQLite</div>
+<div class="propertydescription">Create Windows Folder 'C:\SQLite3 DB Browser'<br>
+Download DB Browser for SQLite (Win64)<br>
+Use Windows Installer, install to 'C:\SQLite3 DB Browser'
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="orm">Object Relational Mapping</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Object-relational mappers (ORMs) allow developers to access data from a backend by writing Python code instead of SQL queries. Each web application framework handles integrating ORMs differently.<br>
+<li>Object – This part represents the objects and programming language where the framework is used, for example Python.</li>
+<li>Relational – This part represents the RDBMS database you’re using (Relational Database Manager System). There are numerous popular relational databases out there, but you’re probably using on of the following – MSSQL, MySQL, Oracle Database, PostgreSQL, MariaDB, PerconaDB, TokuDB. What’s common between most relational databases is their relational structures (tables, columns, keys, constraints, etc.).</li>
+<li>Mapping – This final part represents the bridge and connection between the two previous parts, the objects and the database tables.</li>
+</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">3</a>
+| <a href="https://db-engines.com/en/ranking" target="_blank">DB-Engines Ranking</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="orm.django">Django ORM</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The Django ORM is the interface used by <a href="#django">Django</a> to provide database access. It’s based on the idea of models, an abstraction that makes it easier to manipulate data in Python.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Active Record vs Data Mapper (<a href="#sqlalchemy">SQL-Alchemy</a>)</div>
+<div class="propertydescription">Django ORM uses the active record implementation – you’ll see this implementation in most <a href="#orm">ORMs</a>. Basically what it means is that each row in the database is directly mapped to an object in the code and vice versa. ORM frameworks such as Django won’t require predefining the schema to use the properties in the code. You just use them, as the framework can ‘understand’ the structure by looking at the database schema. Also, you can just save the record to the database, as it’s mapped to a specific row in the table.</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="orm.peewee">'peewee' ORM</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">peewee is another <a href="#orm">ORM</a> with a focus on being lightweight with support for Python 2.6+ and 3.2+ which supports <a href="#sqlite">SQLite</a>, <a href="#mysql">MySQL</a> and <a href="#postgressql">Postgres</a> by default. The model layer is similar to that of the Django ORM and it has SQL-like methods to query data. While SQLite, MySQL and Postgres are supported out-of-the-box, there is a collection of add-ons available.<br>
+A small but powerful library for accessing databases by way of an ORM, with native support for SQLite, MySQL, and PostgreSQL.  Peewee provides a safe, programmatic path to access database resources, using a set of Python classes that are intuitive for both Python developers and database engineers. With Peewee, a quick-and-dirty way to access a database can be later expanded to a more robust option without having to rip it out and start over. Transactions are natively supported, and optional modules provide support for everything from connection pooling to advanced field types like many-to-many. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">3</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="orm.pony">Pony ORM</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">PonyORM is an ORM that takes a different approach to querying the database. Instead of writing an SQL-like language or boolean expressions, Python’s generator syntax is used. There’s also an graphical schema editor that can generate PonyORM entities for you. It supports Python 2.6+ and Python 3.3+ and can connect to SQLite, MySQL, Postgres & Oracle</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">3</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.postgresqltutorial.com/postgresql-python/" target="_blank">PostgreSQL Python</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/postgresql.html" target="_blank">fullstackpython: PostgreSQL</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="orm.sqlobject">SQLObject ORM</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">SQLObject ORM supports a wide variety of databases: Common database systems MySQL, Postgres and SQLite and more exotic systems like SAP DB, SyBase and MSSQL.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">3</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.python">Python IDLE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/idle.html" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.pycharm">Pycharm IDE</a><br>
+<a class="semanticweb">Version: 2018.3.1  Released: Dec 10, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.jetbrains.com/help/pycharm/meet-pycharm.html" target="_blank">jetbrains: 2018.3 Online Help</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+
+<!----- thenewboston -------------------------------------------------->
+<li>
+| <a href="" target="_blank">JetBrains</a>
+| <a href="https://www.youtube.com/results?search_query=getting+started+with+pycharm+1%2F8" target="_blank">Getting Started</a>
+| <a href="https://www.youtube.com/watch?v=5rSBPGGLkW0" target="_blank">01</a>*
+| <a href="https://www.youtube.com/watch?v=wCJ5kiSmvUY" target="_blank">02 UI</a>*
+| <a href="https://www.youtube.com/watch?v=JLfd9LOdu_U" target="_blank">03</a>*
+| <a href="https://www.youtube.com/watch?v=XOkNJxvNtPw" target="_blank">04</a>*
+| <a href="https://www.youtube.com/watch?v=jmTo5xTRka8" target="_blank">05</a>*
+| <a href="https://www.youtube.com/watch?v=QJtWxm12Eo0" target="_blank">06</a>*
+| <a href="https://www.youtube.com/watch?v=-VzJvNLooj4" target="_blank">07</a>*
+| <a href="https://www.youtube.com/watch?v=y6n3tjP32wg" target="_blank">08</a>*
+| <a href="https://www.youtube.com/watch?v=y6n3tjP32wg" target="_blank">New 2018.2</a>*
+|</li>
+<!----- thenewboston -------------------------------------------------->
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.jetbrains.com/pycharm/" target="_blank">JetBrains</a>
+ - <span class="update">(visited 24 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Installing PyCharm</div>
+<div class="propertydescription">Download PyCharm from 'jetbrains.com'<br>
+Install using Winodows installer (associate .py file type)<br>
+[PyCharm Welcome] Configure 'project interpreter=\python37\python.exe'<br>
+[Create new project] browse to your personal 'Projects' folder {c:\python37\SneedPy\}
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.eclipse">Eclipse IDE</a><br>
+<a class="semanticweb">Version: 2018-12  Released: Dec 19, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Install Eclipse Platform + EP:'Marketplace client' + MP:'pydev' (perspective)</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wiki.eclipse.org/Platform" target="_blank">eclipse: Platform</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=NDFbXIiqT4o&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y&index=5" target="_blank">CoreyMS: eclipse</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.eclipse.org/ide/" target="_blank">eclipse.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.eclipse.pydev">'pydev' IDE for Eclipse</a><br>
+<a class="semanticweb">Version: 7.0.3  Released: Nov 08, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Install Eclipse Platform + EP:'Marketplace client' + MP:'pydev' (perspective)</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://sourceforge.net/projects/pydev/" target="_blank">sourceforge: pydev for eclipse</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">e</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.pydev.org/" target="_blank">pydev.org</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse" target="_blank">PyDev - Python IDE for Eclipse</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.wingpersonal">Wing-Personal IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.wing101">Wing 101 IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.vim">Vim IDE</a><br>
+<a class="semanticweb">Version: 8.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Vim is a highly configurable text editor for efficiently creating and changing any kind of text. It is included as "vi" with most UNIX systems and with Apple OS X.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://vim.wikia.com/wiki/Use_Vim_like_an_IDE" target="_blank">Use Vim like an IDE</a>
+| <a href="https://www.vim.org/download.php" target="_blank">vim downlaod</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/vim-and-python-a-match-made-in-heaven/" target="_blank">realpython: VIM and Python – A Match Made in Heaven</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://dev.to/bezirganyan/who-said-that-vim-cannot-compete-with-ides-51k4" target="_blank">Who said VIM cannot compete with IDEs?</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/vim.html" target="_blank">Full Stack Python: Vim</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://spacevim.org/use-vim-as-a-python-ide/" target="_blank">SpaceVim: A community-driven vim distribution</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="solid">Inrupt and Solid</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">solid pod 'JHSinKC' + 'Python2018'</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=jHGcwNmeIRw" target="_blank">NWO Sneak Peek</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+	<li>
+<a class="listitem" href="https://solid.inrupt.com/" target="_blank">Solid</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.inrupt.com/" target="_blank">Inrupt</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.inrupt.com/blog/one-small-step-for-the-web" target="_blank">One Small Step for the Web</a>
+ - <span class="update">(visited 30 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fastcompany.com/90243936/exclusive-tim-berners-lee-tells-us-his-radical-new-plan-to-upend-the-world-wide-web" target="_blank">Tim Berners-Lee tells us his radical new plan to upend the World Wide Web</a>
+ - <span class="update">(visited 28 Sep 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Technologies in Solid</div>
+<div class="propertydescription">Solid server + Solid POD + solid-auth-client<br>
+HTTP + REST + HTML + CSS + PureCSS (Yahoo) + Web Annotation Vocabulary + Linked Data + FOAF<br>
+WebID: Identity + TLS + OpenID Connect<br>
+JavaScript + 'npm' + NODE.js + JQuery + Turtle (graphics) + rdflib.js <br>
+Frameworks: Angular v6 + 'ngx' + 'toastr' - Vue - Yeoman - React<br>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="ide.vscode">Visual Studio Code IDE</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="editor.atom">Atom Editor</a><br>
+<a class="semanticweb">Version: 1.33.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=DjEuROpsvp4&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y&index=3" target="_blank">CoreyMS: Atom</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://atom.io/" target="_blank">Atom: Home</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="beeware">'beeware' Framework</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=qaPzlIJ57dk" target="_blank">Russell Keith-Magee - Building a cross-platform native app with BeeWare - PyCon 2018</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="xml">eXtensible Markup Language (XML)</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Extensible Markup Language (XML) is a simple, very flexible text format derived from SGML (ISO 8879). Originally designed to meet the challenges of large-scale electronic publishing, XML is also playing an increasingly important role in the exchange of a wide variety of data on the Web and elsewhere</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.w3.org/XML/" target="_blank">w3c.org</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="xml.python">'xml' in Python</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tutorialspoint.com/python/python_xml_processing.htm" target="_blank">tutorialspoint: </a>
+| <a href="https://www.guru99.com/manipulating-xml-with-python.html" target="_blank">Guru99: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.geeksforgeeks.org/xml-parsing-python/" target="_blank">geeksforgeeks: XML parsing in Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/scenarios/xml/" target="_blank">hitchhikers: XML parsing</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="json">'json' Javascript Object Notation</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/json.html" target="_blank">docs3.7</a>
+| <a href="https://www.learnpython.org/en/Serialization" target="_blank">LearnPython</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=pTT7HMqDnJw&index=25&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-" target="_blank">Socratica</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+
+
+
+</body>
+</html>

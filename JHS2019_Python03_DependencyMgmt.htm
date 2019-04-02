@@ -1,0 +1,3743 @@
+﻿<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python03 Dependency Management</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++  -->
+<ul id="menu">
+
+<!--  START - Virtual Environment section  --------------===----------->
+<li><a href="#">Virtual Environment</a>
+<div class="menu-container-1">
+
+<!--  START - Virtual Environment column  ----------------------------->
+<div class="column-1" id=""><h3>VIRTUAL ENVIRONMENT</h3>
+<ul>
+<li><a href="#dependency.management">Dependency Mgmt</a></li>
+<li><a href="#virtual.environments">Virtual Environments</a></li>
+<li><a href="#doc29.pipenv">'pipenv' installer</a></li>
+<li><a href="#doc29.venv">29.3 'venv' VirtualEnv</a></li>
+<li><a href="#doc29.pyvenv">'pyvenv' VirtualEnv</a></li>
+<li><a href="#doc29.pyenv">'pyenv' VirtualEnv</a></li>
+<li><a href="#doc29.virtualenv">'virtualenv'</a></li>
+<li><a href="#doc29.virtualenvwrapper">'virtualenvwrapper'</a></li>
+<li><a href="#__init__.py">'__init__.py'</a></li>
+<li><a href="#requirements.txt">requirements.txt</a></li>
+</ul></div>
+<!--  START - Virtual Environment column  ----------------------------->
+
+</div></li>
+<!--  END - Virtual Environment section  ------------------------------>
+
+
+<!--  START - Installers section  ------------------------------------->
+<li><a href="#">Installers</a>
+<div class="menu-container-2">
+
+<!--  START - Installers column  -------------------------------------->
+<div class="column-1" id=""><h3>Installers</h3>
+<ul>
+<li><a href="">INSTALLERS</a></li>
+<li><a href="#doc29.direnv">'direnv' installer</a></li>
+<li><a href="#doc29.python-dotenv">'python-dotenv' config</a></li>
+<li><a href="#doc29.pip">29.5 'pip' installer</a></li>
+<li><a href="#doc29.pipdeptree">'pipdeptree' Display</a></li>
+<li><a href="#doc29.ensurepip">29.2 'ensurepip' Install</a></li>
+</ul></div>
+<!--  END - Installers column  ---------------------------------------->
+
+</div></li>
+<!--  END - Installers section  --------------------------------------->
+
+
+<!--  START - Configuration section  ---------------------------------->
+<li><a href="#">Configuration</a>
+<div class="menu-container-1">
+
+<!--  START - Configuration column  ----------------------------------->
+<div class="column-1" id=""><h3>Configuration</h3>
+<ul>
+<li><a href="#doc30.projectsetup">Project Setup</a></li>
+<li><a href="#doc30.os.environ">'os.environ' Env Vars</a></li>
+<li><a href="#doc33.__future__">'__future__'</a></li>
+<li><a href="#doc33.abc">'abc' Abstract</a></li>
+<li><a href="#doc33.atexit">'atexit' handler</a></li>
+<li><a href="#doc33.contextlib">'contextlib'</a></li>
+<li><a href="#doc33.dataclasses">'dataclasses'</a></li>
+<li><a href="#doc33.gc">'gc' garbage</a></li>
+<li><a href="#doc33.inspect">'inspect' handler</a></li>
+<li><a href="#doc33.site">'site'</a></li>
+<li><a href="#doc30.sys">'sys' OS tools</a></li>
+<li><a href="#doc33.sysconfig">'sysconfig' data</a></li>
+</ul></div>
+<!--  START - Configuration column  ----------------------------------->
+
+</div></li>
+<!--  END - Configuration section  ------------------------------------>
+
+
+<!--  START - Compilers section  -------------------------------------->
+<li><a href="#">Compilers</a>
+<div class="menu-container-1">
+
+<!--  START - Compilers column  --------------------------------------->
+<div class="column-1" id=""><h3>Compilers</h3>
+<ul>
+<li><a href="#doc31.compilers">COMPILERS</a></li>
+<li><a href="#doc31.webassembly">'wasm' Web Assembly</a></li>
+<li><a href="#doc31.code">'code' interpreter</a></li>
+<li><a href="#doc31.codeop">'codeop' compiler</a></li>
+</ul></div>
+<!--  START - Compilers column  --------------------------------------->
+
+</div></li>
+<!--  END - Compilers section  ---------------------------------------->
+
+
+</ul>
+<!-- +++++ end table of contents ++++++++++++++++++++++++++++++-------->
+<br><p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12">12.0  Serialization</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p>difflib, **notation, % operator</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.pickle">12.1  'pickle' - Python object serialization</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=EPsS2J8empg&list=PL8830E081324343F1&index=25" target="_blank">monkeylord: 25</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/how-to-pickle-unpickle-tutorial/" target="_blank">pythoncentral</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc33.pickletools">33.13  'pickletools' — Tools for pickle developers</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pickletools.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.copyreg">12.2 'copyreg' - Register pickle support functions</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.shelve">12.3 'shelve' - Python object persistence</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.json">'json' conversion</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.serpy">'serpy' JSON Serialization</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.marshal">12.4  'marshal' - Internal Python object serialization</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc12.marshmallow">'marshmallow' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://marshmallow.readthedocs.io/en/3.0/" target="_blank">Marshmallow 3.0</a>
+ - <span class="update">(visited 22 Aug 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="12Factor">12 Factor Applications (SaaS)</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://12factor.net/" target="_blank">12factor</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.clearlytech.com/2014/01/04/12-factor-apps-plain-english/" target="_blank">clearlytech</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.sitepoint.com/12-factor-apps-methodology-implement-apps-appfog/" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.happiestminds.com/blogs/cloud-native-applications-and-the-12-factor-design-methodology/" target="_blank">happiestminds</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/The-12-Factor-App-is-cloud-native-development-for-dummies" target="_blank">The-12-Factor-App-is-cloud-native-development-for-dummies</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="repository">Python Package Repository</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="faqheader">Sample Repository</div>
+<div class="faqdescription">
+<ol>
+<li>README.rst</li>
+<li>LICENSE</li>
+<li>setup.py</li>
+<li><a href="JHS2018_Python08_Packaging.htm#requirements.txt" target="_blank">requirements.txt</a></li>
+<li><a href="JHS2018_Python08_Packaging.htm#__init__.py" target="_blank">sample/__init__.py</a></li>
+<li>sample/core.py</li>
+<li>sample/helpers.py</li>
+<li>docs/conf.py</li>
+<li>docs/index.rst</li>
+<li>tests/test_basic.py</li>
+<li>tests/test_advanced.py</li>
+
+</ol></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/writing/structure/" target="_blank">hitchhikers: Structuring Your Project</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29">29.0 Software Packaging and Distribution</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Software Packaging includes 'distutils', 'zipapp', 'py_compile'</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/distribution.html" target="_blank">3.7doc</a>
+| <a href="https://packaging.python.org/" target="_blank">Python Packaging User Guide</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://manikos.github.io/a-tour-on-python-packaging" target="_blank">A tour on Python Packaging</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How to install Flask</div>
+<div class="propertydescription">[Powershell]<kbd>python -m pip install -U Flask</kbd></div>
+<p></p>
+<div class="propertyheader">How to create a Python distribution</div>
+<div class="propertydescription">[01_Python\pybooks\Head First Python] Chapter 2 explains how to create a distribution.</div>
+<p></p>
+<div class="propertyheader"><a href="https://packaging.python.org/" target="_blank">Python Packaging User Guide</a></div>
+<div class="propertydescription">Q. What if you want to install an application without changing its libraries or the versions of those libraries, which might break the application.
+<br />Or what if you can’t install packages into the global site-packages directory? For instance, on a shared host.  Virtual environments have their own installation directories and they don’t share libraries with other virtual environments.  There are two common tools for creating Python virtual environments:
+<li>[python console] <kbd>pip search <i>SubjectName</i></kbd> searches PyPI.</li>
+<li>[python console] <kbd>pip show <i>SubjectName</i></kbd> displays information about a package.</li>
+<li>venv (Python v3.3+) installs pip and setuptools into created virtual environments.</li>
+<li>virtualenv (Python v2.6+ and v3.3+) needs to be installed separately, 'pip', 'setuptools' and 'wheel' are always installed into created virtual environments by default (regardless of version).</li>
+</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.distutils">29.1 'distutils' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">The 'distutils' package provides support for building and installing additional modules into a Python installation.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/distutils.html" target="_blank">3.7doc</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Up</div>
+<div class="propertydescription">[</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.setuptools">'setuptools' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">Setuptools is a collection of enhancements to the Python distutils that allow developers to more easily build and distribute Python packages, especially ones that have dependencies on other packages.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/setuptools/" target="_blank">PyPI</a>
+| <a href="https://setuptools.readthedocs.io/en/latest/" target="_blank">good docs: setuptools 40.6.2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.pypa.io/en/latest/" target="_blank">Python Packaging Authority</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Up</div>
+<div class="propertydescription">[</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc32">32.0 Importing Modules</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html" target="_blank">chrisyeh96: Definitive Guide to Python import Statements</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">Tkdocs</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://mccricardo.wordpress.com/2014/03/19/__init__-py-what-in-the-world-is-it-for/" target="_blank">McCricardo blog</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.reddit.com/r/Python/comments/1bbbwk/whats_your_opinion_on_what_to_include_in_init_py/" target="_blank">Reddit</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://ncoghlan-devs-python-notes.readthedocs.io/en/latest/python_concepts/import_traps.html" target="_blank">Traps for the Unwary in Python’s Import System</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">3</div>
+<div class="propertydescription"><kbd>py_compile.compile('filename.py')</kbd></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc32.zipimport">32.1  'zipimport' — Import modules from Zip archives</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/zipimport.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13">13.0 Data Compressiona and Archiving</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/archiving.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.zlib">13.1  'zlib' Compression compatible with gzip</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/zlib.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.gzip">13.2  'gzip' — Support for gzip files</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/gzip.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.bz2">13.3  'bz2' — Support for bzip2 compression</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/bz2.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.lzma">13.4  'lzma' — Compression using the LZMA algorithm</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/lzma.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.zipfile">13.5  'zipfile' — Work with ZIP archives</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/zipfile.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc13.tarfile">13.6  'tarfile' — Read and write tar archive files</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/tarfile.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.zipapp">29.4  'zipapp' — Manage executable Python zip archives</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/zipapp.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc31">Python Compilers</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc31.webassembly">'wasm' Javascript Web Assembly</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">You can translate C/C++ to WebAssembly (for Linux/MAC/Windows), and then see the machine code generated by the browser.</div>
+
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://github.com/mbasso/awesome-wasm" target="_blank">!Github: AwesomeWASM!</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=bac0dGQbUto" target="_blank">Dan Callahan (2017): Practical WebAssembly</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://medium.com/@MadsSejersen/webassembly-the-missing-tutorial-95f8580b08ba" target="_blank">Serjerson: WebAssembly — The missing tutorial</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://webassembly.org/" target="_blank">webassembly</a>
+ - <span class="update">(visited 18 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://blog.scottlogic.com/2018/07/20/wasm-future.html" target="_blank">The future of WebAssembly</a>
+ - <span class="update">(published 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://mbebenita.github.io/WasmExplorer/" target="_blank">WebAssembly Explorer</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+<li>
+<a class="listitem" href="https://blog.mikaellundin.name/2016/06/19/creating-a-webassembly-binary-and-running-it-in-a-browser.html" target="_blank">Lundin: Creating a WebAssembly binary and running it in a browser</a>
+ - <span class="update">(published June 19, 2016)</span>
+</li>
+<li>
+<a class="listitem" href="https://rsms.me/wasm-intro" target="_blank">Anderson: Introduction to WebAssemblyM</a>
+ - <span class="update">(published Jan 16, 2017 )</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc31.code">'code' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc31.codeop">'codeop' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc30.sys">30.1 'sys' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<p class="faqdescription">The 'sys' module is...</p>
+<p>See <a href="#doc16.os">'os' module</a>.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/sys.html" target="_blank">3.0docs</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://e-tutorial.info/python-3-programming-tutorial-sys-module/" target="_blank">e-Tutorial</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://pythonprogramming.net/sys-module-python-3/" target="_blank">Python Programming</a>
+| <a href="https://www.python-course.eu/sys_module.php" target="_blank">Python Course.eu</a>
+| <a href="https://www.vskills.in/certification/tutorial/python/sys-module/" target="_blank">Vskills</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.journaldev.com/17243/python-sys-module" target="_blank">JournalDev</a>
+ - <span class="update">(visited 11 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://effbot.org/librarybook/sys.htm" target="_blank">Effbot</a>
+ - <span class="update">(visited 11 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://python101.pythonlibrary.org/chapter20_sys.html" target="_blank">Python 101</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a href=https://docs.python.org/3.1/library/sys.html#sys.stdout" target="_blank">Standard File Objects</a></div>
+<div class="faqdescription">There are built-in file objects representing standard input, output, and error. <kbd>import sys</kbd> to access 'stdin', 'stdout', and 'stderr'. There are also immutable copies of these in __stdin__, __stdout__, and __stderr__.  The <kbd>print()</kbd> function uses stdin (a stream object).</div>
+<p></p>
+<div class="propertyheader">#1 How to display the 'current search path' {system path}?</div>
+<div class="propertydescription">[python console]  <kbd>print(sys.path)</kbd><br>
+returns.... [', 'c:\\python37\\python37.zip', etc....]<br>
+When you 'import' modules, the python compiler uses <kbd>sys.path</kbd> to find the \folder\module.</div>
+<div class="propertyheader">#2 How to display the \folder\file path?</div>
+<div class="propertydescription">[python console] <kbd>os.path.join(os.path.dirname(__file__), '..')</kbd> Displays the parent directory where the module/program resides.<br>
+returns.... [', 'c:\\foldername\\foldername\\...]</div>
+<div class="propertyheader">#3 How to display the 'current working directory' (cwd)?</div>
+<div class="propertydescription">[python console]  <kbd>os.getcwd()</kbd><br>
+returns.... [', 'c:\\python37\\python37.zip', etc....]</div>
+<p></p>
+<div class="propertyheader">How to insert the 'current working directory' into the current search path?</div>
+<div class="propertydescription">[python console]  <kbd>sys.path.insert(0, 'cwd'))</kbd> or<br>
+ <kbd>sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))</kbd>
+returns.... [', '\\cwd, c:\\python37\\python37.zip', etc....]</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc33.sysconfig">'sysconfig'— Provide access to Python’s configuration information</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The sysconfig module provides access to Python’s configuration information like the list of installation paths and the configuration variables relevant for the current platform.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href=https://docs.python.org/3.7/library/sysconfig.html" target="_blank">doc3.7</a>
+| <a href="https://pymotw.com/2/sysconfig/" target="_blank">pymotw</a>
+| <a href="http://epydoc.sourceforge.net/stdlib/distutils.sysconfig-module.html" target="_blank">sourceforge</a>
+| <a href="" target="_blank">x</a>
+|</div>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.programcreek.com/python/index/1618/sysconfig" target="_blank">programcreek: sysconfig</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc15">15.0 Cryptographics Services</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/crypto.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.blog.pythonlibrary.org/2016/05/18/python-3-an-intro-to-encryption/" target="_blank">Python 3: An Intro to Encryption</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/scenarios/crypto/" target="_blank">Hitchhikers Guide to Python</a>
+ - <span class="update">(visited 04 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://medium.com/@ismailakkila/black-hat-python-encrypt-and-decrypt-with-rsa-cryptography-bd6df84d65bc" target="_blank">Black Hat Python — Encrypt and Decrypt with RSA Cryptography</a>
+ - <span class="update">(visited 04 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.crypto101.io/" target="_blank">Crypto101</a>
+ - <span class="update">(visited 04 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">'GPGME'</div>
+<div class="propertydescription">GPGME Python bindings provide pythonic access to GPG Made Easy</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc15.hashlib">15.1  'hashlib' — Secure hashes and message digests</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/hashlib.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc15.hmac">15.2  'hmac' — Keyed-Hashing for Message Authentication</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/hmac.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc15.secrets">15.3  'secrets' — Generate secure random numbers for managing secrets</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/secrets.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gpgme">GPGME - GnuPG Made Easy</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">GnuPG Made Easy (GPGME) is a library designed to make access to GnuPG easier for applications. It provides a High-Level Crypto API for encryption, decryption, signing, signature verification and key management. Currently it uses GnuPG's OpenPGP backend as the default, but the API isn't restricted to this engine. </div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.gnupg.org/" target="_blank">GnuPG.org</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://gnupg.org/" target="_blank">The GNU Privacy Guard</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyca">'pyca' - Python Cryptographic Authority</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">DEAD: PyCrypto v2.6.1: last released: Oct 17, 2013</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://github.com/pyca" target="_blank">GitHub</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://cryptography.io/en/latest/" target="_blank">pyca/cryptography</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/pyca/cryptography" target="_blank">Github: pyca/cryptography</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="charm">'charm' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Charm is a framework for rapidly prototyping advanced cryptosystems, which ships with a library of implemented cryptosystems. Based around Python (with C code for extra speed), it’s meant to be used by cryptographers and computer science researchers.<br>
+The Charm library includes public key encryption schemes, identity-based encryption schemes, attribute-based encryption schemes, digital signatures, privacy-preserving signatures, commitment schemes, zero-knowledge proofs and interactive protocols such as anonymous credential and oblivious transfer schemes</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="security.csrf">CSRF Attack</a><br>
+<a class="semanticweb">Version: x  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.tinfoilsecurity.com/blog/what-is-cross-site-request-forgery-csrf" target="_blank">tinfoilsecurity:
+Cross-Site Request Forgery (CSRF) in Plain English
+</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29" target="_blank">Cross-Site Request Forgery (CSRF)</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.veracode.com/security/csrf" target="_blank">veracode: CROSS-SITE REQUEST FORGERY GUIDE</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.direnv">'direnv' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">direnv is an environment switcher for the shell. It knows how to hook into bash, zsh, tcsh, fish shell and elvish to load or unload environment variables depending on the current directory. This allows project-specific environment variables without cluttering the ~/.profile file.<br>
+Before each prompt, direnv checks for the existence of a ".envrc" file in the current and parent directories. If the file exists (and is authorized), it is loaded into a bash sub-shell and all exported variables are then captured by direnv and then made available to the current shell.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">3.</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://github.com/direnv/direnv/wiki/Python" target="_blank">Github</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://rnorth.org/practical-direnv" target="_blank">North: Practical direnv</a>
+ - <span class="update">(published 06 Dec 16)</span>
+</li>
+<li>
+<a class="listitem" href="https://scotch.io/@iamjohnnym/managing-python-with-pyenv-and-direnv" target="_blank">Managing Python with Pyenv and Direnv</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Up</div>
+<div class="propertydescription">[</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.python-dotenv">'python-dotenv' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">Reads the key,value pair from .env file and adds them to environment variable. It is great for managing app settings during development and in production using 12-factor principles. NOTE: Usage is designed to mirror the heroku config api very closely.<br>
+The easiest and most common usage consists on calling load_dotenv when the application starts, which will load environment variables from a file named .env in the current directory or any of its parents or from the path specificied; after that, you can just call the environment-related method you need as provided by os.getenv.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://pydigger.com/pypi/python-dotenv" target="_blank">PyDigger</a>
+| <a href="https://hackage.haskell.org/package/dotenv-0.7.0.0/docs/Configuration-Dotenv.html" target="_blank">Configuration.Dotenv</a>
+| <a href="https://pypi.org/project/python-dotenv/" target="_blank">PyPI</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=QtACou6PsWI" target="_blank">PrettyPrinted: Python Dotenv in Flask</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="https://hackage.haskell.org/package/dotenv" target="_blank">dotenv: Loads environment variables from dotenv files</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://anaconda.org/conda-forge/python-dotenv" target="_blank">conda-forge / packages / python-dotenv</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.programcreek.com/python/example/90889/dotenv.load_dotenv" target="_blank">ProgramCreek</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://simpleit.rocks/python/flask/managing-environment-configuration-variables-in-flask-with-dotenv/" target="_blank">Managing Environment Configuration Variables In Flask With Dotenv</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://blog.jongallant.com/2018/01/python-lessons-learned/" target="_blank">Python Lessons Learned. Read This Before You Start Building a Distributable Python Package</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Up</div>
+<div class="propertydescription">[</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pip">29.5 'pip' installer</a><br>
+<a class="semanticweb">Version: 18.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">See 'pip-tools' + 'pip-compile' + 'pip-sync' + 'pipreqs'<br>
+<li>pip download - Download packages from (1) PyPI (and other indexes) using requirement specifiers (2) VCS project urls, (3) Local project directories, (4) Local or remote source archives.</li>
+<li>pip uninstall - uninstall most installed packages.</li>
+<li>pip freeze - displays installed packages (including editables) in a single coluumn suitable for 'requirements.txt'; case-insensitive sorted order.</li>
+<li>pip list - lists installed packages (including editables) in two columns; case-insensitive sorted order.</li>
+<li>pip show - show information about one or more installed packages.</li>
+<li>pip search - search PyPI packages whose name or summary contains [search string].</li>
+<li>pip check - verify installed packages have compatible dependencies.</li>
+<li>pip config</li>
+<li>pip wheel - uses the 'bdist_wheel setuptools' extension from the wheel package to build individual wheels. Offers the advantage of not recompiling your software during every install.</li>
+<li>pip hash - a convenient way to get a hash digest for use with Hash-Checking Mode, especially for packages with multiple archives.</li>
+</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pip.pypa.io/en/stable/reference/pip/" target="_blank">pypa: pip</a>
+| <a href="https://pip.pypa.io/en/stable/reference/pip_install/" target="_blank">pypa: pip install</a>
+| <a href="https://pip.pypa.io/en/stable/user_guide/#environment-variables" target="_blank">pipa: pip environment variables</a>
+| <a href="https://docs.python.org/3/installing/index.html" target="_blank">3.7doc</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=U2ZN104hIcc&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y&index=6" target="_blank">CoreyMS: pip</a>
+| <a href="" target="_blank">x</a>
+
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://medium.com/python-pandemonium/better-python-dependency-and-package-management-b5d8ea29dff1" target="_blank">Gal: Better Python dependency while packaging your project</a>
+ - <span class="update">(published Mar 01, 2018)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+<div class="propertyheader">"pip help"</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip help</kbd> shows module docs<br>
+[Windows CMD] <kbd>pip help install</kbd> shows install options</div>
+<p></p>
+<div class="propertyheader">"pip list"</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip list</kbd> shows list of installed packages + version number<br>
+[Windows CMD] <kbd>pip list --outdated (-O)</kbd> shows packages to update</div>
+<p></p>
+<div class="propertyheader">"pip freeze"</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip freeze</kbd> shows list of installed packages + version number<br>
+[Windows CMD] <kbd>pip freeze > requirements.txt</kbd> saves package list to file</div>
+<p></p>
+<div class="propertyheader">"pip --version"</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip --version</kbd> shows 'pip' version number</div>
+<p></p>
+<div class="propertyheader">"pip install -U $PACKAGE_NAME"</div>
+<div class="propertydescription">[Windows CMD] <kbd>python -m pip install --upgrade pip</kbd></div>
+<p></p>
+<div class="propertyheader">"pip install -r $REQUIREMENTS.TXT_FILE</div>
+<div class="propertydescription">[Windows CMD] <kbd>python -m pip install -r requirements.txt</kbd></div>
+<p></p>
+<div class="propertyheader">Upgrade 'pip module</div>
+<div class="propertydescription">[Windows CMD] <kbd>python -m pip install --upgrade pip</kbd></div>
+<p></p>
+<div class="propertyheader">Check current pip version</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip --version</kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pipdeptree">'pipdeptree' Displays dependencies</a><br>
+<a class="semanticweb">Version: 0.13.1  Released: Oct 08, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pipdeptree' is a command line utility for displaying the installed python packages in form of a dependency tree. It works for packages installed globally on a machine as well as in a virtualenv. Since <kbd>pip freeze</kbd> shows all dependencies as a flat list, finding out which are the top level packages and which packages they depend on requires some effort. It can also be tedious to resolve conflicting dependencies because pip doesn’t yet have true dependency resolution (more on this later).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/pipdeptree/" target="_blank">PyPI</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Why is a package installed?</div>
+<div class="propertydescription">[C:\python37] <kbd>pipdeptree --reverse --packages six,click</kbd></div>
+
+<div class="propertyheader">W</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.ensurepip">29.2 'ensurepip' Bootstrapping the pip installer</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/library/ensurepip.html" target="_blank">doc3.7.l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc30.projectsetup">Python Project Setup</a><br>
+<a class="semanticweb">Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<a class="listitem" href="https://github.com/pypa/sampleproject/blob/master/setup.py" target="_blank">github: sampleproject</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://packaging.python.org/" target="_blank">Python Packaging User Guide</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank">Packaging Python Projects</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">3</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="dependency.management">Python Dependency Management</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">
+<li>pyenv – A Python version manager. Installs different versions and flavors of Python interpreters.</li>
+<li>pyvenv – A tool to create isolated virtual environments from a Python interpreter. Ships with Python from 3.4.</li>
+<li>virtualenv – Creates virtual environments, available in PyPi.</li>
+<li>So pyvenv is comparable to virtualenv while pyenv is a totally different kind of tool.</li>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0517/" target="_blank">PEP 517 A build-system independent format for source trees</a>
+| <a href="https://www.python.org/dev/peps/pep-0518/" target="_blank">PEP 518 Specifying Minimum Build System Requirements for Python Projects</a>
+| <a href="https://www.python.org/dev/peps/pep-0582/" target="_blank">PEP 582 Python local packages directory</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/ofek/hatch" target="_blank">'hatch'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/sdispater/poetry" target="_blank">'poetry'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/takluyver/flit" target="_blank">'flit'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/ambv/black/#pyprojecttoml" target="_blank">'black'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="virtual.environments">Virtual Environments</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">
+<li>pyenv – A Python version manager. Installs different versions and flavors of Python interpreters.</li>
+<li>pyvenv – A tool to create isolated virtual environments from a Python interpreter. Ships with Python from 3.4.</li>
+<li>virtualenv – Creates virtual environments, available in PyPi.</li>
+<li>So pyvenv is comparable to virtualenv while pyenv is a totally different kind of tool.</li>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0582/" target="_blank">PEP 582 Python local packages directory</a>
+| <a href="https://www.python.org/dev/peps/pep-0517/" target="_blank">PEP 517 A build-system independent format for source trees</a>
+| <a href="https://www.python.org/dev/peps/pep-0518/" target="_blank">PEP 518 Specifying Minimum Build System Requirements for Python Projects</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/ofek/hatch" target="_blank">'hatch'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/sdispater/poetry" target="_blank">'poetry'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/takluyver/flit" target="_blank">'flit'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://github.com/ambv/black/#pyprojecttoml" target="_blank">'black'</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://medium.com/@grassfedcode/goodbye-virtual-environments-b9f8115bc2b6" target="_blank">Medium: Goodbye Virtual Environments?</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://towardsdatascience.com/comparing-python-virtual-environment-tools-9a6543643a44" target="_blank">towardsdatascience: Comparing Python Virtual Environment tools</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pipenv">'pipenv' installer</a><br>
+<a class="semanticweb">Version: 2018.11.26  Released: Nov 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">'pipenv' + 'pipfile' + 'pipfile.lock'<br>
+pipenv, by Kenneth Reitz (the author of requests), aims to combine Pipfile, pip and virtualenv into one command on the command-line.<br>
+The 'virtualenv' directory typically gets placed in <kbd>~/.local/share/virtualenvs/XXX</kbd>, with XXX being a hash of the path of the project directory. This is different from virtualenv, where the directory is typically in the current working directory.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pipenv.readthedocs.io/en/latest/basics/" target="_blank">Basic Usage of Pipenv</a>
+| <a href="https://pipenv.readthedocs.io/en/latest/" target="_blank">Pipenv: Python Dev Workflow for Humans</a>
+| <a href="https://pipenv.readthedocs.io/en/latest/advanced/#configuration-with-environment-variables" target="_blank">Pipenv (36) Configuration Environment variables</a>
+| <a href="https://github.com/pypa/pipenv" target="_blank">Github: pipenv</a>
+| <a href="https://docs.python-guide.org/dev/virtualenvs/" target="_blank">hitchhikers: Pipenv & Virtual Environments</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://coreyms.com/development/python/python-tutorial-pipenv-easily-manage-packages-and-virtual-environments" target="_blank">coreyms: Pipenv</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/pipenv-guide/" target="_blank">realpython: Pipenv-A Guide to the New Python Packaging Tool</a>
+ - <span class="update">VanTol: 24 Apr 18</span>
+</li>
+<li>
+<a class="listitem" href="https://opensource.com/article/18/2/why-python-devs-should-use-pipenv" target="_blank">opensource: Why Python devs should use Pipenv</a>
+ - <span class="update">Triplett 28 Feb 18</span>
+</li>
+<li>
+<a class="listitem" href="https://pipenv.readthedocs.io/en/latest/advanced/#pipfile-vs-setuppy" target="_blank">readthedocs: Pipfile vs setup.py</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://pipenv.readthedocs.io/en/latest/install/#make-sure-you-ve-got-python-pip" target="_blank">readthedocs: Pipenv & Virtual Environments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/dev/virtualenvs/" target="_blank">Hitchhikers: Pipenv & Virtual Environments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How to initialize a Python 3 virtual environment</div>
+<div class="propertydescription">[Windows CMD] <kbd>$ pipenv --python 3.7</kbd></div>
+<p></p>
+<div class="propertyheader">Installing packages for your project</div>
+<div class="propertydescription">Pipenv manages dependencies on a per-project basis. To install packages, change into your project’s directory (or just an empty directory for this tutorial) and run:<br>
+[Windows CMD] <kbd>$ cd myproject<br>
+$ pipenv install requests</kbd><br>
+Pipenv will install the excellent Requests library and create a Pipfile for you in your project’s directory. The Pipfile is used to track which dependencies your project needs in case you need to re-install them, such as when you share your project with others.</div>
+<p></p>
+<div class="propertyheader"><a href="https://tox-pipenv.readthedocs.io/en/latest/" target="_blank">tox-pipenv</a></div>
+<div class="propertydescription">tox-pipenv is a 'tox' plugin to replace the default use of 'virtualenv', and pip with Pipenv’s development workflow.<br>
+<kbd>[command line] pipenv install tox-pipenv</kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.venv">29.3 'venv' Virtual Environments</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a>
+</tr>
+</tbody>
+</table>
+
+<p class="faqdescription"><kbd>$ python -m venv</kbd> <br>
+venv creates virtual environments in the shell that are fresh and sandboxed, with user-installable libraries, and it's multi-python safe.
+<li>Fresh because virtual environments only start with the standard libraries that ship with python, you have to install any other libraries all over again with pip install while the virtual environment is active.</li>
+<li>Sandboxed because none of these new library installs are visible outside the virtual environment, so you can delete the whole environment and start again without worrying about impacting your base python install. User-installable libraries because the virtual environment's target folder is created without sudo in some directory you already own, so you won't need sudo permissions to install libraries into it.</li>
+<li>It is multi-python safe, since when virtual environments activate, the shell only sees the python version (3.4, 3.5 etc.) that was used to build that virtual environment.</li></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/venv.html" target="_blank">3.7docs</a>
+| <a href="https://www.python.org/dev/peps/pep-0405/" target="_blank">PEP 405</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=VgP0xzLeLgA" target="_blank">+Chris Hawkes</a>
+| <a href="https://www.youtube.com/watch?v=UqkT2Ml9beg" target="_blank">++Dan Bader02</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://www.youtube.com/watch?v=N5vscPTWKOk" target="_blank">Corey Shafer</a>
+| <a href="https://www.youtube.com/watch?v=8KWVEc6vFgA" target="_blank">xDan Bader01</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/how-to-install-virtualenv-python/" target="_blank">Python Central Install</a>
+| <a href="https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/" target="_blank">Add Python to the PATH</a>
+| <a href="https://realpython.com/pipenv-guide/" target="_blank">Pipenv: RealPython</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+
+<ol>
+<li>
+<a class="listitem" href="https://jeffknupp.com/blog/2014/02/04/starting-a-python-project-the-right-way/" target="_blank">Starting A Python Project The Right Way</a>
+ - <span class="update">(visited 04 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.pipenv.org/" target="_blank">Pipenv: Python Dev Workflow for Humans</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/#virtualenvironments-ref" target="_blank">Pipenv & Virtual Environments</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pyvenv">'pyvenv' Module</a><br>
+<a class="newhtml5">DEPRICATED</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pyvenv; is a script shipped with Python 3 but deprecated in Python 3.6 as it had problems (not to mention the confusing name). In Python 3.6+, the exact equivalent is python3 -m venv.</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pyenv">'pyenv' Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pyenv' is used to isolate Python versions. For example, you may want to test your code against Python 2.6, 2.7, 3.3, 3.4 and 3.5, so you'll need a way to switch between them.<br>
+Once activated, it prefixes the PATH environment variable with ~/.pyenv/shims, where there are special files matching the Python commands (python, pip). These are not copies of the Python-shipped commands; they are special scripts that decide on the fly which version of Python to run based on the PYENV_VERSION environment variable, or the .python-version file, or the ~/.pyenv/version file. pyenv also makes the process of downloading and installing multiple Python versions easier, using the command pyenv install.<br>
+'pyenv' allows you to easily install multiple copies and multiple flavors of the Python interpreter. So you can not only install different versions of CPython, you can also install PyPy, Jython, Stackless Python and their different versions.<br>
+A command line tool to easily swap out the global python interpreter. It also allows to define per application python version. You can use it’s local command or directly mention a python version in a file named .python-version under a directory and for that directory and it’s children, the mentioned version will be used.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://github.com/pyenv/pyenv" target="_blank">github: pyenv</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">3</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.virtualenv">'virtualenv' Modules</a><br>
+<a class="semanticweb">Version: 16.1.0  Released: Oct 31, 2018</a><br>
+<a class="newhtml5">Many problems in build systems (emacs packages, python standalone application builders, installers...)<br>
+	ultimately come down to issues with 'virtualenv'. Python will be a better platform when we eliminate<br>
+	this additional option and use 'venv'.</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'virtualenv' creates isolated Python environments.<br>
+It works by installing a bunch of files in a directory (eg: env/), and then modifying the PATH environment variable to prefix it with a custom bin directory (eg: env/bin/). An exact copy of the python or python3 binary is placed in this directory, but Python is programmed to look for libraries relative to its path first, in the environment directory.<br>
+'virtualenv' tries to copy the Python binary into the virtual environment's bin directory. However it does not update library file links embedded into that binary, so if you build Python from source into a non-system directory with relative path names, the Python binary breaks. Since this is how you make a copy distributable Python, it is a big flaw.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://virtualenv.pypa.io/en/latest/reference/#options" target="_blank">PyPA</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href=https://www.youtube.com/watch?v=N5vscPTWKOk&index=7&list=PL-osiE80TeTt66h8cVpmbayBKlMTuS55y" target="_blank">CoreyMS: virtualenv</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://realpython.com/dependency-pitfalls/" target="_blank">realpython: Python Dependency Management Pitfalls</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://virtualenv.pypa.io/en/latest/" target="_blank">PyPA</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv" target="_blank">pythonforbeginners: How to use Python virtualenv</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html" target="_blank">readthedocs: Virtual Environments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">'virtualenv' Help</div>
+<div class="propertydescription">[MSDOS command] <kbd>virtualenv -h</kbd> shows module docs</div>
+<div class="propertyheader">Install 'virtualenv' module</div>
+<div class="propertydescription">[MSDOS command] <kbd>pip install virtualenv</kbd></div>
+<div class="propertyheader">Verify 'virtualenv' version number</div>
+<div class="propertydescription">[MSDOS command] <kbd>virtualenv --version</kbd></div>
+<div class="propertyheader">Create new 'virtual environment'</div>
+<div class="propertydescription">[MSDOS command] <kbd>virtualenv $PATH\FOLDER_NAME</kbd> creates new virtual environment<br>
+Creates \Include, \Lib, \Scripts, \tcl folders</div>
+<div class="propertyheader">Activate new virtual environment</div>
+<div class="propertydescription">[c:\temp\veTEST] <kbd>scripts\activate</kbd></div>
+<div class="propertyheader">Deactivate new virtual environment</div>
+<div class="propertydescription">[c:\temp\veTEST] <kbd>scripts\deactivate</kbd></div>
+<div class="propertyheader">Remove virtual environment</div>
+<div class="propertydescription">[CMDER$c:\temp\veTEST] <kbd>rm -rf veTEST/</kbd> removes folder</div>
+<p></p>
+<div class="propertyheader">3</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.virtualenvwrapper">'virtualenvwrapper' Modules</a><br>
+<a class="semanticweb">Version: 4.8.3  Released: Oct 31, 2018</a>
+<a class="newhtml5">none</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'virtualenvwrapper' is a set of extensions to Ian Bicking’s virtualenv tool. The extensions include wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://virtualenvwrapper.readthedocs.io/en/latest/" target="_blank">readthedocs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">3</div>
+<div class="propertydescription"></div>
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="__init__.py">'__init__.py' Configuration File</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">
+<ol>
+<li>__init__.py can execute initialization code for the package<br>
+It can be used to export selected portions of the package under more convenient name, hold convenience functions, etc.</li>
+<li>__init__.py is used to mark directories as Python package directories. If you have the files<br>
+<kbd>mydir/spam/__init__.py<br>
+mydir/spam/module.py</kbd><br>
+and mydir is on your path, you can import the code in module.py as
+<kbd>import spam.module</kbd> or <kbd>from spam import module</kbd></li>
+<li>__init__.py file requires Python treat the directories as containing packages; this is done to prevent directories with a common name, such as string, from unintentionally hiding valid modules that occur later (deeper) on the module search path.</li>
+<li>__init__.py can set the __all__ variable</li>
+<li>In the simplest case, __init__.py can just be an empty file.</li>
+</ol>
+</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/tutorial/modules.html#packages" target="_blank">docs3.7</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.reddit.com/r/Python/comments/1bbbwk/whats_your_opinion_on_what_to_include_in_init_py/" target="_blank">reddit: What's your opinion on what to include in __init__.py ?</a>
+ - <span class="update">(visited 20 Jun 13)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="requirements.txt">requirements.txt Configuration File</a><br>
+<a class="semanticweb">Version: 3.7.2  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pip.readthedocs.io/en/1.1/requirements.html#requirements-file-format" target="_blank">readthedocs: The requirements file format</a>
+| <a href="https://pip.pypa.io/en/stable/reference/pip_install/#requirements-file-format" target="_blank">Requirements File Format</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">#1 How to generate a requirements.txt file.</div>
+<div class="propertydescription">[Windows CMD] <kbd>pip freeze > requirements.txt</kbd><br>
+Creates 'cwd'/requirements.txt file of the current version of Python.</div>
+<p></p>
+<div class="propertyheader">#2 Use 'pipreqs 0.4.8' to generate a requirements.txt file.</div>
+<div class="propertydescription">[Windows CMD] <kbd>pipreqs /home/project/location</kbd><br>
+Creates requirements.txt file in /home/project/location/requirements.txt</div>
+<p></p>
+<div class="propertyheader">"pip install -r $REQUIREMENTS.TXT_FILE</div>
+<div class="propertydescription">[python console] <kbd>pip install -r requirements.txt --no-index --find-links file:///tmp/packages</kbd></div>
+<p></p>
+<div class="propertyheader">3 reasons NOT to use 'pip freeze'.</div>
+<div class="propertydescription">
+<li>`pip freeze` only saves the packages that are installed with `pip install` in your environment.</li>
+<li>'pip freeze' saves all packages in the environment including those that you don't use in your current project. (if you don't have virtualenv)</li>
+<li>Sometimes you just need to create requirements.txt for a new project without installing modules.</li>
+</div>
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc11.02">11.02 'os.path' Functions</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">See <a href="#">'os' module</a>.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!--------------------------------------------------------------------->
+<!--------------------------------------------------------------------->
+
+
+</body>
+</html>

@@ -1,0 +1,1799 @@
+﻿<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python16 Exceptions Logging Debug</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++ ------->
+<ul id="menu">
+
+<!--  START - Error Handling section  --------------------------------->
+<li><a href="#">Error Handling</a>
+<div class="menu-container-1">
+
+<!--  START - Error Handling section  --------------------------------->
+<div class="column-1"><h3>Error Handling</h3>
+<ul>
+<li><a href="#doc05">5.0 Error Handling</a></li>
+<li><a href="#doc05.exceptions">'exceptions' module</a></li>
+<li><a href="#doc05.baseclasses">5.1 Exception classes</a></li>
+<li><a href="#doc05.concreteexceptions">5.2 Concrete exceptions</a></li>
+<li><a href="#doc05.exceptionhierarchy">5.4 Exception hierarchy</a></li>
+<li><a href="#doc16.errno">16.15 'errno' Module</a></li>
+<li><a href="#doc05.warnings">5.3 'warnings' module</a></li>
+<li><a href="#doc30.warnings">30.5 'warnings' Control</a></li>
+</ul></div>
+<!--  START - Error Handling section  --------------------------------->
+</div></li>
+<!--  END - Error Handling section  ----------------------------------->
+
+
+<!--  START - Logging section  ---------------------------------------->
+<li><a href="#">Logging</a>
+<div class="menu-container-1">
+
+<!--  START - Logging column  ----------------------------------------->
+<div class="column-1"><h3>Logging</h3>
+<ul>
+<li><a href="#doc16.loggingPython">Logging in Python</a></li>
+<li><a href="#doc16.logging">16.6 'logging' module</a></li>
+<li><a href="#doc16.logging.config">16.7 'logging.config'</a></li>
+<li><a href="#doc16.logging.handlers">16.8 'logging.handlers'</a></li>
+<li><a href="#doc16.eliot">'eliot'</a></li>
+<li><a href="#doc16.logbook">'logbook'</a></li>
+<li><a href="#doc16.sentry">'sentry'</a></li>
+<li><a href="#doc16.raven">'raven'</a></li>
+</ul></div>
+<!--  END - Logging column  ------------------------------------------->
+</div></li>
+<!--  END - Logging section  ------------------------------------------>
+
+
+<!--  START - Debug section  ------------------------------------------>
+<li><a href="#">Debug</a>
+<div class="menu-container-3">
+
+<!--  START - Debug column  ------------------------------------------->
+<div class="column-1"><h3>Debug</h3>
+<ul>
+<li><a href="#doc28">28.0 Debugging</a></li>
+<li><a href="#doc28.dbd">28.1 'dbd'</a></li>
+<li><a href="#doc28.faulthandler">28.2 'faulthandler'</a></li>
+<li><a href="#doc28.pdb">28.3 'pdb'</a></li>
+<li><a href="#doc28.profilers">28.4 Python Profilers</a></li>
+<li><a href="#doc28.trace">28.6 'trace'</a></li>
+<li><a href="#doc28.tracemalloc">28.7 'tracemalloc'</a></li>
+<li><a href="#ipdb">'ipdb'</a></li>
+<li><a href="#pudb">'pudb'</a></li>
+<li><a href="#remote.pdb">'remote-pdb'</a></li>
+<li><a href="#wdb">'wdb'</a></li>
+</ul></div>
+<!--  START - Debug column  ------------------------------------------->
+
+<!--  START - Profiler column  ---------------------------------------->
+<div class="column-1"><h3>Profiler</h3>
+<ul>
+<li><a href="#line.profiler">'line_profiler'</a></li>
+<li><a href="#memory.profiler">'memory_profiler' monitor</a></li>
+<li><a href="#profiling">profiling</a></li>
+<li><a href="#py-spy">'py-spy'</a></li>
+<li><a href="#pyflame">'pyflame'</a></li>
+<li><a href="#vprof">'vprof''</a></li>
+</ul></div>
+<!--  START - Profiler column  ---------------------------------------->
+
+<!--  START - Debug Tools column  ------------------------------------->
+<div class="column-1"><h3>Debug Tools</h3>
+<ul>
+<li><a href="#icecream">IceCream</a></li>
+<li><a href="#django.debug.toolbar">django-debug-toolbar</a></li>
+<li><a href="#django.devserver">django-devserver</a></li>
+<li><a href="#flask.debugtoolbar">'flask-debugtoolbar'</a></li>
+<li><a href="#hunter">'hunter' trace tools</a></li>
+<li><a href="#iptrace.strace">'iptrace-strace'</a></li>
+<li><a href="#manhole">'manhole'</a></li>
+<li><a href="#pyelftools">pyelftools</a></li>
+<li><a href="#pyringe">pyringe</a></li>
+</ul></div>
+<!--  START - Debug Tools column  ------------------------------------->
+
+</div></li>
+<!--  END - Debug section  -------------------------------------------->
+
+</ul>
+<!-- +++++ end table of contents ++++++++++++++++++++++++++++++----- -->
+<br><p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05">5.0 Error Handling</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">In Python, all exceptions must be instances of a class that derives from BaseException.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/exceptions.html" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=nlCKrKGHSSk&index=31&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-" target="_blank">Socratica</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/tutorial/errors.html" target="_blank">PythonTutorial</a>
+| <a href="https://python101.pythonlibrary.org/chapter7_exception_handling.html" target="_blank">Python101</a>
+| <a href="https://pythonprogramming.net/handling-exceptions-try-except-python-3/" target="_blank">PythonProgramming</a>
+| <a href="http://thepythonguru.com/python-exception-handling/" target="_blank">Python Guru</a>
+| <a href="https://www.pythonforbeginners.com/error-handling/" target="_blank">Python4Beginners</a>
+| <a href="https://realpython.com/python-exceptions/" target="_blank">RealPython</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://code.tutsplus.com/tutorials/professional-error-handling-with-python--cms-25950" target="_blank">Envato02</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05.exceptions">'exceptions' Module</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href=https://www.programcreek.com/python/?ClassName=logging&submit=Search" target="_blank">Program Creek</a>
+ - <span class="update">(visited 22 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://code.tutsplus.com/tutorials/debugging-in-python--cms-25822" target="_blank">Envato01</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+<li>
+<a class="listitem" href="https://code.tutsplus.com/tutorials/how-to-handle-exceptions-in-python--cms-28621" target="_blank">Envato03</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://en.wikibooks.org/wiki/Python_Programming/Exceptions" target="_blank">Wikibooks</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.pythonforbeginners.com/error-handling/exception-handling-in-python/" target="_blank">Pythonforbeginners</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+</ol>
+
+<div class="faqheader">Try / Except / Else / Finally block</div>
+<div class="faqdescription"><kbd>Try:</kbd> this is the code you want to executre; logs INFO<br>
+<kbd>Except:</kbd> code jumps here and logs first error.<br>
+<kbd>Else:</kbd>  executers if 'try' block succeeds<br>
+<kbd>Finally:</kbd>  this code runs no matter what; close things down.</div>
+<p></p>
+
+<div class="propertyheader">What is an Exception?</div>
+<div class="propertydescription">An exception is a signal that an error or other unusual condition has occurred.</div>
+<p></p>
+<div class="propertyheader">Types of Errors?</div>
+<div class="propertydescription">An exception is a 'runtime error' happens during execution of a program.<br>
+A 'logical error' is when the data does not match the logical context.<br>
+A 'syntax or parsing error' occurs during coding or compile time.</div>
+<p></p>
+<div class="propertyheader">What is an Error Handler?</div>
+<div class="propertydescription">A block of code that answers an error. If the 'try' block runs, the 'except' block is ingnored; if the 'try' block fails, the 'except' block(s) run.<br>
+Statements under the 'else' block run only when no exception is raised.<br>
+Statements in the optional 'finally' block will run every time no matter exception occurs or not.<br>
+['try' block]<br>
+<kbd>try: number = int(raw_input("Enter a number between 1 - 10"))</kbd><br>
+['except' block]<br>
+<kbd> except ValueError:<br>
+    print "Inut error. Numbers only."<br>
+    sys.exit()</kbd><br>
+['else' block]<br><kbd>else: doing_different_exception_handling</kbd><br>
+['finally' block]<br>
+<kbd>finally: print('Goodbye, world!')</kbd>
+</div>
+<p></p>
+<div class="propertyheader">Create your own custom exception class</div>
+<div class="propertydescription"><a target ="_blank" href="http://thepythonguru.com/python-exception-handling/">Pyton Guru </a></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05.baseclasses">5.1  Exceptions Base Classes</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/exceptions.html#base-classes" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05.concreteexceptions">5.2  Concrete Exceptions</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">See also <a href="#doc16.6">'logging'</a> and <a href="#doc30.5">'warnings'</a>.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/exceptions.html#concrete-exceptions" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=-ARI4Cz-awo&t=8s" target="_blank">Corey</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05.exceptionhierarchy">5.4  Exception Hierarchy</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">See also <a href="#doc16.6">'logging'</a> and <a href="#doc30.5">'warnings'</a>.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/exceptions.html#exception-hierarchy" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.errno">16.15 'errno — Standard errno system symbols</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">This module makes available standard errno system symbols. The value of each symbol is the corresponding integer value. The names and descriptions are borrowed from linux/include/errno.h, which should be pretty all-inclusive.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/errno.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc05.warnings">5.3 'warnings' Module</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/exceptions.html#warnings" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc30.warnings">30.5 'warnings' — Warning control</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="faqdescription">Warning messages are typically issued in situations where it is useful to alert the user of some condition in a program, where that condition (normally) doesn’t warrant raising an exception and terminating the program.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/warnings.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.loggingpython">Logging in Python</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="faqdescription"></div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://chuckin-py.blogspot.com/2013/01/using-python-logging-across-multiple.html" target="_blank">Programmer's Notes and Random Random Thoughts</a>
+ - <span class="update">(published: Jan 19 2013)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.patricksoftwareblog.com/python-logging-tutorial/" target="_blank">patricksoftwareblog: Python Logging Tutorial</a>
+ - <span class="update">(published: Mar 17 2017)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.loggly.com/ultimate-guide/python-logging-basics/" target="_blank">LoggingThe Ultimate Guide</a>
+ - <span class="update">(visited 28 Jan 19)</span>
+</li>
+<li>
+<a class="listitem" href="https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/" target="_blank">fangpenlin: Good logging practice in Python</a>
+ - <span class="update">(published: Aug 26 2012)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.internalpointers.com/post/logging-python-sub-modules-and-configuration-files" target="_blank">internalpointers: Logging in Python with sub-modules and configuration files</a>
+ - <span class="update">(published: Jun 27 2015</span>
+</li>
+<li>
+<a class="listitem" href="https://gist.github.com/mariocj89/73824162a3e35d50db8e758a42e39aab" target="_blank">mariocj89: python-logging.md</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.blog.pythonlibrary.org/2014/02/11/python-how-to-create-rotating-logs/" target="_blank">blog.pythonlibrary: How to Create Rotating Logs</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.logging">16.6 'logging' Module</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">See also <a href="#doc05">Exceptions</a> and <a href="#doc30.5">'warnings'</a><br>loggers, log records, log filters, log formatters</div>
+<p></p>
+
+<div class="faqdescription">When diagnosing a problem you want to know the exact order messages were logged, and having the different levels separated to different files makes it more difficult.</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0282/" target="_blank">PEP282</a>
+| <a href="https://www.python.org/dev/peps/pep-0391/" target="_blank">PEP391</a>
+| <a href="https://docs.python.org/3/library/logging.html" target="_blank">'logging' module</a>
+| <a href="https://docs.python.org/3/library/logging.config.html#module-logging.config" target="_blank">logging.config</a>
+| <a href="https://docs.python.org/3/library/logging.handlers.html#module-logging.handlers" target="_blank">logging.handlers</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=g8nQ90Hk328" target="_blank">Socratica</a>
+| <a href="https://www.youtube.com/watch?v=-ARI4Cz-awo" target="_blank">Corey: Part 1</a>
+| <a href="https://www.youtube.com/watch?v=jxmzY9soFXg" target="_blank">Corey: Part 2</a>
+| <a href="https://www.youtube.com/watch?v=A4OdSAfHE2Y" target="_blank">SolidShellSecurity</a>
+| <a href="https://www.youtube.com/watch?v=24_4WWkSmNo" target="_blank">Gavin Roy</a>
+| <a href="https://www.youtube.com/watch?v=V0Mpt8i0oOQ" target="_blank">Rajat</a>
+| <a href="https://www.youtube.com/watch?v=Pbz1fo7KlGg" target="_blank">PyCon2018</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/howto/logging.html" target="_blank">Logging HOWTO</a>
+| <a href="https://docs.python.org/3.7/howto/logging-cookbook.html" target="_blank">Logging Cookbook</a>
+| <a href="https://www.digitalocean.com/community/tutorials/how-to-use-logging-in-python-3" target="_blank">DigitalOcean</a>
+| <a href="https://www.toptal.com/python/in-depth-python-logging" target="_blank">toptal: Logging</a>
+| <a href="http://coreyms.com/development/python/python-tutorial-logging-advanced-loggers-handlers-formatters" target="_blank">coreyms: Logging Advanced</a>
+| <a href="http://coreyms.com/development/python/python-tutorial-logging-basics-logging-files-setting-levels-formatting" target="_blank">coreyms: Logging Basics</a>
+| <a href="https://code.tutsplus.com/tutorials/error-handling-logging-in-python--cms-27932" target="_blank">tutsplus: Error Handling & Logging</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://antonym.org/2005/03/a-real-python-logging-example.html" target="_blank">Antonym: A real Python logging example</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://code.tutsplus.com/tutorials/error-handling-logging-in-python--cms-27932" target="_blank">Envato</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+<li>
+<a class="listitem" href="https://dzone.com/articles/best-practices-python-logging" target="_blank">Dzone: Best Practices for Python Logging</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://eric.themoritzfamily.com/learning-python-logging.html" target="_blank">Eric:  Learning Python Logging</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://fangpenlin.com/posts/2012/08/26/good-logging-practice-in-python/" target="_blank">FangPen: Good logging practice in Python</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.geeksforgeeks.org/logging-in-python/" target="_blank">Geeksforgeeks: Logging</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://docs.python-guide.org/writing/logging/#logging-in-a-library" target="_blank">Hitchhiker’s Guide to Python</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://medium.com/@HLIBIndustry/python-logging-custom-handlers-f3ba784a9452" target="_blank">LockeFox: Let’s Talk About Python Logging</a>
+ - <span class="update">(visited 10 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.loggly.com/blog/exceptional-logging-of-exceptions-in-python/" target="_blank">Loggly: Exceptional logging of exceptions in Python</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.loggly.com/docs/python-http/" target="_blank">Loggly: Python Logging Over HTTP/S</a>
+ - <span class="update">(visited 09 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.loggly.com/ultimate-guide/python-logging-basics/" target="_blank">Loggly: The Ultimate Guide to Logging</a>
+ - <span class="update">(visited 08 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://opensource.com/article/17/9/python-logging" target="_blank">OpenSource: A guide to logging in Python</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.patricksoftwareblog.com/python-logging-tutorial/" target="_blank">PatrickKennedy: Python Logging Tutorial</a>
+ - <span class="update">(published 17 Mar 17)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.programcreek.com/python/example/40/logging.getLogger" target="_blank">Programcreek</a>
+ - <span class="update">(visited 08 Oct 18) - 50 code examples for showing how to use logging.getLogger()</span>
+</li>
+<li>
+<a class="listitem" href="http://www.blog.pythonlibrary.org/2012/08/02/python-101-an-intro-to-logging/" target="_blank">Python library: Python 101: An Intro to logging</a>
+ - <span class="update">(visited 09 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://python101.pythonlibrary.org/chapter15_logging.html" target="_blank">Python library: Python 101: Chapter 15 - Logging</a>
+ - <span class="update">(visited 09 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://pymotw.com/3/logging/" target="_blank">PyMOTW-3: Logging</a>
+ - <span class="update">(visited 20 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://pythonprogramming.net/logging-intermediate-python-tutorial/" target="_blank">Pythonprogramming: Logging</a>
+ - <span class="update">(visited 09 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.toptal.com/python/in-depth-python-logging" target="_blank">Toptal: Python Logging: An In-Depth Tutorial</a>
+ - <span class="update">(visited 10 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://universalflowuniversity.com/logging-in-python/" target="_blank">UFU: Logging in Python</a>
+ - <span class="update">(visited 10 Oct 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/python-logging/" target="_blank">realpython: Logging in Python</a>
+ - <span class="update">(Ajitsaria: Sep 12, 2018)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">What is a 'logger'?</div>
+<div class="propertydescription">Loggers are the objects a developer usually interacts with. They are the main APIs that indicate what we want to log. Logger names are hierarchical. That is why I choose to use the module name as the logger name. The hierarchy starts with the root logger and descends from there.<br>
+Loggers, logging levels, handlers are configured at the application-level; do not configure loggers inside your code.</div>
+<p></p>
+
+<div class="propertyheader">What is a 'log level'?</div>
+<div class="propertydescription">There are five levels of importance associated with logging events. Creating more levels is unhelpful, since assigning events to levels becomes subjective.
+<li>50 - 'logger.critical()': <b>Critical</b> the application meltdown is imminent.</li>
+<li>40 - 'logger.error()': <b>Error</b> the application has stopped, due to the problem being logged.</li>
+<li>30 - 'logger.warning()': <b>Warning</b> the application is still executing, but may have problems in the near future.</li>
+<li>20 - 'logger.info()': <b>Affirmation</b> the application is running normally (e.g. "service has started" or "indexing run complete")</li>
+<li>10 - 'logger.debug()': Detailed information used in diagnosing problems.</li>
+<li>00 - NOTSET:</li>
+</div>
+<p></p>
+
+<div class="propertyheader">What is a 'log record'?</div>
+<div class="propertydescription">Events are described by Log records; packages that the logging module uses to pass required information around. Log records contain information about the log level, the function where the log was requested, the string that was passed, arguments, call stack information, etc. LogRecord instances are created automatically by the Logger every time something is logged, and can be created manually via makeLogRecord().</div>
+<p></p>
+
+
+<div class="propertyheader">What is a 'log formatter'?</div>
+<div class="propertydescription">16.6.7 <a href="https://docs.python.org/3/library/logging.html#logrecord-attributes">LogRecord attributes</a>. A Formatter is exactly what it sounds like. It formats a LogRecord. Formatter objects convert a LogRecord to (usually) a string which can be interpreted by either a human or an external system.  Formatter objects configure the final order, structure, and contents of the log message.   Formatters are in charge of serializing the metadata-rich LogRecord into a string.<br>
+Using <kbd>loggger.info("string template {}".format(argument))</kbd> should be avoided whenever possible in favor of <kbd>logger.info("string template %s", argument)</kbd>. This is a better practice, as the actual string interpolation will be used only if the log will be emitted. Not doing so can lead to wasted cycles when we are logging on a level over INFO, as the interpolation will still occur.</div>
+<p></p>
+
+<div class="propertyheader">What is a 'log filter'?</div>
+<div class="propertydescription">Filters allow for finer-grained control of which logs should be emitted. Multiple filters can be attached to both loggers and handlers. For a log to be emitted, all filters should allow the record to pass.  Users can declare their own filters as objects using a filter method that takes a record as input and returns True/False as output.  Filters can be used by Handlers and Loggers for more sophisticated filtering than is provided by levels.  A Filter filters a LogRecord (I have never needed one).  A filter object has a filter() method which is passed an event and which returns a value indicating whether the event is to be processed. Multiple filters can be associated with loggers and handlers, which both inherit from a base class Filterer having <kbd>addFilter(), removeFilter() and filter()</kbd> methods.<br>
+ The <kbd>Filterer.filter()</kbd> method calls the filter() method on all attached filters until all have seen the event, or until one of the filters rejects the event. If the event comes through unscathed, it is processed.</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.logging.config">16.7 'logging.config' — Logging configuration</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="faqdescription">See <a href="#">'os' module</a>.</div>
+<p> </p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/logging.config.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is a 'log configuration'?</div>
+<div class="propertydescription">16.7. 'logging.config' Programmers can configure logging in three ways:
+<li>[dictConfig()] <kbd>logging.basicConfig(level="INFO")</kbd> sets up a basic StreamHandler that will log everything on the INFO and above levels to the console. <br>
+Creating loggers, handlers, and formatters explicitly using Python code that calls the configuration methods listed above.</li>
+<li>Creating a logging config file and reading it using the fileConfig() function.</li>
+<li>[dictConfig()] Creates a dictionary of configuration information and passes it to the dictConfig() function.</li>
+</div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.logging.handlers">16.8 'logging.handlers — Logging handlers</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/logging.handlers.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<p></p>
+<div class="propertyheader">What is a 'log handler'?</div>
+<div class="propertydescription">16.8. 'logging.handlers' are responsible for dispatching the appropriate log messages (based on the log messages’ severity) to the handler’s specified destination (output).  There are 13 standard 'handlers', sending log records into a defined output (e.g. files, syslog, HTTP servers, sockets).<br>
+An application may send log messages to a log file, all log messages of error or higher to stdout, and all messages of critical to an email address. Three individual handlers are required; each handler is responsible for sending messages of a specific severity to a specific location.<br>
+The standard logging module already comes with multiple built-in output handlers like:
+<ol>
+<li>Output stream: StreamHandler, 'systemd' (stdout or stderr)</li>
+<li>File handler: FileHandler inherits from StreamHandler</li>
+<li>Files (watched): </li>
+<li>Rotating set of files (size): RotatingFileHandler switches from one file to the next when the current file reaches a certain size.</li>
+<li>Rotating set of files (time): TimedRotatingFileHandler switches from one file to the next at specified times.</li>
+<li>Email: SMTPHandler sends the events to designated e-mail addresses.  SMTPHandlers are generally used to notify people about problems which need urgent handling.</li>
+<li>Streaming TCP socket: SocketHandler sends the events, via a socket, to a remote server listening on a TCP port.</li>
+<li>Streaming UDP socket: (similar to SocketHandler) DatagramHandler sends the events using UDP sockets. Lower  overhead, lowerreliability.</li>
+<li>Web server: HTTPHandler</li>
+<li>SysLog (UNIX/Linux): SyslogHandler, MemoryHandler</li>
+<li>SysLog (Windows): NTEventLogHandler sends the events to an NT event log.</li>
+<li>Memory Buffer: When a trigger is received, MemoryHandler sends events to another handler to deal with.</li>
+<li>NULL Device: NullHandler is used in library code which uses logging to avoid misconfiguration messages when used in an application which doesn't configure logging.</li>
+</ol></div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.eliot">Eliot - </a><br>
+<a class="semanticweb">Version: 1.5.0  Released: Jul 18, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">'eliot' is a Python logging system that outputs causal chains of actions: actions can spawn other actions, and eventually they either succeed or fail. The resulting logs tell … Use structured logging. Two great tools for this: Eliot: Logging that tells you why it happened Most logging systems tell you what happened in your application, whereas eliot also tells you <br>
+Most logging systems tell you what happened in your application, whereas eliot also tells you why it happened.<br>
+eliot is a Python logging system that outputs causal chains of actions: actions can spawn other actions, and eventually they either succeed or fail. The resulting logs tell you the story of what your software did: what happened, and what caused it.<br>
+Eliot works well within a single process, but can also be used across multiple processes to trace causality across a distributed system. Eliot is only used to generate your logs; you will still need tools like Logstash and ElasticSearch to aggregate and store logs if you are using multiple processes.</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/eliot/" target="_blank">d</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.logbook">Logbook</a><br>
+<a class="semanticweb">Version: 1.4.1  Released: Oct 14, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Logbook is a logging system for Python that replaces the standard library’s logging module. It was designed with both complex and simple applications in mind and the idea to make logging fun:</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Logbook/" target="_blank">PyPI</a>
+| <a href="https://logbook.readthedocs.io/en/stable/" target="_blank">Logbook</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.sentry">Sentry</a><br>
+<a class="semanticweb">Version: 1.4.1  Released: Oct 14, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tbody>
+</table>
+
+<div class="faqdescription">Sentry’s features help you identify and debug errors and give you all the insight to decide when to fix or roll back. When things go to hell, you’ll have help fighting fires.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.sentry.io/clients/python/" target="_blank">Sentry</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="https://sentry.io/for/python/" target="_blank">sentry.io</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.raven">Raven</a><br>
+<a class="semanticweb">Version: 5.10.0  Released: Oct 14, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Raven is the legacy Python client for Sentry. It provides full out-of-the-box support for many of the popular frameworks, including Django, Flask, and Pylons. Raven also includes drop-in support for any WSGI-compatible web application.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://raven.readthedocs.io/en/feature-federated-docs/" target="_blank">Raven for Python</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/getsentry/raven-python" target="_blank">github: raven-python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28">28.0 Debugging and Profiling</a><br>
+<a class="semanticweb">Version:  Released:  2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/debug.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.bdb">28.1 'bdb' — Debugger framework</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The bdb module handles basic debugger functions, like setting breakpoints or managing execution via the debugger.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/bdb.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.faulthandler">28.2 'faulthandler' — Dump the Python traceback</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">This module contains functions to dump Python tracebacks explicitly, on a fault, after a timeout, or on a user signal.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/faulthandler.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.pdb">28.3 'pdb' — The Python Debugger</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The module pdb defines an interactive source code debugger for Python programs.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pdb.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.pythonprofilers">28.4 The Python Profilers</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">cProfile and profile provide deterministic profiling of Python programs. A profile is a set of statistics that describes how often and for how long various parts of the program executed. These statistics can be formatted into reports via the pstats module.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/profile.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.trace">28.6 'trace' or track Python statement execution</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The trace module allows you to trace program execution, generate annotated statement coverage listings, print caller/callee relationships and list functions executed during a program run. It can be used in another program or from the command line.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/trace.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc28.tracemalloc">28.7 'tracemalloc' — Trace memory allocations</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The tracemalloc module is a debug tool to trace memory blocks allocated by Python. It provides the following information:
+<li>Traceback where an object was allocated</li>
+<li>Statistics on allocated memory blocks per filename and per line number: total size, number and average size of allocated memory blocks</li>
+<li>Compute the differences between two snapshots to detect memory leaks</li></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/trace.html" target="_blank">doc3.7</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="c">'py</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+</body>
+</html>

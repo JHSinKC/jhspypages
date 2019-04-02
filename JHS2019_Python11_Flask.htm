@@ -1,0 +1,452 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python11 Flask</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++------------->
+<ul id="menu">
+
+<!--  START - Flask Development section  -------------------------------->
+<li><a href="#">Flask Development</a>
+<div class="menu-container-1">
+
+<!--  START - Flask column  --------------------------------------------->
+<div class="column-1"><h3>Flask</h3>
+<ul>
+<li><a href="#flask">flask</a></li>
+<li><a href="#flask.wtf">'flask-WTF' Forms</a></li>
+
+
+</ul></div>
+<!--  END - Flask column  ----------------------------------------------->
+
+</div></li>
+<!--  END - Flask Development section  ---------------------------------->
+
+
+<!--  START - GUI Framework section  ---------------------------------->
+<li><a href="#">GUI Framework</a>
+<div class="menu-container-1">
+
+<!--  START - GUI Framework column  ----------------------------------->
+<div class="column-1"><h3>GUI Framework</h3>
+<ul>
+<li><a href="#pyside2">'pyside2'</a></li>
+</ul></div>
+<!--  END - GUI Framework column  ------------------------------------->
+
+</div></li>
+<!--  END - GUI Framework section  ------------------------------------>
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++--------------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++  ----------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask">'flask' Web Micro-Framework</a><br>
+<a class="semanticweb">Version: 1.0.2  Released: May 02, 2018</a>
+<a class="newhtml5">Packaged with (5) dependencies</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask is a lightweight WSGI web application framework. It is designed to make getting started quick and easy, with the ability to scale up to complex applications.<br>
+Flask doesn’t enforce any dependencies or project layout, but it does come packaged with five other apps (see below).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://flask.pocoo.org/docs/1.0/" target="_blank">docs1.0.2</a>
+| <a href="https://pypi.org/project/Flask-SQLAlchemy/" target="_blank">PyPI: Flask + <a href="#sqlalchemy">SQL-Alchemy 2.3.2</a></a>
+|<br>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|
+<!----- CoreyMSchafer ------------------------------------------------->
+<li>
+[CoreyMSchafer: Python Flask Tutorial: Full-Featured Web App]
+ <a href="https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=MwZwr5Tvyxo&index=2&t=0s&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">01 Get Started</a>*
+| <a href="https://www.youtube.com/watch?v=QnDWIZuWYW0&index=2&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">02 templates</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=UIJKdCIEXUQ" target="_blank">03 forms</a>
+| <a href="https://www.youtube.com/watch?v=cYWiDiIUxQc" target="_blank">04 database</a>
+| <a href="https://www.youtube.com/watch?v=44PvX0Yv368" target="_blank">05 Package Structure</a>
+| <a href="https://www.youtube.com/watch?v=CSHx6eCkmv0" target="_blank">06 User Authentication</a>
+| <a href="https://www.youtube.com/watch?v=803Ei2Sq-Zs" target="_blank">07 User Account and Profile</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=u0oDDZrDz9U" target="_blank">08 Posts</a>
+| <a href="https://www.youtube.com/watch?v=PSWf2TjTGNY" target="_blank">09 Pagination</a>
+| <a href="https://www.youtube.com/watch?v=vutyTx7IaAI" target="_blank">10 Email and Password Reset</a>
+| <a href="https://www.youtube.com/watch?v=Wfx4YBzg16s" target="_blank">11 Blueprints and Configuration</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=uVNfQDohYNI" target="_blank">12 Custom Error Pages</a>
+| <a href="https://www.youtube.com/watch?v=goToXTC96Co&t=0s&index=14&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH" target="_blank">13 Deploy</a>
+|</li>
+<!----- CoreySchafer -------------------------------------------------->
+
+<!----- RealPython: Discover Flask ------------------------------------>
+<li>
+[RealPython: Discover Flask]
+ <a href="https://github.com/realpython/discover-flask" target="_blank">Github: playlist</a>
+| <a href="https://www.youtube.com/watch?v=WfpFUmV1d0w&feature=youtu.be" target="_blank">01 Setting up a static site</a>
+| <a href="https://www.youtube.com/watch?v=bLA6eBGN-_0" target="_blank">02 Creating a login page</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=qAe6v_6SMA8&feature=youtu.be" target="_blank">30 Continuous Integration</a>
+|</li>
+<!----- RealPython: Discover Flask ------------------------------------>
+
+<!----- Traversy Media: Flask From Scratch ---------------------------->
+<li>
+[Traversy Media: Flask From Scratch]
+ <a href="https://www.youtube.com/playlist?list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_">Github: playlist</a>
+| <a href="https://www.youtube.com/watch?v=zRwy8gtgJ1A&index=2&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&t=0s" target="_blank">01 GetStarted</a>
+| <a href="https://www.youtube.com/watch?v=addnlzdSQs4&index=3&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&t=0s">02 UserReg</a>
+| <a href="https://www.youtube.com/watch?v=QEMtSUxtUDY&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&index=3" target="_blank">03 Login</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=EgnyWxKFwjs&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_&index=4">04 Dashboard</a>
+| <a href="https://www.youtube.com/watch?v=Us9DuF4KWUE&index=5&list=PLillGF-RfqbbbPz6GSEM9hLQObuQjNoj_" target="_blank">05 EditArticles</a>
+|</li>
+<!----- RealPython: Flask From Scratch -------------------------------->
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.fullstackpython.com/flask.html" target="_blank">Full Stack Python</a>
+| <a href="http://coreyms.com/development/python/python-flask-tutorials-full-series" target="_blank">coreyms: Flask</a>
+| <a href="http://flask-tutorial.com/" target="_blank">RMOTR: (20)flask</a>
+| <a href="http://flask.pocoo.org/docs/1.0/tutorial/" target="_blank">Pocoo: (11)flask</a>
+| <a href="http://pythonspot.com/flask-web-app-with-python/" target="_blank">PythonSpot: Flask For Beginners</a>
+|<br>
+| <a href="http://www.tutorialspoint.com/flask" target="_blank">TutorialsPoint</a>
+| <a href="https://hackr.io/tutorials/learn-flask" target="_blank">HackrIO: (+10)</a>
+| <a href="https://scotch.io/tutorials/getting-started-with-flask-a-python-microframework" target="_blank">Scotch: Getting Started With Flask</a>
+| <a href="https://pythonprogramming.net/practical-flask-introduction/" target="_blank">PythonProgramming</a>
+| <a href="https://pythonhow.com/building-a-website-with-python-flask/" target="_blank">PythonHow</a>
+|<br>
+| <a href="https://www.journaldev.com/15524/python-flask-tutorial" target="_blank">JournalDev</a>
+| <a href="http://realpython.com/tutorials/flask/" target="_blank">Real Python: list!</a>
+| <a href="https://realpython.com/scaffold-a-flask-project/" target="_blank">realpython: Scaffold a Flask Project</a>
+|<br>
+| <a href="http://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-python-flask-and-mysql--cms-22972" target="_blank">FEE TutsPlus: Create Web App w/Flask + MySQL</a>
+| <a href="https://code.tutsplus.com/courses/build-a-web-app-with-the-flask-microframework-for-python" target="_blank">FEE TutsPlus: Build a Web App w/Flask</a>
+|<br>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|<br>
+
+<!----- Miguel: Flask Mega-Tutorial ----------------------------------->
+<li>
+[Miguel Grinberg: Flask Mega-Tutorial (veMicroblog)]
+ <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">01 HelloWorld</a>*
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates" target="_blank">02 Templates</a>*
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iii-web-forms" target="_blank">03 Web Forms</a>
+|<br /><span>--&gt;</span>
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-iv-database" target="_blank">04 database</a>
+|<br /><span>--&gt;</span>
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis" target="_blank">23 APIs</a>
+|</li>
+<!----- Miguel: Flask Mega-Tutorial ----------------------------------->
+
+<!----- RealPython: Flask by Example ---------------------------------->
+<li>
+[RealPython: Flask by Example]
+ <a href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">01 Project Setup on Heroku</a>
+| <a href="https://realpython.com/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/" target="_blank">02 Setup Postgres + SQLAlchemy + Alembic</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-part-3-text-processing-with-requests-beautifulsoup-nltk/" target="_blank">03 Text Processing w/Requests + BeautifulSoup + NLTK</a>
+| <a href="https://realpython.com/flask-by-example-implementing-a-redis-task-queue/" target="_blank">04 Implementing a Redis Task Queue</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-integrating-flask-and-angularjs/" target="_blank">05 Integrating Flask + Angular</a>
+| <a href="https://realpython.com/updating-the-staging-environment/" target="_blank">06 Updating the Staging Environment</a>
+| <a href="https://realpython.com/flask-by-example-updating-the-ui/" target="_blank">07 Updating the UI</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/flask-by-example-custom-angular-directive-with-d3/" target="_blank">08 Custom Angular Directive with D3</a>
+|</li>
+<!----- RealPython: Flask by Example ---------------------------------->
+
+<!----- RealPython: Python Web Applications with Flask ---------------->
+<li>
+[RealPython: Python Web Applications with Flask]
+ <a href="https://realpython.com/python-web-applications-with-flask-part-i/" target="_blank">01 Application setup</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/python-web-applications-with-flask-part-ii/" target="_blank">02  Setup user accounts + Templates + Static files</a>
+|<br /><span>--&gt;</span>
+| <a href="https://realpython.com/python-web-applications-with-flask-part-iii/" target="_blank">03 Testing (unit and integration) + Debugging + Error Handling</a>
+|</li>
+<!----- RealPython: Python Web Applications with Flask ---------------->
+
+<!----- Pretty Printed: Intro to Flask Tutorials ---------------------->
+<li>
+[Pretty Printed: Intro to Flask]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=mD4KFDmusCc&index=2&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&t=0s" target="_blank">01 intro</a>
+| <a href=https://www.youtube.com/watch?v=tvRnBbwQwvs&index=2&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">02 Hello</a>
+| <a href="https://www.youtube.com/watch?v=zKI66AuEGkA&index=4&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&t=0s" target="_blank">03 endpoints</a>
+| <a href="https://www.youtube.com/watch?v=HILynX3Dsoc&index=4&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">04 templates</a>
+| <a href="https://www.youtube.com/watch?v=2LADyUdtTrs&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&index=5" target="_blank">05 guestbook</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=SYeKYJwwYvg&index=6&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">06 form</a>
+| <a href="https://www.youtube.com/watch?v=0FsvqwRhYdM&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV&index=7" target="_blank">07 database</a>
+| <a href="https://www.youtube.com/watch?v=_hGE8yvnOfY&index=8&list=PLXmMXHVSvS-AjwTOtiW1DXFYTgUlrUmHV" target="_blank">08 wrapup</a>
+|</li>
+<!----- Pretty Printed: Intro to Flask Tutorials ---------------------->
+
+<!----- Pretty Printed: Flask Tutorials ------------------------------->
+<li>
+[Pretty Printed: Flask Tutorials]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">Playlist</a>
+|<br /><span>--&gt;</span>
+[ RESTFul API With Flask] <a href="" target="_blank">01 Get</a>
+| <a href="" target="_blank">02 Post</a>
+| <a href="" target="_blank">03 Put</a>
+| <a href="" target="_blank">04 Delete</a>
+|<br /><span>--&gt;</span>
+[Flask] <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&t=0s&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=6" target="_blank">05 fl-templates</a>
+| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=6&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">06 loops</a>
+| <a href="https://www.youtube.com/watch?v=gQ6lh3ir2Jw&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8&t=0s" target="_blank">07 HW</a>
+| <a href="https://www.youtube.com/watch?v=Kg9OqG_ZqhM&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8" target="_blank">08 Folders</a>
+| <a href="https://www.youtube.com/watch?v=xHyvIkkZ7uc&index=9&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">09 debug</a>
+| <a href="https://www.youtube.com/watch?v=nWO_VpI5wn8&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=10" target="_blank">10 mysql</a>
+| ....<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=8qDdbcWmzCg&index=126&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">126 context procs</a>
+|</li>
+<!----- Pretty Printed: Flask Tutorials ------------------------------->
+
+<!----- Pretty Printed: Flask Templates  ------------------------------>
+<li>
+[Pretty Printed: Flask Templates]
+<a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&t=0s&index=2" target="_blank">01</a>
+| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=2&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">02</a>
+| <a href="https://www.youtube.com/watch?v=sDrGyxDd4qc&t=0s&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=4" target="_blank">03 macros</a>
+| <a href="https://www.youtube.com/watch?v=FeCdwD32zeQ&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=4" target="_blank">04 </a>
+| <a href="https://www.youtube.com/watch?v=mWuhuaQMZsM&index=5&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">05 jinja</a>
+| <a href="https://www.youtube.com/watch?v=HYO6GNOJMmQ&index=6&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">06 fl-assets</a>
+| <a href="https://www.youtube.com/watch?v=C09qJXa6eKo&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04&index=7" target="_blank">07 fl-assets</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=PE9ZGniSDW8&index=8&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">08 fl-bootstrap</a>
+| <a href="https://www.youtube.com/watch?v=S7ZLiUabaEo&index=9&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">09 fl-bootstrap</a>
+|</li>
+<!----- Pretty Printed: Flask Templates ------------------------------->
+
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://scotch.io/tag/python" target="_blank">Scotch: Flask</a>
+ - <span class="update">(visited 06 Jul 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://exploreflask.com/en/latest/" target="_blank">ExploreFlask: </a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">realpython: Flask by Example</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How to install Flask</div>
+<div class="propertydescription">[Powershell] <kbd>python -m pip install -U Flask</kbd>
+<ol>
+<li>Flask  1.0.2</li>
+<li>Jinja2  2.10</li>
+<li>MarkupSafe  1.1.0</li>
+<li>Werkzeug  0.14.1</li>
+<li>click  7.0</li>
+<li>itsdangerous  1.1.0</li>
+</ol></div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.wtf">'flask-WTF' Web Forms</a><br>
+<a class="semanticweb">Version: 0.14.2  Released: Jan 10, 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-WTF is simple integration of Flask and WTForms + CSRF + file upload + reCAPTCHA.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wtforms.readthedocs.io/en/stable/" target="_blank">WTForms 2.2.1</a>
+| <a href="https://pypi.org/project/Flask-WTF/" target="_blank">PyPI</a>
+| <a href="https://flask-wtf.readthedocs.io/en/stable/" target="_blank">readthedocs: Flask-WTF User Guide</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=-HTAKf4BJPY" target="_blank">Levin: Using Flask-WTF and wtforms Web Forms in Python</a>
+| <a href="https://www.youtube.com/watch?v=eu0tg4vgFr4" target="_blank">prettyprinted: Form Handling in Flask Using WTForms</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|
+
+<!----- Pretty Printed: Flask-WTForms Tutorials ----------------------->
+<li>
+| [Pretty Printed: Flask-WTForms Tutorials] | <a href="https://www.youtube.com/playlist?list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1" target="_blank">Playlist</a>
+| <a href="https://www.youtube.com/watch?v=eu0tg4vgFr4&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=1" target="_blank">01 intro</a>
+| <a href="https://www.youtube.com/watch?v=F9vTlDzn7ac&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=2" target="_blank">02 validators</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=I2dJuNwlIH0&t=0s&list=PLXmMXHVSvS-C_T5JWEDWIc9yEM3Hj52-1&index=12" target="_blank">11 dropdowns</a>
+|</li>
+<!----- Pretty Printed: Flask-WTForms Tutorials ----------------------->
+
+</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.tutorialspoint.com/flask/flask_wtf.htm" target="_blank">tutorialspoint: </a>
+| <a href="https://pythonhosted.org/Flask-WTF/form.html" target="_blank">pythonhosted: Creating Forms</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pyside2">'pyside2' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://wiki.qt.io/PySideDocumentation" target="_blank">PySideDocumentation</a>
+| <a href="https://pypi.org/project/PySide2/" target="_blank">PySide2 5.11.2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://zetcode.com/gui/pysidetutorial/" target="_blank">zetcode: </a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+</body>
+</html>

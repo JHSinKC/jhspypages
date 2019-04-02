@@ -1,0 +1,1133 @@
+﻿<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python15 Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents ++++++++++++++++++++++++++++++-------->
+<ul id="menu">
+
+<!--  START - Lint Tools section  ------------------------------------->
+<li><a href="#">Lint Tools</a>
+<div class="menu-container-2">
+
+<!--  START - Lint Tools column  -------------------------------------->
+<div class="column-1"><h3>LINT TOOLS</h3>
+<ul>
+<li><a href="#docs.flake8">'flake8' Module</a></li>
+<li><a href="#docs.pylint">'pylint'</a></li>
+<li><a href="#docs.pyflakes">'pyflakes'</a></li>
+<li><a href="#docs.pychecker">'pychecker'</a></li>
+<li><a href="#docs.pycodestyle">'pycodestyle' (pep8)</a></li>
+<li><a href="#docs.isort">'isort' Module</a></li>
+<li><a href="#docs.pylama">'pylama' Module</a></li>
+<li><a href="#docs.mypy">'mypy' Module</a></li>
+</ul></div>
+<!--  START - Lint Tools column  -------------------------------------->
+
+<!--  START - CODE REFORMATTER column  -------------------------------->
+<div class="column-1"><h3>CODE REFORMATTER</h3>
+<ul>
+<li><a href="#docs.autopep8">'autopep8' Module</a></li>
+<li><a href="#docs.black">'black' Module</a></li>
+<li><a href="#docs.yapf">'yapf' Module</a></li>
+<li><a href="#docs.python.prettier">'python prettier'</a></li>
+</ul></div>
+<!--  END - CODE REFORMATTER column  ---------------------------------->
+
+</div></li>
+<!--  END - Lint Tools section  --------------------------------------->
+
+
+<!--  START - Code Documentation section  ----------------------------->
+<li><a href="#">Code Documentation</a>
+<div class="menu-container-2">
+
+<!--  START - Code Comments column  ----------------------------------->
+<div class="column-1"><h3>Code Comments</h3>
+<ul>
+<li><a href="#code.comments">Program Code Comments</a></li>
+<li><a href="#code.docstring">'docstring' Module</a></li>
+<li><a href="">------------------------------</a></li>
+<li><a href="#doc27.typing">27.1 'typing'</a></li>
+<li><a href="#doc27.pydoc3">27.2 'pydoc3' online help</a></li>
+<li><a href="#doc27.help">'help()'</a></li>
+<li><a href="#doc27.pymotw">'PyMOTW'</a></li>
+<li><a href="#doc28.dir">'dir()'</a></li>
+<li><a href="#doc28.type">'type()'</a></li>
+</ul></div>
+<!--  END - Code Comments column  ------------------------------------->
+
+<!--  START - Code Documentation column  ------------------------------>
+<div class="column-1"><h3>Code Documentation</h3>
+<ul>
+<li><a href="#docs.rest">reStructured Text</a></li>
+<li><a href="#docs.sphinx">'sphinx' Generator</a></li>
+<li><a href="#docs.docutils">'docutils' Module</a></li>
+<li><a href="">------------------------------</a></li>
+<li><a href="">CONTINUOUS INTEGRAT</a></li>
+<li><a href="#docs.travisci">'Travis-CI' Module</a></li>
+<li><a href="#docs.jenkins">'Jenkins' CI Module</a></li>
+<li><a href="#systemdesignprimer">System Design Primer</a></li>
+</ul></div>
+<!--  END - Code Documentation column  -------------------------------->
+
+</div></li>
+<!--  END - Code Documentation section  ------------------------------->
+
+
+<!--  START - Project Documentation section  -------------------------->
+<li><a href="#">Project Documentation</a>
+<div class="menu-container-1">
+
+<!--  START - Project Documentation column  --------------------------->
+<div class="column-1"><h3>11 Project Docs</h3>
+<ul>
+<li><a href="#project.sourcecode">Project.SourceCode</a></li>
+<li><a href="#project.docs">Project\docs\</a></li>
+<li><a href="#project.license">Project.License</a></li>
+<li><a href="#project.readme">Project.ReadMe</a></li>
+<li><a href="#project.howto">Project.How-To</a></li>
+<li><a href="#project.tutorials">Project.Tutorials</a></li>
+<li><a href="#project.examples">Project.Examples</a></li>
+<li><a href="#project.explanations">Project.Explanations</a></li>
+<li><a href="#project.references">Project.References</a></li>
+<li><a href="#project.contribute">Project.Contribute</a></li>
+<li><a href="#project.conduct">Project.Conduct</a></li>
+</ul></div>
+<!--  END - Project Documentation column  ----------------------------->
+</div></li>
+<!--  END - Project Documentation section  ---------------------------->
+
+
+</ul>
+<!-- +++++ end table of contents ++++++++++++++++++++++++++++++----- -->
+<br><p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="code.comments">Python Code Comments</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqheader">Best Practices</div>
+<div class="faqdescription">Comments are notes to yourself.<br>
+Documenting code are notes to others.
+<ol>
+<li>Keep comments as close to the code being described as possible.</li>
+<li>Don’t use complex formatting (such as tables or ASCII figures).</li>
+<li>Don’t include redundant information.</li>
+<li>Design your code using clear, easy-to-understand concepts, the reader will be able to quickly conceptualize your intent.</li>
+</ol>
+</div>
+<p></p>
+
+<div class="faqheader">Syntax: Code comments</div>
+<div class="faqdescription">
+<li>in-line comment: {python code}  <kbd># in-line comment</kbd></li>
+<li>single-line comment:<br><kbd># comment line 01</kbd></li>
+<li>multi-line comment:<br><kbd># comment line 01<br> # comment line 02<kbd></li>
+<li>Do Not Use '''triple quote strings as comments'''</li>
+</div>
+<p></p>
+
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">PEP 08: Style Guide for Python Code</a>
+| <a href="https://www.python.org/dev/peps/pep-0257/" target="_blank">PEP 257: Docstring Conventions</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="https://www.python.org/doc/essays/styleguide/" target="_blank">DEAD: Python Style Guide</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://realpython.com/documenting-python-code/" target="_blank">RealPython</a>
+| <a href="https://www.zentut.com/python-tutorial/python-comments/" target="_blank">zentut</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">G</a>
+| <a href="" target="_blank">C</a>
+|</div>
+
+<ol>
+
+<li>
+<a class="listitem" href="https://dbader.org/blog/python-multiline-comment" target="_blank">*danbader: Python Multi-line Comments: Your Two Best Options</a>
+ - <span class="update">(visited 10 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.pythonforbeginners.com/comments/comments-in-python" target="_blank">*pythonforbeginners: Use comments in Python</a>
+ - <span class="update">(visited 10 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/python-comments-guide/" target="_blank">*realpython: Writing Comments in Python (Guide)</a>
+ - <span class="update">(visited 10 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://realpython.com/documenting-python-code/" target="_blank">realpython: Documenting Python Code: A Complete Guide</a>
+ - <span class="update">(Mertz: 25 Jul 2018)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.afterhoursprogramming.com/tutorial/python/comments-py/" target="_blank">*afterhoursprogramming: Comments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.digitalocean.com/community/tutorials/how-to-write-comments-in-python-3" target="_blank">digitalocean: How To Write Comments in Python3</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+<div class="propertyheader">How to access Python Help</div>
+<div class="propertydescription"><kbd>help(print)<br>
+returns... Help on built-in function print in module builtins:</kbd></div>
+<p></p>
+<div class="faqheader">type() function</div>
+<div class="faqdescription"></div>
+<div class="faqheader">dir() function</div>
+<div class="faqdescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.sphinx">'sphinx' Generator</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Sphinx is used to build Documentation projects. If docutils is a
+machine, sphinx is the factory. One of many documentation generators. Sphinx has a theming system, supports extensions, and an assembly line that allows docutils to "hook" in at various points during the build process.</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=LQ6pFgQXQ0Q" target="_blank">Using Sphinx to Document Python Code</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://www.sphinx-doc.org/en/master/index.html" target="_blank">Sphinx: Python Documentation Generator</a>
+ - <span class="update">(visited 11 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.rest">reStructuredText (reST)</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.<br>
+reStructuredText is designed for extensibility for specific application domains. The reStructuredText parser is a component of Docutils. reStructuredText is a revision and reinterpretation of the StructuredText and Setext lightweight markup systems.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://docutils.sourceforge.net/docs/user/rst/quickref.html" target="_blank">sourceforge: Quick reStructuredText</a>
+| <a href="https://www.python.org/dev/peps/pep-0287/" target="_blank">PEP 287 - reStructuredText Docstring Format</a>
+| <a href="http://docutils.sourceforge.net/rst.html" target="_blank">sourceforge: REST</a>
+| <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html" target="_blank">sourceforge: ReStructuredText Primer</a>
+|<br>
+
+| <a href="http://docutils.sourceforge.net/docs/user/rst/cheatsheet.txt" target="_blank">sourceforge: REST Cheatsheet</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html" target="_blank">Sphinx: reStructuredText Primer</a>
+| <a href="http://docutils.sourceforge.net/docs/user/rst/demo.html" target="_blank">reStructuredText Demonstration</a>
+
+
+<!----- realpython: Building and Documenting Python REST APIs ------------------------->
+<li>
+|[realpython: Building and Documenting Python REST APIs w/Flask + Connexion]
+| <a href="https://realpython.com/flask-connexion-rest-api/" target="_blank">Part I</a>
+| <a href="https://realpython.com/flask-connexion-rest-api-part-2/" target="_blank">Part 2</a>
+| <a href="" target="_blank">Part 3</a>
+|
+</li>
+<!----- realpython: Building and Documenting Python REST APIs ------------------------->
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://en.wikipedia.org/wiki/ReStructuredText" target="_blank">Wikipedia: reStructuredText</a>
+ - <span class="update">(visited 11 Nov 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://rst.ninjs.org/#" target="_blank">Online reStructuredText editor</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.docutils">'docutils' Python Documentation Utilities</a><br>
+<a class="semanticweb">Version:  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">'docutils' (v0.14) is a modular system for processing documentation into useful formats, such as HTML, XML, and LaTeX.<br>
+For input 'docutils' supports reStructuredText (REST), an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0258/" target="_blank">PEP 258 Docutils Design Specification</a>
+| <a href="https://pypi.org/project/docutils/" target="_blank">PyPI: docutils 0.14</a>
+| <a href="http://docutils.sourceforge.net/docs/index.html" target="_blank">Docutils Project Documentation Overview</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://docutils.sourceforge.net/" target="_blank">Docutils: Documentation Utilities</a>
+ - <span class="update">(published 13 Jun 2001)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">What is an {attribute} 'docstring'</div>
+<div class="propertydescription"><kbd>def myfunction():<br>
+'''function does something important-this comment tells me what it does'''</kbd>
+<li>'docstring' is the first line in a module, class, function, method or <kbd>__init__</kbd>.</li>
+<li>The text is a '''tripel-quoted, multi-line comment'''.  [do this] + [return that].</li>
+<li>The 'docstring' is recognized by the Python bytecode compiler and becomes the <kbd>__doc__</kbd> special atribute accessible as runtime object. See Help.</li>
+</div>
+<p></p>
+
+<div class="propertyheader">S</div>
+<div class="propertydescription">Add</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.flake8">'flake8' Code Linter</a><br>
+<a class="semanticweb">Version: 3.6.0  Released: Oct 23, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flake8 is a Python library that wraps 'PyFlakes', 'pycodestyle' and Ned Batchelder’s 'McCabe' script.<br>
+It checks your code base against coding style (PEP8), programming errors (like “library imported but unused” and “Undefined name”) and checks cyclomatic complexity. It has low rate of false positives.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://flake8.pycqa.org/en/latest/" target="_blank">pycqa: docs</a>
+| <a href="https://media.readthedocs.org/pdf/flake8/latest/flake8.pdf" target="_blank">readthedocs</a>
+| <a href="https://github.com/DmytroLitvinov/awesome-flake8-extensions" target="_blank">litvinov: Flake8-EXTENTIONS</a>
+| <a href="https://julien.danjou.info/the-best-flake8-extensions/" target="_blank">danjou: Flake8-EXTENTIONS</a>
+| <a href="https://pypi.org/project/flake8/" target="_blank">PyPI</a>
+|<br>
+| <a href="http://flake8.pycqa.org/en/latest/user/options.html" target="_blank">flake8 List of Optionsx</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=TDUf93vqq3g" target="_blank">danbader: flake8</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://flake8.pycqa.org/en/latest/index.html#quickstart" target="_blank">pycqa: Quickstart</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://medium.com/python-pandemonium/what-is-flake8-and-why-we-should-use-it-b89bd78073f2" target="_blank">Python Pandemonium: What is Flake8 and why we should use it?</a>
+ - <span class="update">(visited 20 Jun 17)</span>
+</li>
+<li>
+<a class="listitem" href="https://simpleisbetterthancomplex.com/packages/2016/08/05/flake8.html" target="_blank">Freitas: How to Use Flake8</a>
+ - <span class="update">(published Aug 05, 2016)</span>
+</li>
+<li>
+<a class="listitem" href="https://opensource.com/article/18/7/7-python-libraries-more-maintainable-code" target="_blank">Triplett: 7 Python libraries for more maintainable code</a>
+ - <span class="update">(published 30 Jul 2018)</span>
+</li>
+<li>
+<a class="listitem" href="https://julien.danjou.info/code-style-checks-in-python/" target="_blank">danjou: Code Style Checks in Python</a>
+ - <span class="update">(published Oct 01, 2018)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">View 'flake8' help</div>
+<div class="propertydescription">[c:\python37] <kbd>flake8 --help</kbd><br>
+[python&gt;&gt;&gt;] <kbd>help(flake8)</kbd></div>
+<p></p>
+
+<div class="propertyheader">Check to see if 'flake8' is installed</div>
+<div class="propertydescription">[c:\python37] <kbd>flake8 --version</kbd><br>
+[c:\python37] <kbd>pip list --format=columns</kbd> or <kbd>pip freeze</kbd></div>
+<p></p>
+
+<div class="propertyheader">How to install 'flake8'</div>
+<div class="propertydescription">[c:\python37] <kbd>python -m pip install flake8</kbd></div>
+<p></p>
+
+<div class="propertyheader">Pass "myfile.py" to 'flake8'</div>
+<div class="propertydescription">[c:\python37] <kbd>python -m flake8 path/to/code/to/myfile.py</kbd></div>
+<p></p>
+
+<div class="propertyheader">Specify command-line options directly to 'flake8'</div>
+<div class="propertydescription">[c:\python37] <kbd>python -m flake8 --select E123  myfile.py</kbd></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.pycodestyle">'pycodestyle' - Python style guide checker</a><br>
+<a class="semanticweb">Version: 1.7.1  Released: Oct 24, 2017</a>
+<a class="newhtml5">Renamed from 'PEP 08'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pep8' module is a tool to check your Python code
+ against some of the style conventions in PEP 8.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pep8.readthedocs.io/en/release-1.7.x/" target="_blank">readthedocs</a>
+| <a href="https://pypi.org/project/pep8/" target="_blank">PyPI</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://realpython.com/python-pep8/" target="_blank">realpython: How to Write Beautiful Python Code With PEP 8</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://github.com/PyCQA/pycodestyle" target="_blank">github: pycodestyle (formerly pep8) - Python style guide checker</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="code.docstring">'docstring' Code Documentation</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Documenting code is describing its use and functionality to your users. While it may be helpful in the development process, the main intended audience is the users.<br>
+PEP 8: Comments should have a maximum length of 72 characters.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0257/" target="_blank">PEP 257 Docstring Conventions</a>
+| <a href="https://pypi.org/project/pep257/" target="_blank">PEP257 Docstring Style Checker</a>
+| <a href="https://www.python.org/dev/peps/pep-3107/" target="_blank">PEP 3107 Function Annotations</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.python.org/dev/peps/pep-0257/#one-line-docstrings" target="_blank">PEP 257 Docstring Conventions</a>
+ - <span class="update">(published 13 Jun 2001)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+<div class="propertyheader">What is an {attribute} 'docstring'</div>
+<div class="propertydescription"><kbd>def myfunction():<br>
+'''function does something important-this comment tells me what it does'''</kbd>
+<li>'docstring' is the first line in a module, class, function, method or <kbd>__init__</kbd>.</li>
+<li>The text is a '''tripel-quoted, multi-line comment'''.  [do this] + [return that].</li>
+<li>The 'docstring' is recognized by the Python bytecode compiler and becomes the <kbd>__doc__</kbd> special atribute accessible as runtime object. See Help.</li>
+</div>
+<p></p>
+
+<div class="propertyheader">How to display a function docString</div>
+<div class="propertydescription">c<br>
+<kbd>print(functionname.__doc__)</kbd>
+</div>
+<p></p>
+<div class="propertyheader">What is an 'additional docsting'?</div>
+<div class="propertydescription">String literals occurring immediately after another docstring</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.typing">27.1 'typing' — Support for type hints</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tbody>
+</table>
+
+<div class="faqdescription">'Typing' defines a standard notation for Python function and variable type annotations. The notation can be used for documenting code in a concise, standard format, and it has been designed to also be used by static and runtime type checkers, static analyzers, IDEs and other tools.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/typing.html" target="_blank">docs3.7</a>
+| <a href="https://pypi.org/project/typing/" target="_blank">PyPI</a>
+| <a href="https://www.python.org/dev/peps/pep-0483/" target="_blank">PEP 483</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Su</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.pydoc3">27.2 'pydoc3' - Documentation generator and online help system</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The pydoc3 module automatically generates documentation from Python modules. The documentation can be presented as pages of text on the console, served to a Web browser, or saved to HTML files.<br>
+<li>Display pydoc docs: [dos cmd] <kbd>python -m pydoc</kbd></li>
+<li>Display flask docs: [dos cmd] <kbd>python -m pydoc flask</kbd></li>
+<li>Keyword search for "flask" modules: [dos cmd] <kbd>python -m pydoc -k flask</kbd></li>
+<li>[python cli] <kbd>help(flask)</kbd> is a Python function.</li>
+<li>pydoc is a command-line interface to the same thing.</li></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/pydoc.html" target="_blank">docs3.7.1</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=Y6TgbyfKCNM" target="_blank">jw: Use Pydoc To Document Python Code</a>
+| <a href="https://www.youtube.com/watch?v=fbEEbXyrNSQ" target="_blank">factorpad: Python help() function and pydoc3</a>
+|<br>
+| <a href="https://www.youtube.com/watch?v=URBSvqib0xw&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-&index=34&t=96s" target="_blank">Socratica: 33 PyDoc3</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://pymotw.com/2/pydoc/" target="_blank">pymotw: pydoc</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">[c:\python37] <kbd>python -m pydoc3 {modulename}</kbd></div>
+<div class="propertydescription">Produces plaintext help on the console.</div>
+
+<div class="propertyheader">Keyword search using pydoc3 -k flag</div>
+<div class="propertydescription">Specifying a -k flag before the argument will search the synopsis lines of all available modules for the specified keyword (similar to the Unix man command)<br>
+[c:\python37] <kbd>python -m pydoc -k http</kbd> (lists sources for 'http')</div>
+
+<div class="propertyheader">Generate HTML using pydoc3 -w flag</div>
+<div class="propertydescription">pydoc3 generates HTML output, either writing a static file to a local directory or starting a web server to browse documentation online.<br>
+[c:\python37] <kbd>mkdir c:\jsondocs</kbd><br>
+[c:\python37] <kbd>cd c:\jsondocs</kbd><br>
+[c:\jsondocs] <kbd>c:\python37\python -m pydoc -w json</kbd> (creates c:\jsondocs\json.html)</div>
+
+<div class="propertyheader">Pydoc3 -n flag</div>
+<div class="propertydescription">S</div>
+
+<div class="propertyheader">Starts a web server with pydoc3 -p flag</div>
+<div class="propertydescription">
+<kbd>Pydoc3 -p 5000</kbd> (webserver at http://localhost:5000/).<br>
+The server generates documentation as you browse through the available modules.S</div>
+
+<div class="propertyheader">Start web server + web browser using pydoc3 -b flag</div>
+<div class="propertydescription">Each served page has a navigation bar at the top where you can Get help on an individual item. Search all modules with a keyword in their synopsis line, and go to the Module index, Topics and Keywords pages.</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="docs.black">'black' - Code Formatter</a><br>
+<a class="semanticweb">Version: 18.9b0  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Black is the uncompromising Python code formatter. By using it, you agree to cede control over minutiae of hand-formatting. In return, Black gives you speed, determinism, and freedom from pycodestyle nagging about formatting. You will save time and mental energy for more important matters.<br>
+Blackened code looks the same regardless of the project you're reading. Formatting becomes transparent after a while and you can focus on the content instead.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/black/" target="_blank">PyPI</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.help">'help()' Method</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">
+<li>help() is a Python function.</li>
+<li><a id="doc27.pydoc3">'pydoc3'</a> is a command-line interface to the same thing.</li></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.programiz.com/python-programming/methods/built-in/help" target="_blank">programiz: </a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc27.pymotw">Python Module of the Week</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">PyMOTW is a series of blog posts written by Doug Hellmann. It was started as a way to build the habit of writing something on a regular basis. The focus of the series is building a set of example code for the modules in the Python standard library.<br>
+The source text for PyMOTW is reStructuredText (REST) and the HTML and PDF output are created using Sphinx.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pymotw.com/3/" target="_blank">Python 3 Module of the Week</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="c">'py</a><br>
+<a class="semanticweb">Version: 1  Released: Sep 26, 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+</body>
+</html>
