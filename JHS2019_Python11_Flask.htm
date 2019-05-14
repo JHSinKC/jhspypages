@@ -19,7 +19,7 @@
 <ul>
 <li><a href="#flask">flask</a></li>
 <li><a href="#flask.wtf">'flask-WTF' Forms</a></li>
-
+<li><a href="#jinja">jinja2</a></li>
 
 </ul></div>
 <!--  END - Flask column  --------------------------------------------->
@@ -256,9 +256,48 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 |<br /><span>--&gt;</span>
 | <a href="https://www.youtube.com/watch?v=PE9ZGniSDW8&index=8&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">08 fl-bootstrap</a>
 | <a href="https://www.youtube.com/watch?v=S7ZLiUabaEo&index=9&list=PLXmMXHVSvS-ABlT4k4eS3YPJSnPUozw04" target="_blank">09 fl-bootstrap</a>
-|</li>
+|</li><p></p>
 <!----- Pretty Printed: Flask Templates ------------------------------->
 
+<!----- Julian Nash: Flask Tutorial  ------------------------------>
+<li>
+[Julian Nash: Flask Tutorial]
+<a href="https://pythonise.com/series/learning-flask" target="_blank">Playlist</a>
+| <a href="https://pythonise.com/feed/flask/your-first-flask-app" target="_blank">01 setup</a>*
+| <a href="https://pythonise.com/feed/flask/flask-application-structure" target="_blank">02 structure</a>
+| <a href="https://pythonise.com/feed/flask/rendering-html-files-with-flask" target="_blank">03 HTML files</a>
+| <a href="https://pythonise.com/feed/flask/serving-static-files-with-flask" target="_blank">04 static files</a>
+|<br /><span>--&gt;</span>
+| <a href="https://pythonise.com/feed/flask/jinja-template-inheritance" target="_blank">05 inheritance</a>
+| <a href="https://pythonise.com/feed/flask/jinja-template-design" target="_blank">06 template-design</a>
+| <a href="https://pythonise.com/feed/flask/flask-working-with-forms" target="_blank">07 forms</a>
+| <a href="https://pythonise.com/feed/flask/generating-dynamic-urls-with-flask" target="_blank">08 dynamic URLs</a>
+| <a href="https://pythonise.com/feed/flask/working-with-json-in-flask" target="_blank">09 JSON</a>
+| <a href="https://pythonise.com/feed/flask/flask-and-fetch-api" target="_blank">10 Fetch API</a>
+|<br /><span>--&gt;</span>
+| <a href="https://pythonise.com/feed/flask/flask-query-strings" target="_blank">11 Query strings</a>
+| <a href="https://pythonise.com/feed/flask/flask-configuration-files" target="_blank">12 configuration files</a>
+| <a href="https://pythonise.com/feed/flask/flask-uploading-files" target="_blank">13 file uploads</a>
+| <a href="https://pythonise.com/feed/flask/sending-files-with-flask" target="_blank">14 Sending files</a>
+| <a href="https://pythonise.com/feed/flask/flask-cookies" target="_blank">15 Flask cookies</a>
+|<br /><span>--&gt;</span>
+| <a href="https://pythonise.com/feed/flask/flask-message-flashing" target="_blank">17 message flashing</a>
+| <a href="https://pythonise.com/feed/flask/flask-session-object" target="_blank">16 session object</a>
+| <a href="https://pythonise.com/feed/flask/flask-error-handling" target="_blank">18 error handling</a>
+| <a href="https://pythonise.com/feed/flask/flask-http-methods" target="_blank">19 HTTP methods</a>
+| <a href="https://pythonise.com/feed/flask/the-flask-request-object" target="_blank">20 request object</a>
+|<br /><span>--&gt;</span>
+| <a href="https://pythonise.com/feed/flask/flask-rq-task-queue" target="_blank">21 Task queues</a>
+| <a href="https://pythonise.com/feed/flask/flask-resize-image-with-pillow-html-picture-element" target="_blank">22 Pillow</a>
+| <a href="https://pythonise.com/feed/flask/deploy-a-flask-app-nginx-uwsgi-virtual-machine" target="_blank">23 Google VM</a>
+| <a href="https://pythonise.com/feed/flask/building-a-flask-app-with-docker-compose" target="_blank">24 Docker</a>
+| <a href="https://pythonise.com/feed/flask/python-flask-uwsgi-introduction" target="_blank">25 uwsgi</a>
+| <a href="https://pythonise.com/feed/flask/python-before-after-request" target="_blank">26 request functions</a>
+|<br /><span>--&gt;</span>
+| <a href="https://pythonise.com/feed/flask/exploring-uwsgi-decorators" target="_blank">27 uwsgi decorators</a>
+| <a href="https://pythonise.com/feed/flask/custom-flask-decorators" target="_blank">28 decorators</a>
+|</li>
+<!----- Julian Nash: Flask Tutorial ------------------------------->
 </div>
 <p></p>
 
@@ -406,7 +445,100 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="propertydescription"></div>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- ++++++++++++++++++++++++++++++------------------------------------>
+<hr />
+<p></p>
+<p></p>
 
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="jinja">jinja2 Templating</a><br>
+<a class="semanticweb">Version: 2.10  Released: November 8, 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<div class="faqdescription">Jinja is a web template engine for the Python programming language. Licensed under a BSD License created by Armin Ronacher. It is similar to the Django template engine but provides Python-like expressions while ensuring that the templates are evaluated in a sandbox</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://jinja.pocoo.org/docs/2.10/" target="_blank">pocoo: jinja2</a>
+| <a href="https://pypi.org/project/Jinja2/" target="_blank">pypi: Jinja2</a>
+| <a href="https://github.com/pallets/jinja" target="_blank">github: jinja</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=bxhXQG1qJPM" target="_blank">Rigden: Jinja2 Templating</a>
+| <a href="https://vimeo.com/257997257" target="_blank">byers: Jinja2</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<br>
+
+<!----- Schulman: Jinja2 Tutorial ------------------------------------>
+<li>
+[Schulman: Jinja2 Tutorial] <a href="https://packetpushers.net/python-jinja2-tutorial/" target="_blank">packetpushers: </a>
+| <a href="https://vimeo.com/120005103" target="_blank">101 Intro</a>
+| <a href="https://vimeo.com/120012280" target="_blank">102 Filters</a>
+|<br /><span>--&gt;</span>
+| <a href="https://vimeo.com/120089070" target="_blank">103 Includes</a>
+| <a href="https://vimeo.com/120109699" target="_blank">104 if+then+else</a>
+| <a href="https://vimeo.com/120182263" target="_blank">105 CVS</a>
+|</li><p></p>
+<!----- Schulman: Jinja2 Tutorial ------------------------------------>
+
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="http://jinja.pocoo.org/" target="_blank">pocoo: jinja2</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.fullstackpython.com/jinja2.html" target="_blank">Full Stack Python</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++------------------------->
 
 
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
