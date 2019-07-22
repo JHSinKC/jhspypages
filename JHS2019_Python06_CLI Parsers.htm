@@ -1,0 +1,227 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python06 CLI Parsers</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++++++--------->
+<ul id="menu">
+
+<!--  START - CLI Design ---------------------------------------------->
+<li><a href="#">CLI Design</a>
+<div class="menu-container-1">
+
+<!--  START - CLI Design column  -------------------------------------->
+<div class="column-1"><h3>CLI Design</h3>
+<ul>
+<li><a href="#doc16.argparse">16.4 'argparse'</a></li>
+<li><a href="#doc16.getopt">16.5 'getopt'</a></li>
+<li><a href="#cmd">'cmd' comm line</a></li>
+</ul></div>
+<!--  END - CLI Design column  ---------------------------------------->
+
+</div></li>
+<!--  END - CLI Design section ---------------------------------------->
+
+
+<!--  START - Parsers Section  ---------------------------------------->
+<li><a href="#">Parsers</a>
+<div class="menu-container-2">
+
+<!--  START - Parsers column  ----------------------------------------->
+<div class="column-1"><h3>Parsers</h3>
+<ul>
+<li><a href="#doc16.argparse">16.4 'argparse'</a></li>
+<li><a href="#doc16.getopt">16.5 'getopt'</a></li>
+<li><a href="#cmd">'cmd' comm line</a></li>
+<li><a href="#doc33.parser">33.1 'parser' access</a></li>
+<li><a href="#doc33.ast">33.2 'ast'</a></li>
+<li><a href="#doc33.tokenize">33.7 'tokenize'</a></li>
+
+<li><a href="#antlr">ANTLR</a></li>
+<li><a href="#lark">'lark'</a></li>
+<li><a href="#lrparsing">'lrparsing'</a></li>
+<li><a href="#ply">'ply'</a></li>
+<li><a href="#plyplus">'plyplus'</a></li>
+<li><a href="#pyleri">'pylefi'</a></li>
+<li><a href="#arpeggio">'arpeggio'</a></li>
+<li><a href="#canopy">'canopy'</a></li>
+</ul></div>
+<!--  END - Parsers column -------------------------------------------->
+
+<!--  START - Lexers column ------------------------------------------->
+<div class="column-1"><h3>Lexers</h3>
+<ul>
+<li><a href="#shlex">'shlex' lexical analysis</a></li>
+</ul></div>
+<!--  END - Lexers column --------------------------------------------->
+
+</div></li>
+<!--  END - Parsers Section ------------------------------------------->
+
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++++++----------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++--------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.argparse">16.4 'argparse' Parser Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The argparse module is used to write user-friendly command-line interfaces. The program defines what arguments it requires, and argparse will figure out how to parse those out of sys.argv. 'argv', 'args'</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="http://www.tutorialspoint.com/python/python_command_line_arguments.htm" target="_blank">TutorialsPoint</a>
+| <a href="https://www.pythonforbeginners.com/argparse/argparse-tutorial" target="_blank">Python4Beginners</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://pymotw.com/2/argparse/" target="_blank">PyMOTW</a>
+ - <span class="update">(visited 27 Aug 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">What is 'args'?</div>
+<div class="propertydescription">List of strings to parse. The default is taken from <kbd>sys.argv</kbd>.</div>
+<p></p>
+<div class="propertyheader">What is 'argv'?</div>
+<div class="propertydescription">'arguments vector' is the list of command-line arguments.</div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc16.getopt">16.5 'getopt' Parser Module</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">T</a>
+ - <span class="update">(visited 24 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How</div>
+<div class="propertydescription">[Fr</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
