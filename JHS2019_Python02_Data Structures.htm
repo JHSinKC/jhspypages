@@ -1,0 +1,1897 @@
+<!DOCTYPE html lang="en">
+<html lang="en-US">
+<head>
+<title>JHS2019 Python02 Data Structures</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
+</head>
+ap
+<body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
+<!-- +++++ new table of contents +++++++++++++++++++++++++++++--------->
+<ul id="menu">
+
+<!--  START - Types section  ------------------------------------------>
+<li><a href="">Types</a>
+<div class="menu-container-1">
+
+<!--  START - Built-in Types column  ---------------------------------->
+<div class="column-1"><h3>Built-in Types</h3>
+<ul>
+<li><a href="#doc04.types">4.0  Built-in Types</a></li>
+<li><a href="#doc04.truth">4.1  Truth Value Testing</a></li>
+<li><a href="#doc04.boolean">4.2  Boolean Operations</a></li>
+<li><a href="#doc04.comparison">4.3  Comparisons</a></li>
+<li><a href="">--------------------------------</a></li>
+<li><a href="">4.4 Numeric Types</a></li>
+<li><a href="#doc04.int">Int type</a></li>
+<li><a href="#doc04.float">Float type</a></li>
+<li><a href="#doc04.long">Long type</a></li>
+<li><a href="#doc04.complex">Complex type</a></li>
+<li><a href="">4.5  Iterator Types</a></li>
+<li><a href="#sorting">Sorts</a></li>
+<li><a href="#doc04.range">Range</a></li>
+</ul></div>
+<!--  END - Built-in Types column1  ----------------------------------->
+</div></li>
+<!--  END - Types section  -------------------------------------------->
+
+
+<!--  START - Language: List / Tuple section  ------------------------->
+<li><a href="OS Services">List / Tuple</a>
+<div class="menu-container-2">
+
+<!--  START - List column  -------------------------------------------->
+<div class="column-1"><h3>List</h3>
+<ul>
+<li><a href="#list">List</a></li>
+<li><a href="#list.comprehension">List Comprehension</a></li>
+<li><a href="#collections.userlist">UserList</a></li>
+<li><a href="#list.stack">Stack</a></li>
+<li><a href="#list.queue">Queue</a></li>
+<li><a href="#collections.deque">Deque</a></li>
+</ul></div>
+<!--  END - List column  ---------------------------------------------->
+
+<!--  START - Tuple column  ------------------------------------------->
+<div class="column-1"><h3>Tuple</h3>
+<ul>
+<li><a href="#tuple">Tuple</a></li>
+<li><a href="#collections.namedtuple">NamedTuple</a></li>
+<li><a href="#range">Range</a></li>
+</ul></div>
+<!--  END - Tuple column  --------------------------------------------->
+</div></li>
+<!--  END - Language: List / Tuple section  --------------------------->
+
+
+<!--  START - Language: Dictionary / Set section  --------------------->
+<li><a href="OS Services">Dictionary / Set</a>
+<div class="menu-container-2">
+
+<!--  START - Dictionary column  -------------------------------------->
+<div class="column-1"><h3>Dictionary</h3>
+<ul>
+<li><a href="#dictionary">Dictionary</a></li>
+<li><a href="#dictionary.comprehensions">Dict Comprehensions</a></li>
+<li><a href="#collections.defaultdict">DefaultDict</a></li>
+<li><a href="#collections.ordereddict">OrderedDict</a></li>
+<li><a href="#collections.userdict">UserDict</a></li>
+<li><a href="#collections.chainmap">ChainMap</a></li>
+<li><a href="#collections.counter">Counter</a></li>
+</ul></div>
+<!--  END - Dictionary column  ---------------------------------------->
+
+<!--  START - Sets column  -------------------------------------------->
+<div class="column-1"><h3>Sets</h3>
+<ul>
+<li><a href="#set">Set</a></li>
+<li><a href="#set.comprehensions">Set Comprehensions</a></li>
+<li><a href="#set.frozenset">FrozenSets</a></li>
+</ul></div>
+<!--  START - Sets column  ------------------------------------------->
+</div></li>
+<!--  END - Language: Dictionary / Set section  ---------------------->
+
+
+<!--  START - Language: Byte section  -------------------------------->
+<li><a href="" id="Networking">Byte</a>
+<div class="menu-container-1">
+
+<!--  START - Byte column  ------------------------------------------->
+<div class="column-1"><h3>Byte</h3>
+<ul>
+<li><a href="#binary.byte">Bytes</a></li>
+<li><a href="#binary.bytearray">ByteArray</a></li>
+<li><a href="#binary.memoryview">MemoryView</a></li>
+</ul></div>
+<!--  START - Byte column  ------------------------------------------->
+</div></li>
+<!--  END - Language: Byte section  ---------------------------------->
+
+
+<!--  START - Language: Collections section  ------------------------->
+<li><a href="" id="Networking">Collections</a>
+<div class="menu-container-1">
+
+<!--  START - Collections column  ------------------------------------>
+<div class="column-1"><h3>Collections</h3>
+<ul>
+<li><a href="#collections">'collections' module</a></li>
+<li><a href="#">DEPRECATED: 'collections.abc'</a></li>
+<li><a href="#collections.userstring">UserString</a></li>
+<li><a href="#collections.namedtuple">NamedTuple</a></li>
+<li><a href="#collections.userlist">UserList</a></li>
+<li><a href="#collections.deque">Deque</a></li>
+<li><a href="#collections.defaultdict">DefaultDict</a></li>
+<li><a href="#collections.ordereddict">OrderedDict</a></li>
+<li><a href="#collections.userdict">UserDict</a></li>
+<li><a href="#collections.chainmap">ChainMap</a></li>
+<li><a href="#collections.counter">Counter</a></li>
+</ul></div>
+<!--  START - Collections column  ------------------------------------>
+</div></li>
+<!--  END - Language: Collections section ---------------------------->
+
+</ul>
+<!-- +++++ end table of contents +++++++++++++++++++++++++++----------->
+<br><p></p>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++--------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.types">4.0  Built-In Types</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<tr>
+<td>Data Type</td>
+<td><mark class="semanticweb">Ordered</mark></td>
+<td><mark class="semanticweb">Indexed</mark></td>
+<td><mark class="semanticweb">Mutable</mark></td>
+</tr>
+
+<tr>
+<td>List</td>
+<td>ordered</td>
+<td>unindexed</td>
+<td>mutable</td>
+</tr>
+
+<tr>
+<td>Tuple</td>
+<td>ordered</td>
+<td>unindexed</td>
+<td>immutable</td>
+</tr>
+
+<tr>
+<td>Dictionary</td>
+<td>unordered</td>
+<td>indexed</td>
+<td>mutable</td>
+</tr>
+
+<tr>
+<td>Set</td>
+<td>unordered</td>
+<td>unindexed</td>
+<td>mutable</td>
+</tr>
+<tr>
+<td>frozenset</td>
+<td></td>
+<td></td>
+<td>immutable</td>
+</tr>
+
+<tr>
+<td>Strings</td>
+<td>unordered</td>
+<td>indexed</td>
+<td>immutable</td>
+</tr>
+
+<tr>
+<td>int + float<br>
+complex</td>
+<td>ordered</td>
+<td>unindexed</td>
+<td>immutable</td>
+</tr>
+
+<tr>
+<td>range</td>
+<td>ordered</td>
+<td>...</td>
+<td>immutable</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td></td>
+<td></td>
+<td>immutable</td>
+</tr>
+
+<tr>
+<td>bool</td>
+<td>...</td>
+<td>...</td>
+<td>immutable</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>...</td>
+<td>...</td>
+<td>immutable</td>
+</tr>
+<tr>
+<td>array.py</td>
+<td>ordered</td>
+<td>indexed</td>
+<td>mutable</td>
+</tr>
+<tr>
+<td>bytearray</td>
+<td></td>
+<td>indexed</td>
+<td>mutable</td>
+</tr>
+</table>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/stdtypes.html#other-built-in-types" target="_blank">3.7docs</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+[ Python Central ] <a href="https://www.pythoncentral.io/series/python-data-structures-tutorial/" target="_blank">Python Data Structures Tutorial</a>
+| <a href="https://www.pythoncentral.io/search-implementations-linear-binary/" target="_blank">05 Search implementations: Linear and Binary</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.geeksforgeeks.org/packing-and-unpacking-arguments-in-python/" target="_blank">geeksforgeeks: Packing and Unpacking Arguments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="faqheader">chr(int)</div>
+<div class="faqdescription">The integer input is a number between 0 - 1,114,111. The output is the represented Unicode character.<br>
+[python console] <kbd>chr(120) </kbd> returns 'x'.</div>
+<p></p>
+<div class="faqheader">ord(c)</div>
+<div class="faqdescription">The input is a single character (c).  The output is Unicode number representing that character.<br>
+[python console] <kbd>ord('x') </kbd> returns '120'.</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.boolean">Python Boolean type</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+<div class="propertyheader">X</div>
+<div class="propertydescription"></div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++- --------------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc02.loops">Python Looping Techniques: 'for' 'while' 'enumerate()'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqheader">'for' loop</div>
+<div class="faqdescription"><kbd>for (startnum; endnum or terminate logic; step)</kbd><br>
+<kbd>for each_item in (my_list; my_tuple; my_string; my_dict)</kbd><br>
+<kbd>for each_num in range(startnum, endnum, step)</kbd><br>
+<kbd>for each_num = startnum to endnum</kbd>
+</div>
+<p></p>
+<div class="faqheader">'while' loop</div>
+<div class="faqdescription"><kbd>count = 0</kbd><br>
+<kbd>while count < 5:</kbd><br>
+<kbd>. . print(count)</kbd><br>
+<kbd>. . count += 1</kbd> # This is the same as count = count + 1</div>
+<p></p>
+<div class="faqheader">'enumerate(my_list/_tuple/_string/_dict, start_value)' function</div>
+<div class="faqdescription"><kbd>for counter, value in enumerate(some_list):</kbd> 'counter' does len(some_list)<br>
+<kbd>. . print(counter, value)</kbd> displays some_list[index] and the value<br>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/tutorial/datastructures.html?highlight=loop" target="_blank">docs3.7</a>
+| <a href="https://docs.python.org/3/tutorial/datastructures.html#tut-loopidioms" target="_blank">5.6. Looping Techniques</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.py4e.com/html3/05-iterations" target="_blank">Py4E</a>
+| <a href="https://www.pythonforbeginners.com/loops/" target="_blank">Python4Begginers</a>
+| <a href="https://www.learnpython.org/en/Loops" target="_blank">LearnPython</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=HFQGxh1jY3g" target="_blank">Al Sweigart</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<p></p>
+<div class="propertyheader">X</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc10.itertools">'itertools' — Functions creating iterators for efficient looping</a><br>
+<a class="semanticweb">Version: 3.7.1  Released: 2018</a>
+<a class="newhtml5">no warnings</a>
+</p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The module standardizes a core set of fast, memory efficient tools that are useful by themselves or in combination. Together, they form an “iterator algebra” making it possible to construct specialized tools succinctly and efficiently in pure Python.<br>
+For instance, SML provides a tabulation tool: tabulate(f) which produces a sequence f(0), f(1), .... The same effect can be achieved in Python by combining map() and count() to form map(f, count()).<br>
+These tools and their built-in counterparts also work well with the high-speed functions in the operator module. For example, the multiplication operator can be mapped across two vectors to form an efficient dot-product: sum(map(operator.mul, vector1, vector2)).</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/itertools.html" target="_blank">docs3.7.1</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=SxTIWPeFnIY" target="_blank">Python Basics: Itertools Permutations</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://realpython.com/python-itertools/" target="_blank">realpython: Itertools in Python3, By Example</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.blog.pythonlibrary.org/2016/04/20/python-201-an-intro-to-itertools/" target="_blank">pythonlibrary: Python 201: An Intro to itertools</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">3</div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="sorting">Python Sort Methods</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="faqheader">Bubble sort</div>
+<div class="faqdescription"><a href="https://www.pythoncentral.io/bubble-sort-implementation-guide/" target="_blank">pythoncentral: Bubble Sort</a><br>
+This algorithm iterates over a list, comparing elements in pairs and swapping them until the larger elements "bubble up" to the end of the list, and the smaller elements stay at the "bottom".
+</div>
+<p></p>
+
+<div class="faqheader">Heap sort</div>
+<div class="faqdescription"><a href="https://stackabuse.com/sorting-algorithms-in-python/" target="_blank">stackabuse: Heap Sort</a><br>
+Like the Insertion and Selection sorts, segments the list into sorted and unsorted parts. It converts the unsorted segment of the list to a Heap data structure, so that we can efficiently determine the largest element.</div>
+<p></p>
+
+<p></p>
+<div class="faqheader">Insertion sort</div>
+<div class="faqdescription"><a href="https://www.pythoncentral.io/insertion-sort-implementation-guide/" target="_blank">pythoncentral: Insertion Sort</a><br>
+Like Selection Sort, this algorithm segments the list into sorted and unsorted parts. It iterates over the unsorted segment, and inserts the element being viewed into the correct position of the sorted list.</div>
+<p></p>
+
+<div class="faqheader">Merge sort</div>
+<div class="faqdescription"><a href="https://www.pythoncentral.io/merge-sort-implementation-guide/" target="_blank">pythoncentral: Merge Sort</a><br>
+This divide and conquer algorithm splits a list in half, and keeps splitting the list by 2 until it only has singular elements. Adjacent elements become sorted pairs, then sorted pairs are merged and sorted with other pairs as well. This process continues until we get a sorted list with all the elements of the unsorted input list.</div>
+
+<p></p>
+<div class="faqheader">Quick sort</div>
+<div class="faqdescription"><a href="https://www.pythoncentral.io/quick-sort-implementation-guide/" target="_blank">pythoncentral: Quick Sort</a><br>
+ A divide and conquer algorithm. When configured correctly, it's extremely efficient and does not require the extra space Merge Sort uses. We partition the list around a pivot element, sorting values around the pivot.</div>
+
+<p></p>
+<div class="faqheader">Selection sort</div>
+<div class="faqdescription"><a href="https://www.pythoncentral.io/selection-sort-implementation-guide/" target="_blank">pythoncentral: Selection Sort</a><br>
+This algorithm segments the list into two parts: sorted and unsorted. We continuously remove the smallest element of the unsorted segment of the list and append it to the sorted segment.</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.numeric">[Numeric types] 'int' + 'float' + 'complex'</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="faqheader" id="doc04.06.4">'int' <mark class="semanticweb">Mutable</mark></div>
+<div class="faqdescription"></div>
+<p></p>
+
+<div class="faqheader" id="doc04.06.5">'float' <mark class="semanticweb">Mutable</mark></div>
+<div class="faqdescription"></div>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://realpython.com/python-lists-tuples/" target="_blank">RealPython</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="faqheader" id="doc04.06.6">'complex' <mark class="semanticweb">Mutable</mark></div>
+<div class="faqdescription"></div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.list">[ Python List ]</a> <mark class="semanticweb">Sequence type, Immutable, Ordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementdescription">Lists never have gaps! They contract.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/tutorial/datastructures.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<br>
+
+<!-- Python Central: List Tutorials ----------------------------------->
+[ Python Central ] <a href="https://www.pythoncentral.io/series/python-data-structures-tutorial/" target="_blank">Python Data Structures Tutorial</a>
+| <a href="https://www.pythoncentral.io/python-lists-and-tuples/" target="_blank">Python Lists and Tuples</a>*
+|<br><span>--&gt;</span>
+| <a href="https://www.pythoncentral.io/python-reverse-list-place/" target="_blank">11 Python List: How To Implement in Place Reversal</a>
+| <a href="https://www.pythoncentral.io/singly-linked-list-insert-node/" target="_blank">12 Singly Linked List: How To Insert + Print Node</a>
+|<br><span>--&gt;</span>
+| <a href="https://www.pythoncentral.io/find-remove-node-linked-lists/" target="_blank">13 Singly Linked List: How To Find + Remove a Node</a>
+| <a href="https://www.pythoncentral.io/reverse-singly-linked-list/" target="_blank">14 How To Reverse a Singly Linked List</a>
+|</div>
+<!-- Python Central: List Tutorials ----------------------------------->
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">Iterate a list using: For-In Loop</div>
+<div class="propertydescription"><kbd>for word in my_list<br>
+....print(word)</kbd>
+Range begins at '0'. Range ends when inum equals the number of slices in my_list.</div>
+<p></p>
+
+<div class="propertyheader">Iterate a list using: While Loop</div>
+<div class="propertydescription"><kbd>while inum < len(my_list)<br>
+....print(my_list[inum])<br>
+....inum += 1</kbd>
+Range begins at '0'. Range ends when inum equals the number of slices in my_list.</div>
+<p></p>
+
+<div class="propertyheader">Iterate a list using: For-In Range Loop</div>
+<div class="propertydescription"><kbd>for inum in range(len(my_list))<br>
+....print(my_list[inum])<br>
+....inum += 1</kbd>
+Range begins at '0'. Range ends when inum is greater than the number of slices in my_list.</div>
+<p></p>
+
+<div class="propertyheader">What is "extended slice syntax"</div>
+<div class="propertydescription"><kbd>p = backwards<br>
+print p[::-1]</kbd>
+you tell the function where to begin and end (by inserting two semicolons you're telling the function to begin at the beginning and end at the end), using "-1" to iterate through the string backwards<br>
+(Using "-2" would still print backwards, but would step over every other letter, resulting in "srwcb"</div>
+<p></p>
+
+<div class="faqdescription"><kbd>my_list.count("apple")</kbd> counts the number of 'apple" occuring in my_list</div>
+<div class="faqdescription"><kbd>my_list.index("apple")</kbd> returns the index of the first occurence of 'apple" in my_list</div>
+<div class="faqdescription"><kbd>'apple' in my_list</kbd> returns True or False if string occurs in my_list</div>
+
+<div class="faqdescription"><kbd>my_list = my_list + ['monday', 2.0]</kbd> join lists using concatenation</div>
+<div class="faqdescription"><kbd>my_list.append('tuesday')</kbd> takes a single argument, which can be any datatype. Here, you’re calling the append() method with a list of three items. If you start with a list of six items and append a list onto it, you end up with... a list+1 (7 items).</div>
+<div class="faqdescription"><kbd>my_list.extend(['four', 'G'])</kbd> takes a single argument, which is always a list, and adds each of the items of that list to my_list. If you start with a list of six items and append a list of six items onto it, you end up with a list of the sum of both lists (12 items).</div>
+<div class="faqdescription">
+<kbd>my_list.insert(0, 'G')</kbd> inserts new value ('G') at the index [0] indicated</div>
+<div class="faqdescription"><kbd>del my_list[1]</kbd> removes the item at the specified index. All items after the deleted item shift their positional index to “fill the gap” created by deleting the item.</div>
+<div class="faqdescription"><kbd>my_list.remove('apple')</kbd> removes the first occurence of 'apple' from the list.</div>
+<div class="faqdescription"><kbd>my_list.pop(index)</kbd> pop.() removes the last item; pop(index) removes that item, shifts all items after it to “fill the gap,” and returns the value it removed.</div>
+<p></p>
+<div class="faqdescription"><kbd>tuple(my_list)</kbd> converts items from my_list into a tuple</div>
+<div class="faqdescription"><kbd>list(my_tuple)</kbd> converts items from my_tuple into a list</div>
+
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="list.comprehension">[ List Comprehension ]</a> <mark class="semanticweb">Sequence type, Immutable, Ordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p>A List Comprehension maps (does an operation) from a source list into a target list.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/tutorial/datastructures.html" target="_blank">doc3.7.1</a>
+| <a href="https://www.python.org/dev/peps/pep-0202/" target="_blank">PEP 202 (2000)</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=AhSvKGTh28Q&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-&index=23&t=0s" target="_blank">Socratica</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://python101.pythonlibrary.org/chapter6_comprehensions.html" target="_blank">Python101:</a>*
+| <a href="http://www.diveintopython3.net/comprehensions.html" target="_blank">diveintopython:</a>*
+| <a href="https://www.digitalocean.com/community/tutorials/understanding-list-comprehensions-in-python-3" target="_blank">digitalocean:</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.dalkescientific.com/writings/NBN/list_comps.html" target="_blank">dalkescientific: List Comprehensions</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How does a List Comprehension work?</div>
+<div class="propertydescription"><kbd>destination_list = [*transform*  *iteration*  *filter*]<br>
+destination_list = [expression(i) for i in source_list if filter(i)]</kbd><br>
+<kbd>my_list = [inum for inum in range(0,10)]</kbd>
+# outputs: my_list = [0,1,2,3,4,5,6,7,8,9]<br>
+<li>The *iteration* loops through the source_list[].</li>
+<li>If the *filter expression* == True, the *transform expression* is executed, the result is added to the destination_list[].</li>
+<li>If the *filter expression* == False, the *transform expression* does not execute and the iteration continues.</li>
+<li>If there is only a var_name and no *transform expression*, the var_name holds the result is simply added to the destination_list[] and the iteration continues.</li>
+</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="list.queues">Lists as Queues</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+
+<!-- Python Central: Queue Tutorials ---------------------------------->
+[ Python Central ] <a href="https://www.pythoncentral.io/series/python-data-structures-tutorial/" target="_blank">Python Data Structures Tutorial</a>
+| <a href="https://www.pythoncentral.io/use-queue-beginners-guide/" target="_blank">03 How to use Queue</a>
+| <a href="https://www.pythoncentral.io/circular-queue/" target="_blank">04 Circular Queue</a>
+|<br><span>--&gt;</span>
+| <a href="https://www.pythoncentral.io/priority-queue-beginners-guide/" target="_blank">06 Priority Queue</a>
+|</div>
+<p></p>
+<div class="propertyheader">Use a list as a 'queue' (FIFO)</div> Not recommended.  See <a href="#deque">collections.deque</a>.
+<div class="propertydescription">Use <kbd>my_list.insert(0, 'value')</kbd> to push a new value onto the zero-end, the near end of my_list[].<br>
+Use <kbd>val = my_list.pop(0)</kbd> to pop values off the zero-end, near end of my_list[].</div>
+<!-- Python Central: Queue Tutorials ---------------------------------->
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="list.stack">Lists as Stacks</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+<br>
+<!-- Python Central: Stack Tutorials ---------------------------------->
+[ Python Central ] <a href="https://www.pythoncentral.io/series/python-data-structures-tutorial/" target="_blank">Python Data Structures Tutorial</a>
+| <a href="https://www.pythoncentral.io/stack-tutorial-python-implementation/" target="_blank">02 Stack Tutorial: An implementation beginner’s guide</a>
+|
+<!-- Python Central: Stack Tutorials ---------------------------------->
+<p></p>
+<div class="propertyheader">Use a list as a 'stack' (LIFO)</div> Not recommended.  See <a href="#deque">collections.deque</a>.
+<div class="propertydescription">Use <kbd>my_list.append(new)</kbd> to push values onto the far-end/top of the stack.<br>
+Use <kbd>my_list.pop()</kbd> to pop values off the far-end/top of the stack.</div>
+</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.tuple">( Python Tuple )</a><mark class="semanticweb">Sequence, Immutable, Ordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">
+<li>Tuples() are immutable, they “write-protect” your data. </li>
+<li>You can not insert / append / delete value inside a tuple(). <kbd>del my_tuple</kbd> deletes the entire thing.</li>
+<li>Tuples() are hashable, and mutable lists[] are not.</li>
+<li>Tuples immutable elements can be used as keys for dictionary, which is not possible with mutable lists[].</li>
+<li>Tuples() are faster than lists[].</li>
+<li>Tuples() are comparable.</li>
+</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="http://www.diveintopython3.net/native-datatypes.html#tuples" target="_blank">diveintopython3</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+    | <a href="https://realpython.com/python-lists-tuples/" target="_blank">RealPython</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.programiz.com/python-programming/tuple" target="_blank">programiz: tuple</a>
+ - <span class="update">(visited 07 Dec 19)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.guru99.com/python-tuples-tutorial-comparing-deleting-slicing-keys-unpacking.html" target="_blank">Guru99: Tuples</a>
+ - <span class="update">(visited 07 Dec 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">Packing / Unpacking tuples</div>
+<div class="propertydescription"><kbd>my_tuple = ("monday", "tuesday", "wednesday")</kbd> packs the tuple<br>
+<kbd>(first_DOW, second_DOW, third_DOW) = x</kbd> unpacks the tuple into symbol table</div>
+<p></p>
+
+<div class="propertyheader">Confirm existing value in tuple</div>
+<div class="propertydescription"><kbd>'apple' in my_tuple</kbd> returns True or False if string occurs in my_tuple</div>
+<div class="propertydescription"><kbd>my_tuple.index("apple")</kbd> returns the index of the first occurence of 'apple" in my_tuple</div>
+<p></p>
+
+<div class="faqheader">Tuple Built-in Functions</div>
+<div class="faqdescription">
+<li><kbd>all()</kbd> Return True if all elements of the tuple are true (or if the tuple is empty).</li>
+<li><kbd>any()</kbd> Return True if any element of the tuple is true. If the tuple is empty, return False.</li>
+<li><kbd>cmp()</kbd></li>
+<li><kbd>enumerate()</kbd> Return an enumerate object. It contains the index and value of all the items of tuple as pairs.</li>
+<li><kbd>my_tuple.index('apple')</kbd> returns the index for the first occurence</li>
+<li><kbd>my_tuple.count('apple')</kbd> returns the number of occurences</li>
+<li><kbd>max()</kbd> Return the largest item in the tuple.</li>
+<li><kbd>min()</kbd> Return the smallest item in the tuple</li>
+<li><kbd>len(my_tuple)</kbd> Return the length (the number of items) in the tuple.</li>
+<li><kbd>sorted()</kbd> Take elements in the tuple and return a new sorted list (does not sort the tuple itself).</li>
+<li><kbd>sum()</kbd> Retrun the sum of all elements in the tuple.</li>
+<li><kbd>tuple(my_list)</kbd> converts items from my_list into an immutable tuple</li>
+<li><kbd>str(my_tuple)</kbd> converts items from my_tuple into a mutable list</li>
+</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc04.range">Python Range</a> <mark class="semanticweb">Sequence, Ordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+<p>The built-in range() function constructs a sequence of integers. (Technically, the range() function returns an iterator, not a list or a tuple</p>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"><kbd>(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7)</kbd><br>
+<kbd>MONDAY</kbd> returns index == 0<br>
+<kbd>TUESDAY</kbd> returns index == 1<br>
+<kbd>SUNDAY</kbd> returns index == 6<br>
+</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="dictionary">{ Python Dictionary }</a> <mark class="semanticweb">Mutable, Unordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="elementdescription">A dictionary{} assigns a fixed key index to each data value.  You must know the key to get the value.<br>
+You can not use sequential [index_number] to access values.</div>
+<p></p>
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries" target="_blank">pyorg: dictionaries</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=daefaLgNkw0" target="_blank">coreyshafer: dictionaries</a>
+| <a href="https://medium.com/@GalarnykMichael/python-basics-10-dictionaries-and-dictionary-methods-4e9efa70f5b9" target="_blank">Michael Galarnyk</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.datacamp.com/community/tutorials/python-dictionary-tutorial" target="_blank">DataCamp</a>
+| <a href="https://diveintopython3.problemsolving.io/native-datatypes.html#dictionaries" target="_blank">diveintopython3</a>
+| <a href="https://realpython.com/python-dicts/" target="_blank">realpython</a>
+| <a href="https://www.geeksforgeeks.org/python-dictionary/" target="_blank">geeksforgeeks</a>
+| <a href="https://www.pythonforbeginners.com/dictionary/how-to-use-dictionaries-in-python" target="_blank">pythonforbeginners</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader">Add/update a key-value pair to a dictionary.</div>
+<div class="faqdescription">[console] <kbd>my_dict['new key'] = 'new value'</kbd><br>
+[console] <kbd>my_dict.update({'new key': 'new value', 'existing key': 'new value'})</kbd>
+</div>
+<p></p>
+
+<div class="faqheader">Retrieving non-existent key</div>
+<div class="faqdescription">[console] <kbd>print(my_dict.get('bad key')) RETURNS the defalt value 'None'</kbd><br>
+[console] <kbd>print(my_dict.get('bad key', "ouch")) RETURNS 'ouch' instead of 'none'</kbd><br>
+[console] <kbd>print(my_dict['bad key']) RETURNS a KeyError</kbd>
+</div>
+<p></p>
+
+<p></p>
+<div class="faqheader">#1 Determine if my_dict has a specfic key?</div>
+<div class="faqdescription"><kbd>if 'location' in my_dict:<br>print(my_dict['location'])<br>
+else:<br>print('my_dict does not have a location key')</kbd></div>
+<div class="faqheader">#2 Determine if my_dict has a specfic key?</div>
+<div class="faqdescription"><kbd>try:<br>print(my_dict['location'])<br>
+except KeyError:<br>print('my_dict does not have a location key')</kbd></div>
+<p></p>
+<div class="faqheader">Dictionary view functions</div>
+<div class="faqdescription">
+<li>dict.keys()</li>
+<li>dict.values()</li>
+<li>dict.items()</li>
+</div>
+<div class="faqheader">Use my_dict.keys() function</div>
+<div class="faqdescription"><kbd>print(my_dict.keys() RETURNS all of the keys</kbd><br>
+<kbd>for key in my_dict.keys():<br>value = my_dict[key]<br>....print(key, value, sep=" = ")</kbd> </div>
+<div class="faqheader">Use my_dict.values() function</div>
+<div class="faqdescription"><kbd>print(my_dict.values() RETURNS all of the values</kbd><br>
+<kbd>for key, value in my_dict.items():<br>....print(key, value, sep=" = ")</kbd> </div>
+<div class="faqheader">Use my_dict.items() function</div>
+<div class="faqdescription"><kbd>for key, value in my_dict.items()<br>....print(key, value, sep=" = ")</kbd> </div>
+<p></p>
+<div class="propertyheader">What data types are 'hashable'?</div>
+<div class="propertydescription">Note: The keys in a dictionary have to be hashable.  <br>
+The values (items) in a dictionary can have any data type.
+<li>Hashable key types: [not mutable] Integers + floating point numbers + strings + tuples + frozensets.</li>
+<li>Not Hashable key types: [mutable] Lists + Dictionaries + Sets.</li> </div>
+<p></p>
+<div class="propertyheader">What functions are related to 'dict'?</div>
+<div class="propertydescription">[console] <kbd>dir(my_dict)</kbd> </div>
+
+<p></p>
+<div class="propertyheader">View HELP for 'dict'</div>
+<div class="propertydescription">[console] <kbd>help(dict)</kbd> </div>
+<div class="propertyheader">View HELP for .get function?</div>
+<div class="propertydescription">[console] <kbd>help(my_dict.get)</kbd> </div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="dictionary.comprehensions">{ Python Dictionary Comprehension }</a>
+<mark class="semanticweb">Mutable, Unordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="elementdescription">A Python dictionary{} is an 'associative array' or 'map'.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.python.org/dev/peps/pep-0274/" target="_blank">PEP 274 (2001)</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=XCcpzWs-CI4" target="_blank">Socratica</a>
+| <a href="https://www.youtube.com/watch?v=J_R2nxy1nQY" target="_blank">Pretty Printed</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorial</div>
+<div class="elementdescription">
+| <a href="https://www.datacamp.com/community/tutorials/python-dictionary-comprehension" target="_blank">DataCamp</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">How does a Dictionary Comprehension work?</div>
+<div class="propertydescription"><kbd>*destination_dict* = {*transform*  *iteration*  *filter*}</kbd><br>
+<kbd>destination_dict = {k:v for (k,v) in d.items() if filter_string in k}</kbd><br>
+<li>The *iteration* loops through the source_dict{}.</li>
+<li>If the *filter expression* == True, the *transform expression* is executed, the result is added to the destination_dict{}.</li>
+<li>If the *filter expression* == False, the *transform expression* does not execute and the iteration continues.</li>
+<li>If there is only a var_name and no *transform expression*, the var_name holds the result is simply added to the destination_dict{} and the iteration continues.</li>
+</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="collections">'collections' Module</a></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in containers, dict, list, set, and tuple.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/collections.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<table border = '1'>
+<tr><th>name</th><th width=700>description</th></tr>
+<tr><td>namedtuple()</td><td>factory function for creating tuple subclasses with named fields each value has a name<br>
+v3.8.x no longer supports the verbose parameter or _source attribute which showed the generated source code for the named tuple class. This was part of an optimization designed to speed-up class creation.</td></tr>
+<tr><td>deque</td><td>list-like container with fast appends and pops on either end</td></tr>
+<tr><td>ChainMap</td><td>dict-like class for creating a single view of multiple mappings</td></tr>
+<tr><td>Counter</td><td>dict subclass for counting hashable objects</td></tr>
+<tr><td>OrderedDict</td><td>dict subclass that remembers the order entries were added. Like a dictionary, but the order of<br>
+ keys is maintained</td></tr>
+<tr><td>defaultdict</td><td>dict subclass that calls a factory function to supply missing values. Like a dictionary,<br>
+ but unspecified keys have a user-specified default value</td></tr>
+<tr><td>UserDict</td><td>wrapper around dictionary objects for easier dict subclassing</td></tr>
+<tr><td>UserList</td><td>wrapper around list objects for easier list subclassing</td></tr>
+<tr><td>UserString</td><td>wrapper around string objects for easier string subclassing</td></tr>
+</table>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="faqheader"><a id="deque">collections.deque([interable[, maxlen]])</a></div>
+<p></p>
+<div class="propertyheader">collections.deque([interable[, maxlen]])</div>
+<div class="propertydescription">Deques (“deck”) are a generalization of stacks and queues.</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="binary.byte">Python 'bytes'</a> <mark class="semanticweb">Sequence, Immutable</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">Th</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="binary.bytearray">Python 'bytearray'</a> <mark class="semanticweb">Sequence, Immutable</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">Th</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="binary.memoryview">'memoryview'  [Binary Sequence Types] </a> <mark class="semanticweb">Immutable</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">Memory view is a safe way to expose the buffer protocol in Python. It allows you to access the internal buffers of an object by creating a memory view object.  It exposes the C level buffer interface as a Python object which can then be passed around like any other object.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://www.geeksforgeeks.org/memoryview-in-python/" target="_blank">geeksforgeeks</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.programiz.com/python-programming/methods/built-in/memoryview" target="_blank">programiz: </a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="set">Python Set</a>
+<mark class="semanticweb">Mapping type, Mutable, Unordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="faqdescription">Since sets are unordered, there is no “last” value in a set, so there is no way to control which value gets removed. It is completely arbitrary.</div>
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.python-course.eu/python_sets_example.php" target="_blank">CourseEU</a>
+| <a href="http://www.diveintopython3.net/native-datatypes.html#sets" target="_blank">diveintopython3</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader">Convert 'list' into 'set'</div>
+<div class="faqdescription"><kbd>my_set set(my_list)</kbd> creates my_set with the items from my_list</div>
+<div class="faqdescription"><kbd>list(my_tuple)</kbd> converts items from my_tuple into a list</div>
+<p></p>
+<div class="faqheader">Adding items to a set; Duplicate values are ignored, sets can not contain duplicates.</div>
+<div class="faqdescription"><kbd>my_set.add(42)</kbd> 'pushes' the integer '42' into my_set{}.<br>
+<kbd>my_set.update('42')</kbd> 'pushes' the string "42" into my_set{}.<br>
+<kbd>my_set.update({6})</kbd> 'pushes' the integer '6' into my_set{}.<br>
+</div>
+
+<div class="faqheader">Removing items from a set.</div>
+<div class="faqdescription">
+<ol>
+<li><kbd>my_set.remove(42)</kbd> removes value, if present. KeyError: 21 raised if the value is not present.</li>
+<li><kbd>my_set.discard(42)</kbd> removes value if present. No error is raised if the value is not present.</li>
+<li><kbd>my_set.pop()</kbd> since sets are unordered, there is no “last” value in a set, so there is no way to control which value gets removed. It is
+completely arbitrary.</li>
+<li><kbd>my_set.clear()</kbd> removes all values from my_set.</li>
+</ol></div>
+<div class="faqdescription"><kbd>len(my_set)</kbd> returns the number of items</div>
+<p></p>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="set.comprehension">Python Set Comprehension</a>
+<mark class="semanticweb">Mapping type, Immutable, Unordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+
+<p></p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">How does a Set Comprehension work?</div>
+<div class="propertydescription"><kbd>*destination_list* = [*transform*  *iteration*  *filter*]</kbd><br>
+<kbd>destination_list = [expression(i) for i in source_list if filter(i)]</kbd><br>
+<li>The *iteration* loops through the source_list[].</li>
+<li>If the *filter expression* == True, the *transform expression* is executed, the result is added to the destination_list[].</li>
+<li>If the *filter expression* == False, the *transform expression* does not execute and the iteration continues.</li>
+<li>If there is only a var_name and no *transform expression*, the var_name holds the result is simply added to the destination_list[] and the iteration continues.</li>
+</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="set.frozenset">Python Frozenset</a> <mark class="semanticweb">Mapping type, Immutable, Unordered</mark></p></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+
+
+<p>since sets are unordered, there is no “last” value in a set, so there is no way to control which value gets removed. It is
+completely arbitrary.</p>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.python-course.eu/python_sets_example.php" target="_blank">CourseEU</a>
+| <a href="http://www.diveintopython3.net/native-datatypes.html#sets" target="_blank">diveintopython3</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader">Convert 'list' into 'set'</div>
+<div class="faqdescription"><kbd>my_set set(my_list)</kbd> creates my_set with the items from my_list</div>
+<div class="faqdescription"><kbd>list(my_tuple)</kbd> converts items from my_tuple into a list</div>
+<p></p>
+<div class="faqheader">Adding items to a set; Duplicate values are ignored, sets can not contain duplicates.</div>
+<div class="faqdescription"><kbd>my_set.add(42)</kbd> 'pushes' the integer '42' into my_set{}.<br>
+<kbd>my_set.update('42')</kbd> 'pushes' the string "42" into my_set{}.<br>
+<kbd>my_set.update({6})</kbd> 'pushes' the integer '6' into my_set{}.<br>
+</div>
+
+<div class="faqheader">Removing items from a set.</div>
+<div class="faqdescription">
+<ol>
+<li><kbd>my_set.remove(42)</kbd> removes value, if present. KeyError: 21 raised if the value is not present.</li>
+<li><kbd>my_set.discard(42)</kbd> removes value if present. No error is raised if the value is not present.</li>
+<li><kbd>my_set.pop()</kbd> since sets are unordered, there is no “last” value in a set, so there is no way to control which value gets removed. It is
+completely arbitrary.</li>
+<li><kbd>my_set.clear()</kbd> removes all values from my_set.</li>
+</ol></div>
+<div class="faqdescription"><kbd>len(my_set)</kbd> returns the number of items</div>
+<p></p>
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<p></p>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="collections">'collections' Module</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
+
+
+</body>
+</html>

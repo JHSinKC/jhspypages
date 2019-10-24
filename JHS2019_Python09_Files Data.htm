@@ -82,8 +82,6 @@
 <li><a href="#doc08">DATA TYPES</a></li>
 <li><a href="#doc08.array">'array'</a></li>
 <li><a href="#doc08.bisect">'bisect' algorithm</a></li>
-<li><a href="#doc08.collections">'collections'</a></li>
-<li><a href="#doc08.collections.abc">'collections.abc'</a></li>
 <li><a href="#doc08.copy">'copy'</a></li>
 <li><a href="#doc08.enum">'enum' enumerations</a></li>
 <li><a href="#doc08.heapq">'heapq' queue algorithm</a></li>
@@ -137,7 +135,8 @@
 <li><a href="#doc06">TEXT PROCESSING</a></li>
 <li><a href="#doc06.typing">'typing' Hints</a></li>
 <li><a href="#doc06.difflib">''difflib'</a></li>
-<li><a href="#doc06.re">'re Regular expression</a></li>
+<li><a href="#doc06.re">'re' Regular expression</a></li>
+<li><a href="#doc06.regex">'regex' Regular expression</a></li>
 <li><a href="#doc06.readline">'readline'</a></li>
 <li><a href="#doc06.rlcompleter">'rlcompleter'</a></li>
 <li><a href="#doc06.string">'string'</a></li>
@@ -2269,130 +2268,7 @@ The csv module’s reader and writer objects read and write sequences. Programme
 <div class="propertydescription"></kbd></div>
 
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
-<hr />
-<p></p>
-<p></p>
 
-<table summary="">
-<tbody>
-<tr>
-<td>
-<p></p><p></p>
-<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
-<td><p class="head2"><a id="doc08.collections">'collections' Module</a><br>
-<a class="semanticweb">Version:  Released: 2019</a>
-<a class="newhtml5">no warnings</a></p></td>
-</tr>
-</tbody>
-</table>
-
-<div class="faqdescription"></div>
-
-<div class="elementheader">Reference</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-<div class="elementheader">Tutorials on YouTube</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-<div class="elementheader">Tutorials</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-
-<ol>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-</ol>
-
-<div class="propertyheader"></div>
-<div class="propertydescription"></kbd></div>
-
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
-<hr />
-<p></p>
-<p></p>
-
-<table summary="">
-<tbody>
-<tr>
-<td>
-<p></p><p></p>
-<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
-<td><p class="head2"><a id="doc08.collections.abc">'collections.abc' Module</a><br>
-<a class="semanticweb">Version:  Released: 2019</a>
-<a class="newhtml5">no warnings</a></p></td>
-</tr>
-</tbody>
-</table>
-
-<div class="faqdescription"></div>
-
-<div class="elementheader">Reference</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-<div class="elementheader">Tutorials on YouTube</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-<div class="elementheader">Tutorials</div>
-<div class="elementdescription">
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-|</div>
-<p></p>
-
-<ol>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-<li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
-</li>
-</ol>
-
-<div class="propertyheader"></div>
-<div class="propertydescription"></kbd></div>
-
-<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++ ----------------->
 <hr />
 <p></p>
@@ -3430,19 +3306,151 @@ You will not use these functions directly but use wrapper modules like <a href="
 </tbody>
 </table>
 
-<div class="faqdescription">Regular expressions are typically used in applications that involve a lot of text processing. For example, they are commonly used as search patterns in text editing programs used by developers, including vi, emacs, and modern IDEs</div>
+<div class="faqdescription">Regular expressions are typically used in applications that involve a lot of text processing. For example, they are commonly used as search patterns in text editing programs used by developers, including vi, emacs, and modern IDEs. You can alsouse REs to modify a string or to split it apart in various ways.</div>
 
 <div class="elementheader">Reference</div>
 <div class="elementdescription">
 | <a href="https://docs.python.org/3.7/library/re.html" target="_blank">3.7docs</a>
 | <a href="https://pymotw.com/3/re/index.html" target="_blank">PYMOTW</a>
+| <a href="https://docs.python.org/3.8/library/re.html" target="_blank">3.8 docs</a>
+| <a href="https://docs.python.org/3.5/howto/regex.html" target="_blank">HOWTOs</a>
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
 |</div>
 <p></p>
 
+<div class="elementheader">Interactive testing tool</div>
+<div class="elementdescription">
+| <a href="https://www.debuggex.com/" target="_blank">debuggex</a>
+| <a href="http://kodos.sourceforge.net/" target="_blank">Kodos</a>
+| <a href="https://pythex.org/" target="_blank">pythex</a>
+| <a href="http://www.pyregex.com/" target="_blank">pyregex</a>
+| <a href="https://regex101.com/" target="_blank">regex101</a>
+|<p></p>
+
 <div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<p></p>
+
+<!----- Pymoodra: Python Regular Expressions Made Easy -------------->
+<li>
+[Pymoodra: Python Regular Expressions Made Easy]
+| <a href="https://www.youtube.com/playlist?list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg" target="_blank">playlist</a>
+| <a href="https://www.youtube.com/watch?v=VU60rEXaOXk&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg" target="_blank"> 01</a>*
+| <a href="https://www.youtube.com/watch?v=Dkiz0z3bMg0&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=2" target="_blank">02 match-search</a>*
+| <a href="https://www.youtube.com/watch?v=VV_AKyT9znE&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=4&t=1s" target="_blank">03 quantifiers</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=IqF_XGrFbC8&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=4" target="_blank">04 custom chars</a>*
+| <a href="https://www.youtube.com/watch?v=zys2JuGPGvg&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=5" target="_blank">05 custom sets</a>*
+| <a href="https://www.youtube.com/watch?v=CmGLLCDfq6k&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=6" target="_blank">06 groups</a>*
+| <a href="https://www.youtube.com/watch?v=gU6vrgJYT48&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=7" target="_blank">07 groups+naming</a>*
+| <a href="https://www.youtube.com/watch?v=WH_IgZldAgU&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=8" target="_blank">08 groups+quantifiers</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=E66slBlRBHg&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=9" target="_blank">09 backref</a>*
+| <a href="https://www.youtube.com/watch?v=XWj_kyoMLbQ&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=10" target="_blank">10 flags</a>*
+| <a href="https://www.youtube.com/watch?v=_iSyVfQAxnM&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=11" target="_blank">11 re.split</a>*
+| <a href="https://www.youtube.com/watch?v=IqfLhAKeWfg&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=12" target="_blank">12 re.sub</a>*
+| <a href="https://www.youtube.com/watch?v=WbtFUuFE9hg&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=13" target="_blank">13 word boundries</a>*
+| <a href="https://www.youtube.com/watch?v=xQoP_rNmPvI&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=14" target="_blank">14 lookahead1</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=zTI80a7u9YU&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=15" target="_blank">15 lookahead2</a>*
+| <a href="https://www.youtube.com/watch?v=yqwYTSNJFLg&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=16" target="_blank">16 neg-lookaround</a>*
+| <a href="https://www.youtube.com/watch?v=Ij_Yy9rgLtw&list=PLGKQkV4guDKH1TpfM-FvPGLUyjsPGdXOg&index=17" target="_blank">17 lookaround varwidth</a>*
+|</li>
+<!----- Pymoodra: Python Regular Expressions Made Easy ------------------>
+<p></p>
+
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="https://www.pythoncentral.io/series/python-regular-expressions-tutorial/" target="_blank">pythoncentral</a>
+| <a href="http://www.diveintopython3.net/regular-expressions.html" target="_blank">diveintopython3</a>
+| <a href="https://yoursdata.net/beginners-guide-python-regular-expression/" target="_blank">yoursdata: Beginners’ Guide</a>
+| <a href="https://yoursdata.net/example-python-regular-expression/" target="_blank">yoursdata: 12 examples</a>
+| <a href="https://regexone.com/references/python" target="_blank">RegexOne</a>
+|<br>
+| <a href="https://docs.python.org/3.8/howto/regex.html#regex-howto" target="_blank">3.8 docs: HowTo</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://regex101.com/#python" target="_blank">regex101: interactive</a>
+<p></p>
+
+<!----- PythonCentral: Introduction to Python Regular Expressions  ------->
+<li>
+[PythonCentral: Regular Expressions]
+<a href="https://www.pythoncentral.io/introduction-to-python-regular-expressions/" target="_blank">Basic Syntax</a>
+| <a href="https://www.pythoncentral.io/more-about-python-regular-expressions/" target="_blank">Captured Groups</a>
+| <a href="https://www.pythoncentral.io/the-odds-ends-of-python-regular-expressions/" target="_blank">Functions</a>
+| <a href="https://www.pythoncentral.io/real-world-regular-expressions-for-python/" target="_blank">Real-World</a>
+|</li>
+<!----- PythonCentral: Introduction to Python Regular Expressions  ------->
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="https://stackoverflow.com/questions/6930982/how-to-use-a-variable-inside-a-regular-expression" target="_blank">stack: How to use a variable inside a regular expression?</a>
+ - <span class="update">(visited 20 Jun 19)</span>
+</li>
+<li>
+<a class="listitem" href="http://www.rexegg.com/" target="_blank">rexegg: </a>
+ - <span class="update">(visited 20 Oct 19)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">H</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc06.regex">'regex' Regular Expression</a><br>
+<a class="semanticweb">Version:  Released: 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
 <div class="elementdescription">
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
@@ -3451,17 +3459,14 @@ You will not use these functions directly but use wrapper modules like <a href="
 
 <div class="elementheader">Tutorials</div>
 <div class="elementdescription">
-| <a href="https://www.pythoncentral.io/series/python-regular-expressions-tutorial/" target="_blank">pythoncentral</a>
-| <a href="http://www.diveintopython3.net/regular-expressions.html" target="_blank">diveintopython3</a>
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
-| <a href="" target="_blank">x</a>
+| <a href="https://www.rexegg.com/regex-python.html" target="_blank">Rexegg</a>
+| <a href="https://www.w3schools.com/python/python_regex.asp" target="_blank">W3: regex</a>
 |</div>
 <p></p>
 
 <ol>
 <li>
-<a class="listitem" href="" target="_blank">M</a>
+<a class="listitem" href="https://towardsdatascience.com/the-ultimate-guide-to-using-the-python-regex-module-69aad9e9ba56?gi=9fcd721397ea" target="_blank">towardsdatascience: The Ultimate Guide</a>
  - <span class="update">(visited 20 Jun 18)</span>
 </li>
 <li>
