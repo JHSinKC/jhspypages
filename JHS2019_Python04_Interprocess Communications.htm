@@ -11,11 +11,11 @@
 <ul id="menu">
 
 <!--  START - Interprocess Communications section  ------------------------>
-<li><a href="" id="">Interprocess Communications</a>
+<li><a href="" id="">Interprocess Comms</a>
 <div class="menu-container-1">
 
 <!--  START - Interprocess Communications column  ------------------------->
-<div class="column-1"><h3>Interprocess Communications</h3>
+<div class="column-1"><h3>Interprocess Comms</h3>
 <ul>
 <li><a href="#doc19">19.0 Networking and<br> Interprocess Comms</a></li>
 <li><a href="#doc19.socket">19.2 'socket'</a></li>
@@ -23,6 +23,7 @@
 <li><a href="#doc19.select">19.4 'select'</a></li>
 <li><a href="#doc19.selectors">19.5 'selectors'</a></li>
 <li><a href="#doc19.asyncore">19.6 'asyncore'</a></li>
+<li><a href="#doc19.asyncio">'asyncio'</a></li>
 <li><a href="#doc19.asynchat">19.7 'asynchat'</a></li>
 <li><a href="#doc19.signal">19.8 'signal'</a></li>
 <li><a href="#doc19.mmap">19.9 'mmap'</a></li>
@@ -34,9 +35,9 @@
 <!--  END - Interprocess Communications section  -------------------------->
 
 
-<!--  START - Sockets section  -------------------------------------------->
-<li><a href="#">Sockets</a>
-<div class="menu-container-1">
+<!--  START - Sockets Pipes Thread section  ------------------------------->
+<li><a href="#">Sockets Pipes Threads</a>
+<div class="menu-container-2">
 
 <!--  START - Sockets column  --------------------------------------------->
 <div class="column-1"><h3>Sockets</h3>
@@ -51,10 +52,22 @@
 <li><a href="#af_vsock">Sockets: VSOCK</a></li>
 <li><a href="#af_packet">Sockets: Packet</a></li>
 </ul></div>
-<!--  END - Sockets column  ---------------------------------------------------->
+<!--  END - Sockets column  ----------------------------------------------->
+
+<!--  START - Pipes-Threads column  --------------------------------------->
+<div class="column-1"><h3>Pipes-Threads</h3>
+<ul>
+<li><a href="#doc16.os.pipe">'os.pipe' Module</a></li>
+<li><a href="#win32file">'win32file'</a></li>
+<li><a href="#win32pipe">'win32pipe'</a></li>
+<li><a href="#r">'r'</a></li>
+<li><a href="#z">'z'</a></li>
+<li><a href="#c">'c'</a></li>
+</ul></div>
+<!--  END -  Pipes-Threads column  ---------------------------------------->
 
 </div></li>
-<!--  END - Sockets section  ---------------------------------------->
+<!--  END - Sockets Pipes Thread section  --------------------------------->
 
 
 <!--  START - Message Queue section  -------------------------------------->
@@ -75,24 +88,21 @@
 <!--  END - Message Queue section  ---------------------------------------->
 
 
-<!--  START - Pipes-Threads section  -------------------------------------->
+<!--  START - Context Management section  --------------------------------->
 <li><a href="#">Pipes-Threads</a>
 <div class="menu-container-1">
 
-<!--  START - Pipes-Threads column  --------------------------------------->
-<div class="column-1"><h3>Pipes-Threads</h3>
+<!--  START - Context Manager column  ------------------------------------->
+<div class="column-1"><h3>Context Manager</h3>
 <ul>
-<li><a href="#doc16.os.pipe">'os.pipe' Module</a></li>
-<li><a href="#win32file">'win32file'</a></li>
-<li><a href="#win32pipe">'win32pipe'</a></li>
-<li><a href="#r">'r'</a></li>
-<li><a href="#z">'z'</a></li>
-<li><a href="#c">'c'</a></li>
+<li><a href="#doc18.contextvars">18.0 'contextvars'</a></li>
+<li><a href="#doc18.context">18.1 Context Variables</a></li>
+<li><a href="#doc18.mcm">18.2 Manual Context Management</a></li>
 </ul></div>
-<!--  END -  Pipes-Threads column  ---------------------------------------->
+<!--  END -  Context Manager column  -------------------------------------->
 
 </div></li>
-<!--  END - Pipes-Threads section  ---------------------------------------->
+<!--  END - Context Management section  ----------------------------------->
 
 </ul>
 <!-- +++++ end table of contents ++++++++++++++++++++++++++++++  --------->
@@ -960,6 +970,69 @@ Changed in version 3.7: For multicast addresses (with scopeid meaningful) addres
 <td>
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc18.asyncio">18.3 'asyncio' support</a><br>
+<a class="semanticweb">Version: {}  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Context variables are natively supported in asyncio and are ready to be used without any extra configuration. For example, here is a simple echo server, that uses a context variable to make the address of a remote client available in the Task that handles that client.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/contextvars.html#asyncio-support" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on Youtube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader">U</div>
+<div class="propertydescription">[Windows CMD]</div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
 <td><p class="head2"><a id="doc19.asynchat">19.7 'asynchat' — Asynchronous socket command/response handler</a></p></td>
 </tr>
 </tbody>
@@ -1369,6 +1442,194 @@ The signal.signal() function allows defining custom handlers to be executed when
 <div class="propertydescription"></div>
 
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc18.mcm">18.2 Manual Context Management</a><br>
+<a class="semanticweb">Version: {}  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/contextvars.html#manual-context-management" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc18.context">18.1 Context Variables</a><br>
+<a class="semanticweb">Version: {}  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Context Variables should be created at the top module level and never in closures. Context objects hold strong references to context variables which prevents context variables from being properly garbage collected.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/contextvars.html#context-variables" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc18.contextvars">18.0 'contextvars' — Context Variables</a><br>
+<a class="semanticweb">Version: {}  Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">This module provides APIs to manage, store, and access context-local state. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://docs.python.org/3.7/library/contextvars.html" target="_blank">doc3.7.1</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://gnupg.org/" target="_blank">The GNU Privacy Guard</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
 
 </body>
 </html>

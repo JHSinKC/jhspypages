@@ -19,10 +19,10 @@
 <ul>
 <li><a href="#dependency.management">Dependency Mgmt</a></li>
 <li><a href="#virtual.environments">Virtual Environments</a></li>
-<li><a href="#doc29.pipenv">'pipenv' installer</a></li>
-<li><a href="#doc29.venv">29.3 'venv' VirtualEnv</a></li>
-<li><a href="#doc29.pyvenv">'pyvenv' VirtualEnv</a></li>
-<li><a href="#doc29.pyenv">'pyenv' VirtualEnv</a></li>
+<li><a href="#doc29.pipenv">'pipenv'</a></li>
+<li><a href="#doc29.venv">'venv'</a></li>
+<li><a href="#doc29.pyvenv">'pyvenv'</a></li>
+<li><a href="#doc29.pyenv">'pyenv'</a></li>
 <li><a href="#doc29.virtualenv">'virtualenv'</a></li>
 <li><a href="#doc29.virtualenvwrapper">'virtualenvwrapper'</a></li>
 <li><a href="#__init__.py">'__init__.py'</a></li>
@@ -42,11 +42,12 @@
 <div class="column-1" id=""><h3>Installers</h3>
 <ul>
 <li><a href="">INSTALLERS</a></li>
-<li><a href="#doc29.direnv">'direnv' installer</a></li>
+<li><a href="#doc29.pip">'pip'</a></li>
+<li><a href="#doc29.pipx">'pipx'</a></li>
+<li><a href="#doc29.ensurepip">'ensurepip'</a></li>
+<li><a href="#doc29.direnv">'direnv'</a></li>
 <li><a href="#doc29.python-dotenv">'python-dotenv' config</a></li>
-<li><a href="#doc29.pip">29.5 'pip' installer</a></li>
 <li><a href="#doc29.pipdeptree">'pipdeptree' Display</a></li>
-<li><a href="#doc29.ensurepip">29.2 'ensurepip' Install</a></li>
 </ul></div>
 <!--  END - Installers column  ---------------------------------------->
 
@@ -2762,6 +2763,78 @@ The easiest and most common usage consists on calling load_dotenv when the appli
 <td>
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="doc29.pipx">'pipx'</a><br>
+<a class="semanticweb">Version: 0.14.0   Released: Aug 12, 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">'pipx' is a tool to help you install and run end-user applications written in Python. pipx is not a tool for development or publishing of your code -- it's only for consuming already published packages
+<ul>
+<li>Safely install packages to isolated environments, while globally exposing their CLI entry points so you can run them from anywhere (see the install command). This guarantees no dependency conflicts and clean uninstalls!</li>
+<li>Easily list, upgrade, and uninstall packages that were installed with pipx</li>
+<li>
+Run the latest version of a Python application in a temporary environment (see the run command)</li>
+</ul></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/pipx/" target="_blank">pypi: pipx</a>
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">l</a>
+| <a href="" target="_blank">l</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="propertyheader">W</div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
 <td><p class="head2"><a id="doc29.pipdeptree">'pipdeptree' Displays dependencies</a><br>
 <a class="semanticweb">Version: 0.13.1  Released: Oct 08, 2018</a>
 <a class="newhtml5">no warnings</a></p></td>
@@ -3133,7 +3206,7 @@ The easiest and most common usage consists on calling load_dotenv when the appli
 </table>
 
 <div class="elementdescription">'pipenv' + 'pipfile' + 'pipfile.lock'<br>
-pipenv, by Kenneth Reitz (the author of requests), aims to combine Pipfile, pip and virtualenv into one command on the command-line.<br>
+pipenv, by Kenneth Reitz (author of 'requests' module), aims to combine Pipfile, pip and virtualenv into one command on the command-line.<br>
 The 'virtualenv' directory typically gets placed in <kbd>~/.local/share/virtualenvs/XXX</kbd>, with XXX being a hash of the path of the project directory. This is different from virtualenv, where the directory is typically in the current working directory.</div>
 
 <div class="elementheader">Reference</div>
@@ -3178,7 +3251,20 @@ The 'virtualenv' directory typically gets placed in <kbd>~/.local/share/virtuale
  - <span class="update">(visited 20 Jun 18)</span>
 </li>
 <li>
+<a class="listitem" href="https://pipenv-fork.readthedocs.io/en/latest/basics.html" target="_blank">readthedocs: Basic Usage of Pipenv/a>
+ - <span class="update">(visited 20 Jun 19)</span>
+</li>
+<li>
+<a class="listitem" href="https://pipenv-fork.readthedocs.io/en/latest/advanced.html#custom-virtual-environment-location" target="_blank">readthedocs: Advanced Usage of Pipenv/a>
+ - <span class="update">(visited 20 Jun 19)</span>
+</li>
+<li>
 <a class="listitem" href="https://docs.python-guide.org/dev/virtualenvs/" target="_blank">Hitchhikers: Pipenv & Virtual Environments</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
  - <span class="update">(visited 20 Jun 18)</span>
 </li>
 <li>
