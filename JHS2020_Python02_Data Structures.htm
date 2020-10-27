@@ -5,10 +5,10 @@
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="css/JHS2018_Universal.css" type="text/css" media="screen">
 </head>
-ap
+
 <body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
 <!-- +++++ new table of contents +++++++++++++++++++++++++++++--------->
-<ul id="menu">
+<div><ul id="menu">
 
 <!--  START - Types section  ------------------------------------------>
 <li><a href="">Types</a>
@@ -36,8 +36,8 @@ ap
 <!--  END - Types section  -------------------------------------------->
 
 
-<!--  START - Language: List / Tuple section  ------------------------->
-<li><a href="OS Services">List / Tuple</a>
+<!--  START - List / Tuple section  ----------------------------------->
+<li><a href="">List / Tuple</a>
 <div class="menu-container-2">
 
 <!--  START - List column  -------------------------------------------->
@@ -61,7 +61,7 @@ ap
 </ul></div>
 <!--  END - Tuple column  --------------------------------------------->
 </div></li>
-<!--  END - Language: List / Tuple section  --------------------------->
+<!--  END - List / Tuple section  ------------------------------------->
 
 
 <!--  START - Language: Dictionary / Set section  --------------------->
@@ -132,12 +132,11 @@ ap
 </div></li>
 <!--  END - Language: Collections section ---------------------------->
 
-</ul>
+</ul></div>
 <!-- +++++ end table of contents +++++++++++++++++++++++++++----------->
-<br><p></p>
 
-<!-- +++++++++++++++++++++++++++++++++++++++++++++--------------------->
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++  ---------------->
+
 <hr />
 <p></p>
 <p></p>
@@ -159,47 +158,54 @@ ap
 <td><mark class="semanticweb">Ordered</mark></td>
 <td><mark class="semanticweb">Indexed</mark></td>
 <td><mark class="semanticweb">Mutable</mark></td>
-</tr>
-
-<tr>
-<td>List</td>
-<td>ordered</td>
-<td>unindexed</td>
-<td>mutable</td>
-</tr>
-
-<tr>
-<td>Tuple</td>
-<td>ordered</td>
-<td>unindexed</td>
-<td>immutable</td>
-</tr>
-
-<tr>
-<td>Dictionary</td>
-<td>unordered</td>
-<td>indexed</td>
-<td>mutable</td>
-</tr>
-
-<tr>
-<td>Set</td>
-<td>unordered</td>
-<td>unindexed</td>
-<td>mutable</td>
-</tr>
-<tr>
-<td>frozenset</td>
-<td></td>
-<td></td>
-<td>immutable</td>
+<td><mark class="semanticweb">Iterable</mark></td>
 </tr>
 
 <tr>
 <td>Strings</td>
 <td>unordered</td>
 <td>indexed</td>
-<td>immutable</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>List</td>
+<td>ordered</td>
+<td>unindexed</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Tuple</td>
+<td>ordered</td>
+<td>unindexed</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Dictionary</td>
+<td>unordered</td>
+<td>indexed</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+
+<tr>
+<td>Set</td>
+<td>unordered</td>
+<td>unindexed</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>frozenset</td>
+<td></td>
+<td></td>
+<td>No</td>
+<td>Yes</td>
 </tr>
 
 <tr>
@@ -207,48 +213,117 @@ ap
 complex</td>
 <td>ordered</td>
 <td>unindexed</td>
-<td>immutable</td>
+<td>No</td>
 </tr>
 
 <tr>
 <td>range</td>
 <td>ordered</td>
 <td>...</td>
-<td>immutable</td>
+<td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>decimal</td>
 <td></td>
 <td></td>
-<td>immutable</td>
+<td>No</td>
+<td>No</td>
 </tr>
 
 <tr>
 <td>bool</td>
 <td>...</td>
 <td>...</td>
-<td>immutable</td>
+<td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>byte</td>
 <td>...</td>
 <td>...</td>
-<td>immutable</td>
+<td>No</td>
+<td>No</td>
 </tr>
 <tr>
 <td>array.py</td>
 <td>ordered</td>
 <td>indexed</td>
-<td>mutable</td>
+<td>Yes</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>bytearray</td>
 <td></td>
 <td>indexed</td>
-<td>mutable</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>File objects</td>
+<td>Yes</td>
+<td></td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>User-defined class</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Yes</td>
 </tr>
 </table>
 <p></p>
+
+<div class="propertyheader">Define 'hash table'</div>
+<div class="propertydescription">a Hash table or a Hashmap is a type of data structure that maps keys to its value pairs (implement abstract array data types). (Think of a Python dictionary storing names (key) and addresses (values).) It basically makes use of a function that computes an index value that in turn holds the elements to be searched, inserted, removed, etc. This makes it easy and fast to access data. In general, hash tables store key-value pairs and the key is generated using a hash function.<br>
+A hash table stores items in an array. The index for an item is calculated from the key using a hashing function, which generates a fixed-size hash value from an input of arbitrary size.  </div>
+<ol>
+<li>
+<a class="listitem" href="https://www.edureka.co/blog/hash-tables-and-hashmaps-in-python/" target="_blank">edcurka: Hash Tables and Hashmaps in Python: What are they and How to implement?</a>
+ - <span class="update">(visited 05 Sep 20)</span>
+</li>
+<li>
+<a class="listitem" href="https://www.data-structures-in-practice.com/hash-tables/" target="_blank">data structures in practice: Hash tables</a>
+ - <span class="update">(visited 05 Sep 20)</span>
+</li>
+</ol>
+
+<div class="propertyheader">Define 'hashable'</div>
+<div class="propertydescription">Let us point out what is a fixed hash can mean? See the following points.
+<ol>
+<li>An object is hashable if it has a hash value that does not change during its entire lifetime.</li>
+<li>The same data will have the same hash value.</li>
+<li>Even a slight change in the original data results in a completely different hash value.</li>
+<li>The hash() function converts a piece of given information to the encoded hash.</li>
+<li>A number of objects can be much more than a number of hash values, and so, two objects may hash to the same hash value. It is called Hash collision. What this means is that if two objects have the same hash code, they do not necessarily have the same value.</li>
+<li>Objects hashed using hash() are irreversible, leading to loss of information.</li>
+<li>The hash() method returns hashed value only for immutable objects, hence can be used as an indicator to check for mutable/immutable objects.</li>
+<li>All immutable built-in objects in Python are hashable.
+<ul>
+<li>Hashable (immutable): strings, tuples, frozensets, user-defined classes (int/decimal/floats + bool + byte + ranges)</li>
+<li>Not hashable (mutable): lists, dictionaries, sets, array.py, bytearrays</li>
+</ul>
+</li>
+</ol>
+</div>
+
+<div class="propertyheader">Define 'iterable'</div>
+<div class="propertydescription">An iterable is something you can loop over  using a for loop, capable of returning its members one by one.  Sequences are a very common type of iterable. Examples: sequence types include lists, strings, and tuples.</div>
+
+<div class="propertyheader">Define 'iterator'</div>
+<div class="propertydescription">An iterator is an object representing a stream of data. It does the iterating over an iterable.</div>
+
+<div class="propertyheader">Define 'mutable'</div>
+<div class="propertydescription">Think of 'immutable' as 'read-only'</div>
+
+<div class="propertyheader">Define 'ordered'</div>
+<div class="propertydescription"></div>
+
+<div class="propertyheader">Define 'indexed'</div>
+<div class="propertydescription"></div>
+
 
 <div class="elementheader">Reference</div>
 <div class="elementdescription">
@@ -267,8 +342,8 @@ complex</td>
 
 <ol>
 <li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
+<a class="listitem" href="https://realpython.com/python-data-structures/" target="_blank">realpython: Common Python Data Structures (Guide)</a>
+ - <span class="update">(visited 01 Sep 20)</span>
 </li>
 <li>
 <a class="listitem" href="" target="_blank">M</a>
@@ -280,7 +355,7 @@ complex</td>
 </li>
 <li>
 <a class="listitem" href="https://www.geeksforgeeks.org/packing-and-unpacking-arguments-in-python/" target="_blank">geeksforgeeks: Packing and Unpacking Arguments</a>
- - <span class="update">(visited 20 Jun 18)</span>
+ - <span class="update">(visited 01 Sep 20)</span>
 </li>
 </ol>
 
@@ -304,9 +379,8 @@ complex</td>
 <table summary="">
 <tbody>
 <tr>
-<td>
-<p></p><p></p>
-<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+
 <td><p class="head2"><a id="doc04.boolean">Python Boolean type</a><br>
 <a class="semanticweb">Version:  Released: 2019</a>
 <a class="newhtml5">no warnings</a></p></td>
@@ -1412,8 +1486,8 @@ v3.8.x no longer supports the verbose parameter or _source attribute which showe
 
 <ol>
 <li>
-<a class="listitem" href="" target="_blank">M</a>
- - <span class="update">(visited 20 Jun 18)</span>
+<a class="listitem" href="https://stackabuse.com/introduction-to-pythons-collections-module/" target="_blank">stackabuse: Introduction to Python's Collections Module</a>
+ - <span class="update">(published 01 May 19)</span>
 </li>
 <li>
 <a class="listitem" href="" target="_blank">M</a>
@@ -1429,8 +1503,96 @@ v3.8.x no longer supports the verbose parameter or _source attribute which showe
 </li>
 </ol>
 
-<div class="faqheader"><a id="deque">collections.deque([interable[, maxlen]])</a></div>
+
+<div class="faqheader"><a id="collections.Counter">collections.Counter</a></div>
+<div class="faqdescription">A counter tool is provided to support convenient and rapid tallies.  The Counter() function in collections module takes an iterable or a mapping as the argument and returns a Dictionary. In this dictionary, a key is an element in the iterable or the mapping and value is the number of times that element exists in the iterable or the mapping.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
 <p></p>
+
+<div class="faqheader"><a id="collections.defaultdict()">collections.defaultdict()</a></div>
+<div class="faqdescription">Returns a new dictionary-like object. defaultdict is a subclass of the built-in dict class. It overrides one method and adds one writable instance variable. The remaining functionality is the same as for the dict class and is not documented here.<br>
+The first argument provides the initial value for the default_factory attribute; it defaults to None. All remaining arguments are treated the same as if they were passed to the dict constructor, including keyword arguments.  The defaultdict works exactly like a python dictionary, except for it does not throw KeyError when you try to access a non-existent key.</div>
+<p></p>
+
+<div class="faqheader"><a id="collections.deque">collections.deque([interable[, maxlen]])</a></div>
+<div class="faqdescription">The deque is a list optimized for inserting and removing items.  Deques are a generalization of stacks and queues (the name is pronounced “deck” and is short for “double-ended queue”). Deques support thread-safe, memory efficient appends and pops from either side of the deque with approximately the same O(1) performance in either direction.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a id="collections.namedtuple">collections.namedtuple()</a></div>
+<div class="faqdescription">The namedtuple() returns a tuple with names for each position in the tuple.  It overcomes the problem of accessing the elements using the index values. With namedtuple( ) it becomes easier to access these values, since you do not have to remember the index values to get specific elements.<br>
+Returns a new tuple subclass named typename. The new subclass is used to create tuple-like objects that have fields accessible by attribute lookup as well as being indexable and iterable. Instances of the subclass also have a helpful docstring (with typename and field_names) and a helpful __repr__() method which lists the tuple contents in a name=value format.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a id="collections.OrderedDict">collections.OrderedDict</a></div>
+<div class="faqdescription">Ordered dictionaries are just like regular dictionaries where keys maintain the order in which they are inserted, which means if you change the value of a key later, it will not change the position of the key. They have become less important now that the built-in dict class gained the ability to remember insertion order.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a id="collections.ChainMap">collections.ChainMap</a></div>
+<div class="faqdescription">ChainMap is used to combine or link a number of mappings so they can be treated as a single unit. It is often much faster than creating a new dictionary and running multiple update() calls. It returns a list of dictionaries.<br>
+ The class can be used to simulate nested scopes and is useful in templating.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a id="collections.UserDict">collections.UserDict</a></div>
+<div class="faqdescription">The class, UserDict acts as a wrapper around dictionary objects. The need for this class has been partially supplanted by the ability to subclass directly from dict; however, this class can be easier to work with because the underlying dictionary is accessible as an attribute.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<p></p>
+<div class="faqheader"><a id="collections.UserList">collections.UserList</a></div>
+<div class="faqdescription">This class acts as a wrapper around list objects. It is a useful base class for your own list-like classes which can inherit from them and override existing methods or add new ones. In this way, one can add new behaviors to lists.<br>
+The need for this class has been partially supplanted by the ability to subclass directly from list; however, this class can be easier to work with because the underlying list is accessible as an attribute.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+<div class="faqheader"><a id="collections.UserString">collections.UserString</a></div>
+<div class="faqdescription">The class, UserString acts as a wrapper around string objects. The need for this class has been partially supplanted by the ability to subclass directly from str; however, this class can be easier to work with because the underlying string is accessible as an attribute.</div>
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+<p></p>
+
+
 <div class="propertyheader">collections.deque([interable[, maxlen]])</div>
 <div class="propertydescription">Deques (“deck”) are a generalization of stacks and queues.</div>
 <p></p>

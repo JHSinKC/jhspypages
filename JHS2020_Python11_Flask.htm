@@ -7,8 +7,26 @@
 </head>
 
 <body text="#000033" vlink="#330066" alink="#ff0000" link="#0033cc" bgcolor="#b5e5d5">
-<!-- +++++ new table of contents +++++++++++++++++++++++++------------->
+<!-- +++++ new table of contents ++++++++++++++++++++++++-------------->
 <ul id="menu">
+
+<!--  START - Flask Topics section  ----------------------------------->
+<li><a href="#">Topics</a>
+<div class="menu-container-1">
+
+<!--  START - Flask Topics column  ------------------------------------>
+<div class="column-1"><h3>Topics</h3>
+<ul>
+<li><a href="#flask.topics">Flask Topics</a></li>
+<li><a href="#topics.templates">Templates</a></li>
+<li><a href="#topics.logging">Logging</a></li>
+<li><a href="#topics.testing">Testing</a></li>
+</ul></div>
+<!--  END - Flask Topics column  -------------------------------------->
+
+</div></li>
+<!--  END - Flask Topics section  ------------------------------------->
+
 
 <!--  START - Flask Development section  ------------------------------>
 <li><a href="#">Flask Development</a>
@@ -17,16 +35,43 @@
 <!--  START - Flask column  ------------------------------------------->
 <div class="column-1"><h3>Flask</h3>
 <ul>
-<li><a href="#flask">flask</a></li>
-<li><a href="#flask.login">'flask-login'</a></li>
-<li><a href="#flask.wtf">'flask-WTF' Forms</a></li>
+<li><a href="#flask">Flask</a></li>
+<li><a href="#flask.assets">Flask-Assets</a></li>
+ <li><a href="#flask.limiter">Flask-Limiter</a></li>
+<li><a href="#flask.login">Flask-Login</a></li>
+<li><a href="#flask.mail">Flask-Mail</a></li>
+<li><a href="#flask.wtf">Flask-WTF Forms</a></li>
+<li><a href="#flask.debugtoolbar">Flask-Debugtoolbar</a></li>
 <li><a href="#jinja">jinja2</a></li>
-
+<li><a href="#blueprints">blueprints</a></li>
+<li><a href="#celery">celery</a></li>
+<li><a href="#gunicorn">gunicorn</a></li>
+<li><a href="#psycopg2">psycopg2</a></li>
+<li><a href="#pytest">pytest</a></li>
+<li><a href="#pytest.cov">pytest-cov</a></li>
+<li><a href="#redis">redis</a></li>
 </ul></div>
 <!--  END - Flask column  --------------------------------------------->
 
 </div></li>
 <!--  END - Flask Development section  -------------------------------->
+
+
+<!--  START - Databases section  -------------------------------------->
+<li><a href="#">Databases</a>
+<div class="menu-container-1">
+
+<!--  START - Databases column  --------------------------------------->
+<div class="column-1"><h3>Databases</h3>
+<ul>
+<li><a href="#flask.mysql">Flask-MySQL</a></li>
+<li><a href="#flask.sqlalchemy">Flask-SQLAlchemy</a></li>
+<li><a href="#alembic">alembic</a></li>
+</ul></div>
+<!--  END - Databases column  ----------------------------------------->
+
+</div></li>
+<!--  END - Databases section  ---------------------------------------->
 
 
 <!--  START - GUI Framework section  ---------------------------------->
@@ -49,6 +94,7 @@
 <br><p></p>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++  ----------------------->
+
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
 <hr />
 <p></p>
@@ -61,7 +107,7 @@
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
 <td><p class="head2"><a id="flask">'flask' Web Micro-Framework</a><br>
-<a class="semanticweb">Version: 1.1.1  Released: Jul 2019</a>
+<a class="semanticweb">Version: 1.1.0  Released: Jul 2019</a>
 <a class="newhtml5">Packaged with (5) dependencies</a></p></td>
 </tr>
 </tbody>
@@ -72,8 +118,8 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 
 <div class="elementheader">Reference</div>
 <div class="elementdescription">
-| <a href="http://flask.pocoo.org/docs/1.0/" target="_blank">docs1.0.2</a>
-| <a href="https://pypi.org/project/Flask-SQLAlchemy/" target="_blank">PyPI: Flask + <a href="#sqlalchemy">SQL-Alchemy 2.3.2</a></a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/" target="_blank">docs1.0.2</a>
+
 |<br>
 | <a href="" target="_blank">P</a>
 | <a href="" target="_blank">P</a>
@@ -85,10 +131,34 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="elementdescription">
 | <a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA" target="_blank"> freeCodeCamp: Learn Flask for Python</a>*
 | <a href="https://www.youtube.com/watch?v=lj4I_CvBnt0&list=PL9ooVrP1hQOHY-BeYrKHDrHKphsJOyRyu&index=90" target="_blank">Edureka: 90 Flask</a>*
+| <a href="https://www.youtube.com/watch?v=Z1RJmh_OqeA" target="_blank">FreeCodeCamp: Learn Flask</a>
+|<br>
+| <a href="https://www.youtube.com/watch?v=3mwFC4SHY-Y" target="_blank">Clever Programmer: Flask for Beginners</a> (3h)
+| <a href="https://pymbook.readthedocs.io/en/latest/flask.html" target="_blank">PYM: book</a>
 | <a href="" target="_blank">P</a>
 | <a href="" target="_blank">P</a>
 | <a href="" target="_blank">P</a>
+| <a href="" target="_blank">P</a>
+|<p></p>
+
+
+<!----- The Codex: Python and Flask ----------------------------------->
+<li>
+[The Codex: Python and Flask] <b>Ok:2019</b>
+| <a href="https://www.youtube.com/playlist?list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h" target="_blank">playlist</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=7M1MaAPWnYg&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=2&t=0s" target="_blank">01 GetStarted</a>
+| <a href="https://www.youtube.com/watch?v=f085KDOy43k&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=2">02 Routing and Variable Rules</a>
+| <a href="https://www.youtube.com/watch?v=NKJV0ekmo4U&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=3" target="_blank">03 Templates and Jinja</a>
+| <a href="https://www.youtube.com/watch?v=xh3mFxbnc4o&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=4">04 Diving into Jinja2</a>
+|<br /><span>--&gt;</span>
+| <a href="https://www.youtube.com/watch?v=DxI4jnb5m1Q&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=5" target="_blank">05 Template Inheritance and Block Content</a>
+| <a href="https://www.youtube.com/watch?v=-O9NMdvWmE8&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=6">06 Forms with Flask-wtf</a>
+| <a href="https://www.youtube.com/watch?v=f8qvLBvrIFI&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=7" target="_blank">07 data from Forms</a>
 |
+</li><p></p>
+<!----- The Codex: Python and Flask ----------------------------------->
+
 <!----- CoreyMSchafer: Python Flask Tutorial: Full-Featured Web App  -->
 <li>
 [CoreyMSchafer: Python Flask Tutorial: Full-Featured Web App] <b>Ok:2018</b>
@@ -157,11 +227,11 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 | <a href="" target="_blank">03 Put</a>
 | <a href="" target="_blank">04 Delete</a>
 |<br /><span>--&gt;</span>
-[Flask] <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&t=0s&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=6" target="_blank">05 fl-templates</a>
-| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=6&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">06 loops</a>
-| <a href="https://www.youtube.com/watch?v=gQ6lh3ir2Jw&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8&t=0s" target="_blank">07 HW</a>
-| <a href="https://www.youtube.com/watch?v=Kg9OqG_ZqhM&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8" target="_blank">08 Folders</a>
-| <a href="https://www.youtube.com/watch?v=xHyvIkkZ7uc&index=9&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">09 debug</a>
+[Flask] <a href="https://www.youtube.com/watch?v=pJ8V51XJuf0&t=0s&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=6" target="_blank">05 fl-templates</a>*
+| <a href="https://www.youtube.com/watch?v=APh3jdVryF0&index=6&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">06 loops</a>*
+| <a href="https://www.youtube.com/watch?v=gQ6lh3ir2Jw&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8&t=0s" target="_blank">07 HW</a>*
+| <a href="https://www.youtube.com/watch?v=Kg9OqG_ZqhM&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=8" target="_blank">08 Folders</a>*
+| <a href="https://www.youtube.com/watch?v=xHyvIkkZ7uc&index=9&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">09 debug</a>*
 | <a href="https://www.youtube.com/watch?v=nWO_VpI5wn8&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX&index=10" target="_blank">10 mysql</a>
 |<br /><span>--&gt;</span>
 | <a href="https://www.youtube.com/watch?v=8qDdbcWmzCg&index=126&list=PLXmMXHVSvS-CoYS177-UvMAQYRfL3fBtX" target="_blank">126 context procs</a>
@@ -194,7 +264,6 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 | <a href="https://www.youtube.com/watch?v=VsuArvWwuDI&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=2&t=0s" target="_blank">01 sitesetup</a>*
 | <a href="https://www.youtube.com/watch?v=Z7fyAxdL7Uc&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=3&t=0s" target="_blank">02 loginpage</a>*
 | <a href="https://www.youtube.com/watch?v=WCpNvteLCDI&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=4&t=0s" target="_blank">03 sessions</a>*
-
 | <a href="https://www.youtube.com/watch?v=BkdVq9ag7aw&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=5&t=0s" target="_blank">04 database</a>*
 | <a href="https://www.youtube.com/watch?v=M4sxSoRZLtI&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=5" target="_blank">05 PythonAnywwhere</a>*
 | <a href="https://www.youtube.com/watch?v=Z86QxnU9BMM&list=PLLjmbh6XPGK5pM1QJ8I1ccdGiCTHa1IC8&index=6" target="_blank">06 taskmgmt</a>*
@@ -231,8 +300,6 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="elementdescription">
 | <a href="http://www.fullstackpython.com/flask.html" target="_blank">Full Stack Python</a>
 | <a href="http://coreyms.com/development/python/python-flask-tutorials-full-series" target="_blank">coreyms: Flask</a>*
-| <a href="http://flask-tutorial.com/" target="_blank">RMOTR: (20)flask</a>
-| <a href="http://flask.pocoo.org/docs/1.0/tutorial/" target="_blank">Pocoo: (11)flask</a>
 | <a href="http://pythonspot.com/flask-web-app-with-python/" target="_blank">PythonSpot: Flask For Beginners</a>
 |<br>
 | <a href="http://www.tutorialspoint.com/flask" target="_blank">TutorialsPoint</a>
@@ -253,6 +320,28 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 | <a href="" target="_blank">P</a>
 | <a href="" target="_blank">P</a>
 |<br>
+
+ <!----- Palletsprojects: Flask Tutorial ------------------------------>
+<li>
+[Palletsprojects: Flask Tutorial] <b>2020</b>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/" target="_blank">playlist</a>
+|<br /><span>--&gt;</span>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/" target="_blank">01 project layout</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/factory/" target="_blank">02 application setup</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/database/" target="_blank">03 Define and Access the Database</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/views/" target="_blank">04 Blueprints and Views</a>
+ |<br /><span>--&gt;</span>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/templates/" target="_blank">05 Templates</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/static/" target="_blank">06 Static Files</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/blog/" target="_blank">07 Blog Blueprints</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/install/" target="_blank">08 Make project installable</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/tests/" target="_blank">09 Test Coverage</a>
+ |<br /><span>--&gt;</span>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/deploy/" target="_blank">10 Deploy to Production</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/next/" target="_blank">11 Keep Developing</a>*
+|</li><p></p>
+<!----- Palletsprojects: Flask Tutorial ------------------------------->
+
 
 <!----- Miguel Grinberg: Flask Mega-Tutorial (veMicroblog)  ----------->
 <li>
@@ -393,16 +482,20 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 
 <ol>
 <li>
-<a class="listitem" href="https://scotch.io/tag/python" target="_blank">Scotch: Flask</a>
- - <span class="update">(visited 06 Jul 18)</span>
+<a class="listitem" href="https://www.kite.com/blog/python/flask-tutorial/" target="_blank">kite: A Guide to Python’s Flask Web Interface </a>
+ - <span class="update">(visited 29 Sep 20)</span>
 </li>
 <li>
-<a class="listitem" href="https://exploreflask.com/en/latest/" target="_blank">ExploreFlask: </a>
- - <span class="update">(visited 20 Jun 18)</span>
+<a class="listitem" href="https://scotch.io/tag/python" target="_blank">Scotch: Flask</a>
+ - <span class="update">(visited 29 Apr 20) - not much stuff</span>
+</li>
+<li>
+<a class="listitem" href="https://exploreflask.com/en/latest/" target="_blank">Robt. Picard book: Explore Flask</a>
+ - <span class="update">(published Jun 2014)</span>
 </li>
 <li>
 <a class="listitem" href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">realpython: Flask by Example</a>
- - <span class="update">(visited 20 Jun 18)</span>
+ - <span class="update">(visited 20 Jun 18) - IN TUTORIALS!</span>
 </li>
 <li>
 <a class="listitem" href="" target="_blank">M</a>
@@ -444,7 +537,223 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <td>
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
-<td><p class="head2"><a id="flask.login">'flask-login' Module</a><br>
+<td><p class="head2"><a id="flask.topics">Flask Topics</a></td>
+</tr>
+</tbody>
+</table>
+
+<div class="elementheader">Virtual Environment, Install Flask, Jinja2, Folder Setup, Heroku/Git<br>
+Environment Variables, Configuration Settings</div>
+<div class="elementdescription">
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world" target="_blank">Miguel Grinberg: 01 HelloWorld</a>*
+| <a href="https://realpython.com/flask-by-example-part-1-project-setup/" target="_blank">Real Python: 01 Project Setup on Heroku</a>
+| <a href="https://pythonise.com/feed/flask/your-first-flask-app" target="_blank">Julian Nash: 01 setup</a>*
+|<br /><span>--&gt;</span>
+| <a href="https://overiq.com/flask-101/intro-to-flask/" target="_blank">OverIQ: 01 Intro</a>*
+| <a href="https://overiq.com/flask-101/installing-flask/" target="_blank">OverIQ: 02 Install</a>*
+| <a href="https://overiq.com/flask-101/flask-basics/" target="_blank">03 Basics</a>*
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Contexts: Application Context and Request Context.</div>
+<div class="elementdescription">
+| <a href="https://overiq.com/flask-101/contexts-in-flask/" target="_blank">OverIQ: 04 Contexts</a>*
+| <a href="https://overiq.com/flask-101/custom-response-and-hook-points-in-flask/" target="_blank">OverIQ: 05 Custom Response</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="https://flask.palletsprojects.com/en/1.1.x/signals/#signals" target="_blank">Pallets: Signals in Flask</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Flask Login + Authentication</div>
+<div class="elementdescription">
+| <a href="https://overiq.com/flask-101/authentication-in-flask/" target="_blank">OverIQ: 18 Authentication</a>
+| <a href="https://www.youtube.com/watch?v=CSHx6eCkmv0" target="_blank">Corey: 06 User Authentication</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader"><a id="topics.logging">Logging</a></div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Security + Encryption</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader"><a id="topics.templates">Templates</a></div>
+<div class="elementdescription">
+| <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates" target="_blank">Miguel Grinberg: 02 Templates</a>*
+| <a href="https://overiq.com/flask-101/templates-in-flask/" target="_blank">OverIQ: 06 Templates</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|<br>
+| <a href="https://www.youtube.com/watch?v=NKJV0ekmo4U&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=3" target="_blank">Codex: 03 Templates and Jinja</a>
+| <a href="https://www.youtube.com/watch?v=DxI4jnb5m1Q&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=5" target="_blank">Codex: 05 Template Inheritance and Block Content</a>
+|</div>
+<p></p>
+
+<div class="elementheader"><a id="topics.testing">Testing</a></div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<div class="elementheader">Contexts</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.assets">'Flask-Assets' Module</a><br>
+<a class="semanticweb">Version: 2.0  Released: Dec 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-Assets integrates the webassets library with Flask, adding support for merging, minifying and compiling CSS and Javascript files.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Flask-Assets/" target="_blank">PyPi: Flask-Assets</a>
+| <a href="https://flask-assets.readthedocs.io/en/latest/" target="_blank">ReadTheDocs: Flask-Assets</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.limiter">'Flask-Limiter' Module</a><br>
+<a class="semanticweb">Version:   Released: Dec 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-Limiter is the perfect library for controlling traffic rates. You can do rate limiting by IP address or other rules.  Flask-Limiter provides rate limiting features to flask routes. It has support for a configurable backend (redis) for storage with current implementations for in-memory, redis and memcache. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.login">'Flask-Login' Module</a><br>
 <a class="semanticweb">Version: 0.4.1  Released: Dec 2017</a>
 <a class="newhtml5">no warnings</a></p></td>
 </tr>
@@ -497,6 +806,68 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="propertydescription"></kbd></div>
 
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.mail">'Flask-Mail' Module</a><br>
+<a class="semanticweb">Version:   Released: Dec 2017</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The Flask-Mail extension provides a simple interface to set up SMTP with your Flask application and to send messages from your views and scripts. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
 <hr />
 <p></p>
@@ -508,7 +879,7 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <td>
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
-<td><p class="head2"><a id="flask.wtf">'flask-WTF' Web Forms</a><br>
+<td><p class="head2"><a id="flask.wtf">Flask-WTF Web Forms</a><br>
 <a class="semanticweb">Version: 0.14.2  Released: Jan 10, 2017</a>
 <a class="newhtml5">no warnings</a></p></td>
 </tr>
@@ -568,6 +939,9 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
+|<br>
+| <a href="https://www.youtube.com/watch?v=-O9NMdvWmE8&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=6">Codex: 06 Forms with Flask-wtf</a>
+| <a href="https://www.youtube.com/watch?v=f8qvLBvrIFI&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=7" target="_blank">Codex: 07 data from Forms</a>
 |</div>
 <p></p>
 
@@ -591,6 +965,195 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="propertydescription"></div>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.mysql">Flask-MySQL Module</a><br>
+<a class="semanticweb">Version: 0.2.0  Released: Sep 2015</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-MySQL is a Flask extension that allows you to access a MySQL database.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://flask-mysql.readthedocs.io/en/latest/" target="_blank">readthedocs: flask-mysql</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.sqlalchemy">Flask-SQLAlchemy Module</a><br>
+<a class="semanticweb">Version: 2.4.1  Released: Aug 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to your application. It aims to simplify using SQLAlchemy with Flask by providing useful defaults and extra helpers that make it easier to accomplish common tasks. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="https://pypi.org/project/Flask-SQLAlchemy/" target="_blank">PyPI: Flask-SQL-Alchemy 2.4.1</a></a>
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="flask.debugtoolbar">'Flask-Debugtoolbar' Module</a><br>
+<a class="semanticweb">Version: 2.4.1   Released: Aug 2019</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Flask-Debugtoolbar extension adds a toolbar overlay to Flask applications containing useful information for debugging. </div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
 <!-- ++++++++++++++++++++++++++++++------------------------------------>
 <hr />
 <p></p>
@@ -603,19 +1166,29 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <p></p><p></p>
 <a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
 <td><p class="head2"><a id="jinja">jinja2 Templating</a><br>
-<a class="semanticweb">Version: 2.10  Released: November 8, 2017</a>
-<a class="newhtml5">no warnings</a></p></td>
+<a class="semanticweb">Version: 2.11.2  Released: Apr 2020</a><br>
+<a class="newhtml5">To use the PackageLoader class, you will also need <i>setuptools</i> or <i>distribute</i> installed at runtime.</a></p></td>
 </tr>
 </tbody>
 </table>
 <p></p>
 
-<div class="faqdescription">Jinja is a web template engine for the Python programming language. Licensed under a BSD License created by Armin Ronacher. It is similar to the Django template engine but provides Python-like expressions while ensuring that the templates are evaluated in a sandbox</div>
+<div class="faqdescription">Jinja is a web template engine. It is similar to the Django template engine but provides Python-like expressions while ensuring that the templates are evaluated in a sandbox.
+<ul>
+<li>sandboxed execution</li>
+<li>powerful automatic HTML escaping system for XSS prevention</li>
+<li>template inheritance</li>
+<li>compiles down to the optimal python code just in time</li>
+<li>optional ahead-of-time template compilation</li>
+<li>easy to debug. Line numbers of exceptions directly point to the correct line in the template.</li>
+<li>configurable syntax</li>
+</ul>
+</div>
 <p></p>
 
 <div class="elementheader">Reference</div>
 <div class="elementdescription">
-| <a href="http://jinja.pocoo.org/docs/2.10/" target="_blank">pocoo: jinja2</a>
+| <a href="http://jinja.palletsprojects.org/docs/2.10/" target="_blank">palletsprojects: jinja2</a>
 | <a href="https://pypi.org/project/Jinja2/" target="_blank">pypi: Jinja2</a>
 | <a href="https://github.com/pallets/jinja" target="_blank">github: jinja</a>
 | <a href="" target="_blank">x</a>
@@ -634,6 +1207,8 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <p></p>
 <div class="elementheader">Tutorials</div>
 <div class="elementdescription">
+| <a href="https://www.youtube.com/watch?v=NKJV0ekmo4U&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=3" target="_blank">03 Templates and Jinja</a>
+| <a href="https://www.youtube.com/watch?v=xh3mFxbnc4o&list=PLB5jA40tNf3vX6Ue_ud64DDRVSryHHr1h&index=4">04 Diving into Jinja2</a>
 | <a href="" target="_blank">x</a>
 | <a href="" target="_blank">x</a>
 |<br>
@@ -655,7 +1230,11 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 
 <ol>
 <li>
-<a class="listitem" href="http://jinja.pocoo.org/" target="_blank">pocoo: jinja2</a>
+<a class="listitem" href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank">Pallets Project: Jinja</a>
+ - <span class="update">(visited 20 May 20)</span>
+</li>
+<li>
+<a class="listitem" href="http://jinja.ppalletsprojects.org/" target="_blank">palletsprojects: jinja2</a>
  - <span class="update">(visited 20 Jun 18)</span>
 </li>
 <li>
@@ -685,8 +1264,493 @@ Flask doesn’t enforce any dependencies or project layout, but it does come pac
 <div class="propertydescription"></div>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++------------------------->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
 
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="alembic">'alembic' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
 
+<div class="faqdescription">Alembic is a lightweight database migration tool for usage with the SQLAlchemy Database Toolkit for Python.  Setting up a simple DB migrate script with alembic and Click is only a few lines of code.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="blueprints">'blueprints' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.sitepoint.com/premium/books/python-programming-blueprints" target="_blank">Python Programming Blueprints</a>
+ - <span class="update">(published 01 Feb 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="celery">'celery' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="gunicorn">'gunicorn' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="https://www.sitepoint.com/premium/books/python-programming-blueprints" target="_blank">Python Programming Blueprints</a>
+ - <span class="update">(published 01 Feb 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="psycopg2">'psycopg2' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">Psycopg2 lets Python communicate with PostgreSQL databases.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pytest">'pytest' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">The pytest framework makes it easy to write small tests, yet scales to support complex functional testing for applications and libraries.</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="pytest.cov">'pytest-cov' Module</a><br>
+<a class="semanticweb">Version: 2.8.2   Released: 2020</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription">This plugin produces coverage reports. Compared to just using coverage run this plugin does some extras:
+<ol>
+<li>Subprocess support: you can fork or run stuff in a subprocess and will get covered without any fuss.</li>
+<li>Xdist support: you can use all of pytest-xdist’s features and still get coverage.</li>
+<li>Consistent pytest behavior. If you run coverage run -m pytest you will have slightly different sys.path (CWD will be in it, unlike when running pytest).</li></ol>
+</div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
+<hr />
+<p></p>
+<p></p>
+
+<table summary="">
+<tbody>
+<tr>
+<td>
+<p></p><p></p>
+<a href="#top"><img height="40" alt="Go to the Top" src="images/UpArrow.jpg" width="30" /></a></td>
+<td><p class="head2"><a id="redis">'redis' Module</a><br>
+<a class="semanticweb">Version:   Released: 2018</a>
+<a class="newhtml5">no warnings</a></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="faqdescription"></div>
+
+<div class="elementheader">Reference</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials on YouTube</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+<div class="elementheader">Tutorials</div>
+<div class="elementdescription">
+| <a href="" target="_blank">x</a>
+| <a href="" target="_blank">x</a>
+|</div>
+<p></p>
+
+<ol>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+<li>
+<a class="listitem" href="" target="_blank">M</a>
+ - <span class="update">(visited 20 Jun 18)</span>
+</li>
+</ol>
+
+<div class="propertyheader"></div>
+<div class="propertydescription"></kbd></div>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++------------------>
 <hr />
 <p></p>
